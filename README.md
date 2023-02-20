@@ -6,10 +6,4 @@
 
 radwaaa khalil
 
----
-
-- mariam khaled
-
----
-
-hager
+Hi
