@@ -5,9 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="../css/loginPage.css" />
   </head>
   <body>
-    
+    <div class="main-background">
+      <div id="main">
+        <div class="form-heading">
+          <h1 class="form-p">Login</h1>
+          <p class="form-p">
+            New user ? <span class="signup-span">Create an account</span>
+          </p>
+        </div>
+        <div class="form-container">
+          <form action="" target="_blank">
+            <div class="input_wrap">
+              <input
+                type="email"
+                id="input-email"
+                required
+                pattern="[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]{2,4}$"
+              />
+              <label for="email">E-mail</label>
+            </div>
+
+            <div class="input_wrap">
+              <input
+                type="password"
+                id="input-password"
+                name="password"
+                pattern="(?=^.{8,}$)(?=.*[A-Z])(?=.*[a-z]).*$"
+                autocomplete="off"
+                required=""
+              />
+              <label for="input-password">Password</label>
+            </div>
+          </form>
+          <button id="btn">LOGIN</button>
+          <img src="../assets/qqquad.svg" alt="" width="200%" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>

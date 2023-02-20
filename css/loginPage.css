@@ -1,0 +1,151 @@
+body {
+  background-color: #202020;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div {
+  padding: 10px;
+}
+
+#input-email:focus,
+#input-password:focus {
+  outline: none;
+  background-color: #606060;
+  border-radius: 10px;
+}
+
+#Username:valid + .username,
+#input-email:valid + .email {
+  display: none;
+}
+
+#main {
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  margin-right: 50px;
+  background-color: #101010;
+  width: 30%;
+  height: 75%;
+  overflow: hidden;
+  animation: gradient2 10s ease infinite;
+}
+@media (max-width: 1024px) {
+  #main {
+    width: 100%;
+    margin: 25px;
+  }
+}
+.main-background {
+  background-color: rgba(7, 7, 7, 0.7);
+  width: 100%;
+  height: 100vh;
+}
+.form-container {
+  display: grid;
+  place-items: center;
+}
+.signup-span {
+  color: #95f5df;
+  font-weight: bold;
+  cursor: pointer;
+}
+form {
+  font-size: small;
+  width: 100%;
+}
+.form-p {
+  color: beige;
+}
+
+input {
+  background: none;
+  border: none;
+  width: 80%;
+  height: 40px;
+  color: white;
+  font-weight: 700;
+  background-color: #797777;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#btn {
+  width: 150px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font: 700 20px consolas;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border: none;
+  cursor: pointer;
+  
+  background: linear-gradient(
+    -45deg,
+    #bd7ee7,
+    rgb(228, 133, 133),
+    #e8f570,
+    #95f5df
+  );
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+
+input:focus + label,
+input:valid + label {
+  font-size: 12px;
+  color: wheat;
+  top: -5px;
+  left: 10px;
+  padding: 0px 5px 0px 5px;
+}
+
+.input_wrap {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.input_wrap label {
+  font-family: arial;
+  font-size: 12px;
+  color: black;
+  padding: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient2 {
+  0% {
+    box-shadow: 1px 1px 10px 1px #bd7ee7, -1px -1px 10px 1px rgb(175, 17, 17);
+  }
+  50% {
+    box-shadow: 1px 1px 10px 1px #e8f570, -1px -1px 10px 1px #95f5df;
+  }
+  100% {
+    box-shadow: 1px 1px 10px 1px rgb(117, 169, 247),
+      -1px -1px 10px 1px rgb(139, 243, 148);
+  }
+}
