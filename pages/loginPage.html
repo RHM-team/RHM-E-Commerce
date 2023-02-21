@@ -15,42 +15,108 @@
     <link rel="stylesheet" href="../css/loginPage.css" />
   </head>
   <body>
-    <div class="main-background">
-      <div id="main">
-        <div class="form-heading">
-          <h1 class="form-p">Login</h1>
-          <p class="form-p">
-            New user ? <span class="signup-span">Create an account</span>
+    <div class="container-fluid page h-100">
+      <div class="row h-100">
+        <div
+          class="col-md-6 d-sm-12 design pt-5 d-flex flex-column align-items-center"
+        >
+          <h1 class="fst-italic align-self-start pe-4 welcome">
+            Welcome to our <br />
+            Community
+          </h1>
+          <p class="fs-3 align-self-start pe-5">
+            A whole new productive journey <br />
+            starts right here
           </p>
+          <!-- <div class="image-container align-self-end">
+          <img src="./undraw_welcoming_re_x0qo.svg" alt="" height="350px" />
+        </div> -->
         </div>
-        <div class="form-container">
-          <form action="" target="_blank">
-            <div class="input_wrap">
+        <div
+          class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center flex-column form h-100"
+        >
+          <div class="login-container w-100 p-5">
+            <h1 class="fs-1 align-self-start m-5">Login</h1>
+            <div class="form-floating mb-3 w-75">
               <input
                 type="email"
-                id="input-email"
-                required
-                pattern="[A-Za-z0-9]+@[A-Za-z]+\.[A-Za-z]{2,4}$"
+                class="form-control shadow-none"
+                id="floatingInput"
+                placeholder="name@example.com"
               />
-              <label for="email">E-mail</label>
+              <label for="floatingInput">Email address</label>
             </div>
-
-            <div class="input_wrap">
+            <div class="form-floating mb-3 w-75">
               <input
                 type="password"
-                id="input-password"
-                name="password"
-                pattern="(?=^.{8,}$)(?=.*[A-Z])(?=.*[a-z]).*$"
-                autocomplete="off"
-                required=""
+                class="form-control shadow-none"
+                id="floatingPassword"
+                placeholder="Password"
               />
-              <label for="input-password">Password</label>
+              <label for="floatingPassword">Password</label>
+              <div class="d-flex justify-content-between align-baseline">
+                <button type="submit" class="btn mt-5 w-50">LOGIN</button>
+                <p class="form-p">
+                  New user ? <span class="signup-span">Create an account</span>
+                </p>
+              </div>
             </div>
-          </form>
-          <button id="btn">LOGIN</button>
-          <img src="../assets/qqquad.svg" alt="" width="200%" />
+          </div>
+          <div class="signup-container w-100 p-5 d-none">
+            <h1 class="fs-1 align-self-start m-5">Sign Up</h1>
+            <div class="form-floating mb-3 w-75">
+              <input
+                type="text"
+                class="form-control shadow-none"
+                id="floatingInput"
+                placeholder="Name"
+              />
+              <label for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating mb-3 w-75">
+              <input
+                type="email"
+                class="form-control shadow-none"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3 w-75">
+              <input
+                type="password"
+                class="form-control shadow-none"
+                id="floatingPassword"
+                placeholder="Password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating mb-3 w-75">
+              <input
+                type="password"
+                class="form-control shadow-none"
+                id="floatingPassword"
+                placeholder="Confirm Password"
+              />
+              <label for="floatingPassword">Password</label>
+            </div>
+            <div class="d-flex align-baseline">
+              <button type="submit" class="btn mt-5 w-50">SIGN UP</button>
+              <p class="form-p">
+                Already have an account ? <span class="signup-span">login</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="container">
+      <img src="../assets/login-pic.png" alt="" />
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
