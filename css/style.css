@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import './navbar.css';
 
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
     
 }
 
 body {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    /* background-color: #050505; */
+    min-height: 100vh; 
+    background-color: #050505; */
 }
 
 .cube {
