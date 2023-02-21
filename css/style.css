@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 @import './navbar.css';
-
+@import './productsSection.css';
 *{
     box-sizing: border-box;
     margin: 0%;
