@@ -1,0 +1,42 @@
+.carousel-inner{
+    border-radius: 1rem;
+}
+.carousel-caption{
+    top: 4rem;
+    left: 15% !important;
+    text-align: start !important;
+    bottom:4rem !important;
+    width: 300px;
+    font-size: 24px;
+}
+.shop__btn{
+    border-style: none;
+    color: white;
+    background-color: palevioletred;
+    padding: 6px 12px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    
+}
+.trending__desc{
+  
+    letter-spacing: 2.7px;
+    font-size: 30px;
+}
+
+.cat{
+    color: palevioletred;
+    letter-spacing: 2px;
+}
+.sale{
+    color: rgb(194, 194, 194);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.trending__desc{
+    color: black;
+    font-weight: bold;
+}
