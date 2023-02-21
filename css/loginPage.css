@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #f9a826;
+  --secondry-color: #ececec;
+  --secondry-dark-color: #aaaaaa;
+  --gradient-color-1: #bd7ee7;
+  --gradient-color-2: rgb(228, 133, 133);
+  --gradient-color-3: #e8f570;
+  --gradient-color-4: #95f5df;
+}
+body {
+  height: 100vh;
+  position: relative;
+}
+img {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+}
+@media (max-width: 965px) {
+  img {
+    display: none;
+  }
+}
+h1 {
+  color: var(--primary-color);
+}
+.welcome {
+  font-size: 3.5rem;
+}
+p {
+  color: var(--secondry-dark-color);
+}
+.form {
+  background-color: var(--secondry-color);
+  border-radius: 30px 0 0 30px;
+  box-shadow: 5px 9px 19px 4px #000;
+  background-image: url("../assets/form_bg.svg");
+}
+.form-p {
+  color: black;
+}
+.signup-span {
+  background: linear-gradient(
+    -45deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+input {
+  background: none !important;
+  border: none !important;
+  border-bottom: 1px solid black !important;
+}
+input:focus {
+  border-bottom: 1px solid black !important;
+}
+.btn {
+  width: 150px;
+  border-radius: 10px;
+  padding: 10px 10px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font: 700 20px consolas;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(
+    -45deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2),
+    var(--gradient-color-3),
+    var(--gradient-color-4)
+  );
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
