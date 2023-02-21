@@ -1,6 +1,6 @@
 body {
   background-color: #202020;
-  background-image: url("../assets/bg.jpg");
+  background-image: url("../assets/qqquad.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -39,9 +39,8 @@ div {
   }
 }
 .main-background {
-  background-color: rgba(7, 7, 7, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 100vh;
 }
 .form-container {
   display: grid;
@@ -84,7 +83,7 @@ input {
   background-color: whitesmoke;
   border: none;
   cursor: pointer;
-  
+
   background: linear-gradient(
     -45deg,
     #bd7ee7,
