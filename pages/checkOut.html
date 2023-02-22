@@ -22,6 +22,51 @@
       <div class="card mb-3 checkOut-card rounded-start">
         <div class="row g-0" style="height: 100%">
           <div class="col-md-6">
+            <div class="row m-5">
+              <div class="container">
+                <div class="accordion" id="accordionExample">
+                  <div
+                    class="steps d-flex justify-content-between align-items-center"
+                  >
+                    <progress id="progress" value="0" max="100"></progress>
+                    <div class="step-item">
+                      <button
+                        class="step-button text-center cart-step"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      ></button>
+                      <div class="step-title">Cart</div>
+                    </div>
+
+                    <div class="step-item">
+                      <button
+                        class="step-button text-center"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      ></button>
+                      <div class="step-title">Personal Details</div>
+                    </div>
+                    <div class="step-item">
+                      <button
+                        class="step-button text-center"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      ></button>
+                      <div class="step-title">Checkout</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
@@ -34,12 +79,12 @@
               </p>
             </div>
           </div>
-          <div class="col-md-6">
-            <img
+          <div class="col-md-6 checkOutImg ">
+            <!-- <img
               src="../assets/crew-1pJjYDJW5HM-unsplash.jpg"
               class="img-fluid rounded-end checkOutImg"
               alt="..."
-            />
+            /> -->
           </div>
         </div>
       </div>
