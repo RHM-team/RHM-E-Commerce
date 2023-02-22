@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Montserrat&display=swap"
+    rel="stylesheet">
+  <!-- my style -->
+  <link rel="stylesheet" href="../css/productDetailsStyling.css">
+  <title>Product preview card component</title>
+
+  <style>
+
+
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="product">
+      <picture class="product__img">
+        <source srcset="../assets/chair.avif">
+        <img src="../assets/chair.avif" alt=" Gabrielle Essence Perfume bottle flat on a table">
+      </picture>
+      <div class="product__content">
+
+        <p class="product__category">Chair</p>
+        <h1 class="product__title">leather and wood Chair</h1>
+
+        <p class="product__description">Hot selling Cheap chair for the living room with white leather and a leg of high quality wood. </p>
+
+        <div class="flex-group">
+          <p class="product__price">$149.99</p>
+          <s>
+            <p class="product__original__price">$169.99</p>
+          </s>
+        </div>
+        <div class="count__container">
+          <button class="count__btn inc">+</button>
+          <h2 class="counter__text">0</h2>
+          <button class="count__btn dec">-</button>
+        </div>
+        <button class="add__button" data-icon="shopping-cart">Add to Cart</button>
+      </div>
+    </article>
+  </main>
+<script src="../js/counter.js"></script>
+</body>
+
+</html>
