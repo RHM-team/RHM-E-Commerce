@@ -14,6 +14,10 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/checkOut.css" />
     <title>Document</title>
   </head>
@@ -21,8 +25,10 @@
     <div class="container checkOut-container">
       <div class="card mb-3 checkOut-card rounded-start">
         <div class="row g-0" style="height: 100%">
-          <div class="col-md-6">
-            <div class="row m-5">
+          <div class="col-md-6 col-sm-12">
+            <!-------start Stepper ----------->
+
+            <div class="row m-5 mb-0">
               <div class="container">
                 <div class="accordion" id="accordionExample">
                   <div
@@ -67,25 +73,97 @@
                 </div>
               </div>
             </div>
+            <!-- End Stepper -->
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
+              <!-- start checkout section -->
+              <div class="checkout-section d-flex flex-column">
+                <p class="section-title h2">Checkout</p>
+                <p>Personal info</p>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  id="exampleFormControlInput1"
+                  placeholder="Full name(e.g Paul Joe)*"
+                />
+                <input
+                  type="tel"
+                  class="form-control mb-3"
+                  id="exampleFormControlInput1"
+                  placeholder="Phone number*"
+                />
+                <p>Address</p>
+                <div class="address-container d-grid">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <input
+                        type="text"
+                        class="form-control mb-3"
+                        id="exampleFormControlInput1"
+                        placeholder="City*"
+                      />
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <input
+                        type="text"
+                        class="form-control mb-3"
+                        id="exampleFormControlInput1"
+                        placeholder="Country*"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <input
+                        type="text"
+                        class="form-control mb-3"
+                        id="exampleFormControlInput1"
+                        placeholder="Region*"
+                      />
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <input
+                        type="text"
+                        class="form-control mb-3"
+                        id="exampleFormControlInput1"
+                        placeholder="Postal code*"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <p>Payment method</p>
+                <div class="row align-baseline gap-2 m">
+                  <div class="col-md-2 col-sm-4 payment-icon">
+                    <img src="../assets/visa-icon.svg" alt="" />
+                  </div>
+                  <div class="col-md-2 col-sm-4 payment-icon">
+                    <img src="../assets/maestro-icon.svg" alt="" />
+                  </div>
+                  <div class="col-md-2 col-sm-4 payment-icon">
+                    <img src="../assets/paypal-icon.svg" alt="" />
+                  </div>
+                  <div class="col-md-2 col-sm-4 payment-icon">
+                    <img src="../assets/gpay-icon.svg" alt="" />
+                  </div>
+                </div>
+                <div class="d-flex flex-nowrap justify-content-between mt-4">
+                  <p class="back">
+                    <i class="bx bx-left-arrow-alt"></i>Back to cart
+                  </p>
+                  <div
+                    class="d-flex justify-content-end align-items-center mb-5"
+                  >
+                    <button
+                      class="showbtn col-auto fw-bold px-lg-5 p-3 py-3 text-light"
+                    >
+                      Proceed Payment <i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- end checkout section -->
             </div>
           </div>
-          <div class="col-md-6 checkOutImg ">
-            <!-- <img
-              src="../assets/crew-1pJjYDJW5HM-unsplash.jpg"
-              class="img-fluid rounded-end checkOutImg"
-              alt="..."
-            /> -->
-          </div>
+          <div class="col-md-6 checkOutImg"></div>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+/* start stepper */
 .steps {
   margin-bottom: 2rem;
   position: relative;
@@ -43,7 +44,7 @@
 #progress::-webkit-progress-bar {
   background-color: gray;
 }
-
+/* end stepper */
 .checkOutImg {
   /* height: 100%; */
   background-image: url("../assets/abel-y-costa-jb-SMviXCjI-unsplash.jpg");
@@ -55,9 +56,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .checkOut-card {
   width: 80%;
   height: 80%;
 }
+/* start checkout section  */
+.payment-icon {
+  border: 1px solid black;
+}
+.payment-icon img {
+  width: 100%;
+  height: 100%;
+}
+.showbtn {
+  background-color: black;
+  border: none;
+  color: #fff;
+}
+.back {
+  cursor: pointer;
+}
+/* end checkout section  */
