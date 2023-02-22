@@ -14,10 +14,6 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="../css/checkOut.css" />
     <title>Document</title>
   </head>
@@ -25,11 +21,9 @@
     <div class="container checkOut-container">
       <div class="card mb-3 checkOut-card rounded-start">
         <div class="row g-0" style="height: 100%">
-          <div class="col-md-6 col-sm-12">
-            <!-------start Stepper ----------->
-
-            <div class="row m-5 mb-0">
-              <div class="container">
+          <div class="col-md-6 col-sm-12 checkOut-body">
+            <div class="row m-3">
+              <div class="container pb-0 mb-2">
                 <div class="accordion" id="accordionExample">
                   <div
                     class="steps d-flex justify-content-between align-items-center"
@@ -74,7 +68,63 @@
               </div>
             </div>
             <!-- End Stepper -->
+            <!-- start cart section -->
             <div class="card-body">
+              <div class="cart-section d-none">
+                <h5
+                  class="card-title mt-0 text-center mb-4"
+                  style="letter-spacing: 0.2rem"
+                >
+                  YOUR ORDER
+                </h5>
+                <hr />
+                <div class="card mb-3 cart-item">
+                  <div class="container">
+                    <div class="row g-0">
+                      <div class="col-sm-4">
+                        <img
+                          src="../assets/Beds/Apt2B.jpg"
+                          class="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="card-body product__details">
+                          <h5 class="card-title product__title">
+                            leather and wood Chair
+                          </h5>
+                          <p class="product__price">$149.99</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="card mb-3 cart-item">
+                  <div class="container">
+                    <div class="row g-0">
+                      <div class="col-sm-4">
+                        <img
+                          src="../assets/Beds/Apt2B.jpg"
+                          class="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="card-body product__details">
+                          <h5 class="card-title product__title">
+                            leather and wood Chair
+                          </h5>
+                          <p class="product__price">$149.99</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+              </div>
+              <!-- end cart section -->
+              <!-- ----------------------------- -->
               <!-- start checkout section -->
               <div class="checkout-section d-flex flex-column">
                 <p class="section-title h2">Checkout</p>
@@ -163,7 +213,17 @@
               <!-- end checkout section -->
             </div>
           </div>
-          <div class="col-md-6 checkOutImg"></div>
+
+          <!-- </div> -->
+          <!-- </div>
+          <-- <div class="col-md-6 checkOutImg"></div> -->
+          <div class="col-sm-12 col-md-6">
+            <img
+              src="../assets/Mirrors and decorations/abel-y-costa-jb-SMviXCjI-unsplash.jpg"
+              class="img-fluid checkOutImg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>

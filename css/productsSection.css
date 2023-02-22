@@ -58,13 +58,22 @@
   }
   70% {
     transform: scale(1);
+    box-shadow: 0 0 0 2px var(--offwhite);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 var(--offwhite);
+  }
+}
+/* 70% {
+    transform: scale(1);
     box-shadow: 0 0 0 2px #eae7b1;
   }
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 #eae7b1;
   }
-}
+} */
 
 .product-card .social {
   position: absolute;
@@ -100,13 +109,13 @@
 }
 
 .card-body {
-  background-color: #a6bb8d;
+  background-color: var(--darkeroffwhite);
 }
 .card-title {
   color: #293631 !important;
 }
 .card-text {
-  color: #3c6255;
+  color: var(--primary-color);
   font-weight: 500;
 }
 .showbtn {

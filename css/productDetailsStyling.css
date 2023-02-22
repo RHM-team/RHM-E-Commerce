@@ -1,5 +1,5 @@
 /* code use in many places */
-:root {
+/* :root {
   --clr-primary-cyan: hsl(158, 36%, 37%);
   --clr-primary-cyan-clicked: hsl(158, 36%, 20%);
   --clr-primary-cream: hsl(30, 38%, 92%);
@@ -10,8 +10,8 @@
   --ff-montserrat: 'Montserrat', sans-serif;
   --fw-regular: 500;
   --fw-bold: 700;
-
-}
+} */
+@import url("./root.css");
 
 .attribution {
   font-size: 11px;
@@ -127,7 +127,7 @@ body {
 .product__price{
   font-size: 2rem;
   font-weight: var(--fw-bold);
-  color: var(--clr-primary-cyan);
+  color: var(--primary-color);
 }
 .count__container{
   display: flex;
@@ -137,9 +137,9 @@ body {
   color: var(--clr-neutral-dark-grayish-blue);
 }
 .count__btn{
-  border:1px solid var(--clr-primary-cyan);
+  border:1px solid var(--primary-color);
   background-color: var(--clr-neutral-white);
-  color: var(--clr-primary-cyan);
+  color: var(--primary-color);
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
@@ -152,7 +152,7 @@ body {
   border-radius: 0rem 0.2rem 0.2rem 0rem;
 }
 .counter__text{
-  color: var(--clr-primary-cyan);
+  color: var(--primary-color);
     width:80px;
     font-size: 25px;
 }
@@ -164,7 +164,7 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--clr-neutral-white);
-  background-color: var(--clr-primary-cyan);
+  background-color: var(--primary-color);
   font-size: 0.95rem;
   font-weight: var(--fw-bold);
  border-style: none;
@@ -180,9 +180,10 @@ body {
 
 .add__button[data-icon="shopping-cart"]::before{
   content: " ";
-  width: 15px;
-  height:16px;
-  background-image:url("../images/icon-cart.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  height:20px;
+  background-image:url("../assets/icon-cart.svg");
  
 
 }
@@ -203,6 +204,6 @@ body {
     overflow: hidden;
   }
   .product__content { 
-    gap:1.3rem;
+    gap:1.2rem;
   }
 }

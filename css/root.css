@@ -1,0 +1,19 @@
+:root{
+    /* --clr-primary-cyan: hsl(158, 36%, 37%); */
+    --clr-primary-cyan-clicked: hsl(158, 36%, 20%);
+    --clr-primary-cream: hsl(30, 38%, 92%);
+    --clr-neutral-dark-blue: hsl(212, 21%, 14%);
+    --clr-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --ff-fraunces: 'Fraunces', serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    /* style */
+    
+    --primary-color: #3C6255;
+    --secondary-color: #61876E;
+    --darkeroffwhite:#A6BB8D;
+    --offwhite:#EAE7B1;
+}
