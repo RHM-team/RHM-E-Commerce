@@ -1,6 +1,17 @@
+:root{
+    --primary-color: #3C6255;
+    --secondary-color: #61876E;
+    --darkeroffwhite:#A6BB8D;
+    --offwhite:#EAE7B1;
+    --clr-primary-cream: hsl(30, 38%, 92%);
+}
+
 .steps {
   margin-bottom: 2rem;
   position: relative;
+}
+.step-title{
+    font-size: 0.6rem;
 }
 .step-button {
   width: 25px;
@@ -16,10 +27,10 @@
   color: #fff;
 }
 .cart-step {
-  background-color: black;
+  background-color: var(--primary-color);
 }
 .done {
-  background-color: black;
+  background-color:  var(--primary-color);
   color: #fff;
 }
 .step-item {
@@ -29,7 +40,7 @@
 #progress {
   -webkit-appearance: none;
   position: absolute;
-  width: 80%;
+  width: 86%;
   z-index: 5;
   top: 15px;
   height: 1.5px;
@@ -43,7 +54,9 @@
 #progress::-webkit-progress-bar {
   background-color: gray;
 }
+.checkOut-body{
 
+}
 .checkOutImg {
   /* height: 100%; */
   background-image: url("../assets/abel-y-costa-jb-SMviXCjI-unsplash.jpg");
@@ -52,6 +65,7 @@
   background-position: center;
 }
 .checkOut-container {
+    background-color: var(--clr-primary-cream);
   display: flex;
   justify-content: center;
   align-items: center;
