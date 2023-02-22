@@ -61,11 +61,11 @@ cursor: pointer;
     }
     70% {
       transform: scale(1);
-      box-shadow: 0 0 0 2px #EAE7B1;
+      box-shadow: 0 0 0 2px var(--offwhite);
     }
       100% {
       transform: scale(1);
-      box-shadow: 0 0 0 0 #EAE7B1;
+      box-shadow: 0 0 0 0 var(--offwhite);
     }
   }
 
@@ -103,13 +103,13 @@ cursor: pointer;
   }
 
 .card-body {
-    background-color: #A6BB8D;
+    background-color: var(--darkeroffwhite);
   }
 .card-title {
   color: #293631 !important;
 }
 .card-text{
-  color: #3C6255;
+  color: var(--primary-color);
   font-weight: 500;
 }
 .showbtn{
