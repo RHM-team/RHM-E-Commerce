@@ -1,0 +1,63 @@
+.steps {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.step-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color: #fff;
+  transition: 4s;
+}
+.step-button[aria-expanded="true"] {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+.cart-step {
+  background-color: black;
+}
+.done {
+  background-color: black;
+  color: #fff;
+}
+.step-item {
+  z-index: 10;
+  text-align: center;
+}
+#progress {
+  -webkit-appearance: none;
+  position: absolute;
+  width: 80%;
+  z-index: 5;
+  top: 15px;
+  height: 1.5px;
+  margin-left: 18px;
+  margin-bottom: 18px;
+}
+#progress::-webkit-progress-value {
+  background-color: black;
+  transition: 0.5s ease;
+}
+#progress::-webkit-progress-bar {
+  background-color: gray;
+}
+
+.checkOutImg {
+  /* height: 100%; */
+  background-image: url("../assets/abel-y-costa-jb-SMviXCjI-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.checkOut-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.checkOut-card {
+  width: 80%;
+  height: 80%;
+}
