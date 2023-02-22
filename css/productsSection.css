@@ -112,6 +112,10 @@ cursor: pointer;
   color: #3C6255;
   font-weight: 500;
 }
+.showbtn{
+  background-color: transparent;
+  border: none;
+}
 .showbtn:hover{
   background-color: rgba(0, 0, 0,0.25);
 }
