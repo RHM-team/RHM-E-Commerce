@@ -44,19 +44,43 @@ body {
   width: 90%;
   z-index: 5;
   top: 15px;
-  height: 1.5px;
+  height:0.2rem;
   margin-left: 18px;
   margin-bottom: 18px;
 }
 #progress::-webkit-progress-value {
-  background-color: black;
+  background-color: var(--primary-color);
   transition: 0.5s ease;
 }
 #progress::-webkit-progress-bar {
   background-color: gray;
 }
 /* start stepper */
+/*     */
+/* .section{
+  transition: 1s ease;
+  overflow: hidden;
+} */
+/* .test {
+  animation: slide 4s ease-in-out;
+}
 
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  
+  75% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+} */
+/**/
 .checkOut-container {
   margin-top: 3%;
 }
