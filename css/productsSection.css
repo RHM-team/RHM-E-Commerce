@@ -1,8 +1,8 @@
-:root{
---icon-color:#000;
---light-color:#eeeeee;
---lighter-color:#fcfcfc;
---dark-color:#555;
+:root {
+  --icon-color: #000;
+  --light-color: #eeeeee;
+  --lighter-color: #fcfcfc;
+  --dark-color: #555;
 }
 
 .products{
@@ -27,47 +27,74 @@
   cursor: pointer;
 }
 .product-card img {
-  display: block; 
+  display: block;
   border-radius: 0.4rem;
 }
-.bx-cart
-{
+.bx-cart {
   color: var(--icon-color);
 }
-.bx-cart{
+.bx-cart {
   cursor: pointer;
 }
-.favorite{
-    width: 20px;
-    height: 20px;
-    background-color: var(--lighter-color);
-    border-radius: 50%;
-    position: absolute; 
-    top:0;
-    right:0; 
-    cursor: pointer;
-    margin: 0.3rem;
+.favorite {
+  width: 20px;
+  height: 20px;
+  background-color: var(--lighter-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  margin: 0.3rem;
 }
 
-
 .product-card:hover {
-    animation: pulse 2s ; 
-  } 
- 
+  animation: pulse 2s;
+}
 
-  @keyframes pulse {
-    0% {
-      transform: scale(.85);
-    }
-    70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 2px #EAE7B1;
-    }
-      100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 #EAE7B1;
-    }
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
   }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px var(--offwhite);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 var(--offwhite);
+  }
+}
+/* 70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 2px #eae7b1;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 #eae7b1;
+  }
+} */
+
+.product-card .social {
+  position: absolute;
+  /* right: -100%; */
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.product-card .social i {
+  transition: color 0.3s;
+  color: rgba(55, 55, 63, 0.4);
+  margin: 20px 12px;
+  display: block;
+  line-height: 0;
+  text-align: center;
+  font-size: 18px;
+}
 
   .product-card .social {
     position: absolute;
@@ -90,16 +117,16 @@
   }
   
 .product-card .social i:hover {
-    color: var(--dark-color);
-    opacity: 0.9;
-  }
+  color: var(--dark-color);
+  opacity: 0.9;
+}
 .product-card:hover .social {
-    right: 8px;
-    opacity: 1;
-  }
-  .price{
-    color: var(--dark-color)
-  }
+  right: 8px;
+  opacity: 1;
+}
+.price {
+  color: var(--dark-color);
+}
 
 .card-body {
     background-color: white;
@@ -107,13 +134,14 @@
 .card-title {
   color: #293631 !important;
 }
-.card-text{
-  color: #3C6255;
+.card-text {
+  color: var(--primary-color);
   font-weight: 500;
 }
-.showbtn{
+.showbtn {
   background-color: transparent;
   border: none;
+  color: #fff;
 }
 .showbtn a{
   text-decoration: none;
