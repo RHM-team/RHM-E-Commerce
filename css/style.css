@@ -1,22 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-@import './navbar.css';
-@import url("./root.css");
-
-/* :root{
-    --primary-color: #3C6255;
-    --secondary-color: #61876E;
-    --darkeroffwhite:#A6BB8D;
-    --offwhite:#EAE7B1;
-} */
+@import url('./root.css');
+@import url('./navbar.css');
+@import url('./banner.css');
+@import url('./belowbanner.css');
+@import url('./productsSection.css');
 
 
 *{
     box-sizing: border-box;
     margin: 0%;
-    padding: 0%;
-    /* border: 1px solid red; */
-    
+    padding: 0%;  
 }
 
 body {
