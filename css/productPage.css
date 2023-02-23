@@ -1,0 +1,22 @@
+.productsPage{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+}
+.filter{
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.allproducts{
+    text-decoration: underline solid var(--secondary-color) 5px;
+    font-weight:bolder;
+}
+.card{
+    margin-bottom: 10%;
+}
+.product-desc{
+    font-size: small;
+}
+.product-card:hover{
+   cursor: pointer;
+}
