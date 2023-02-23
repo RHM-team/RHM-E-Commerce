@@ -50,7 +50,7 @@
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       ></button>
-                      <div class="step-title">Personal Details</div>
+                      <div class="step-title">Checkout</div>
                     </div>
                     <div class="step-item">
                       <button
@@ -70,7 +70,7 @@
             <!-- End Stepper -->
             <!-- start cart section -->
             <div class="card-body">
-              <div class="cart-section d-none">
+              <div class="cart-section">
                 <h5
                   class="card-title mt-0 text-center mb-4"
                   style="letter-spacing: 0.2rem"
@@ -122,22 +122,34 @@
                   </div>
                 </div>
                 <hr />
+                <div class="d-flex justify-content-end align-items-center mb-5">
+                  <button
+                    class="showbtn col-auto fw-bold px-lg-5 p-1 py-3 text-light"
+                  >
+                    Next <i class="bx bx-right-arrow-alt"></i>
+                  </button>
+                </div>
               </div>
               <!-- end cart section -->
               <!-- ----------------------------- -->
               <!-- start checkout section -->
-              <div class="checkout-section d-flex flex-column">
-                <p class="section-title h2">Checkout</p>
+              <div class="checkout-section d-flex flex-column d-none">
+                <h5
+                  class="card-title mt-0 text-center mb-4 section-title"
+                  style="letter-spacing: 0.2rem"
+                >
+                  CHECKOUT
+                </h5>
                 <p>Personal info</p>
                 <input
                   type="text"
-                  class="form-control mb-3"
+                  class="form-control mb-3 checkout-input"
                   id="exampleFormControlInput1"
                   placeholder="Full name(e.g Paul Joe)*"
                 />
                 <input
                   type="tel"
-                  class="form-control mb-3"
+                  class="form-control mb-3 checkout-input"
                   id="exampleFormControlInput1"
                   placeholder="Phone number*"
                 />
@@ -147,7 +159,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="City*"
                       />
@@ -155,7 +167,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="Country*"
                       />
@@ -165,7 +177,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="Region*"
                       />
@@ -173,7 +185,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="Postal code*"
                       />
@@ -213,16 +225,30 @@
               <!-- end checkout section -->
             </div>
           </div>
-
-          <!-- </div> -->
-          <!-- </div>
-          <-- <div class="col-md-6 checkOutImg"></div> -->
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 col-md-6 checkOutImg-section">
             <img
               src="../assets/Mirrors and decorations/abel-y-costa-jb-SMviXCjI-unsplash.jpg"
               class="img-fluid checkOutImg"
               alt=""
             />
+            <div class="summury-section">
+              <div class="card">
+                <h5
+                  class="card-header text-center"
+                  style="letter-spacing: 0.2rem"
+                >
+                  Your Order
+                </h5>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">
+                    With supporting text below as a natural lead-in to
+                    additional content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

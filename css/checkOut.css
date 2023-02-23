@@ -6,6 +6,7 @@ body {
   font-size: 0.89rem;
   background-color: var(--clr-primary-cream);
 }
+/* start stepper */
 .steps {
   margin-bottom: 2rem;
   position: relative;
@@ -18,20 +19,20 @@ body {
   height: 20px;
   border-radius: 50%;
   border: 1px solid gray;
-  background-color: #fff;
+  background-color: var(--clr-neutral-white);
   transition: 4s;
 }
 .step-button[aria-expanded="true"] {
   width: 25px;
   height: 25px;
-  color: #fff;
+  color: var(--clr-neutral-white);
 }
 .cart-step {
   background-color: var(--primary-color);
 }
 .done {
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--clr-neutral-white);
 }
 .step-item {
   z-index: 10;
@@ -40,7 +41,7 @@ body {
 #progress {
   -webkit-appearance: none;
   position: absolute;
-  width: 86%;
+  width: 90%;
   z-index: 5;
   top: 15px;
   height: 1.5px;
@@ -54,45 +55,56 @@ body {
 #progress::-webkit-progress-bar {
   background-color: gray;
 }
+/* start stepper */
+
 .checkOut-container {
   margin-top: 3%;
 }
 .checkOutImg {
   height: 100%;
-  /* background-image: url("../assets/Mirrors and decorations/abel-y-costa-jb-SMviXCjI-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
 }
 .checkOut-container {
   background-color: var(--clr-primary-cream);
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
-  /* height: 100%; */
 }
 .checkOut-card {
-  width: 80%;
+  width: 90%;
   height: 80%;
 }
+.section-title {
+  color: var(--primary-color);
+}
 /* start checkout section  */
+.checkout-input {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.checkout-input:focus {
+  border-color: var(--primary-color);
+}
 .payment-icon {
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
 }
 .payment-icon img {
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
 }
 .showbtn {
-  background-color: black;
+  background-color: var(--primary-color);
   border: none;
-  color: #fff;
+  color: var(--clr-neutral-white);
 }
 .back {
   cursor: pointer;
+  color: var(--primary-color);
 }
+
 /* end checkout section  */
+
+/* start cart section  */
 
 .cart-item {
   border: none !important;
@@ -148,3 +160,16 @@ body {
 .product__details {
   padding-top: 0px !important;
 }
+/* end cart section  */
+/* start image section */
+.checkOutImg-section {
+  position: relative;
+}
+.summury-section {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+}
+/* end image section */
