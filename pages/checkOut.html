@@ -21,7 +21,7 @@
     <div class="container checkOut-container">
       <div class="card mb-3 checkOut-card rounded-start">
         <div class="row g-0" style="height: 100%">
-          <div class="col-md-6 col-sm-12 checkOut-body p-3">
+          <div class="col-md-6 col-sm-12 checkOut-body p-3 ">
             <div class="row m-3 mb-0">
               <div class="container pb-0 mb-0">
                 <div class="accordion" id="accordionExample">
@@ -50,7 +50,7 @@
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       ></button>
-                      <div class="step-title">Personal Details</div>
+                      <div class="step-title">Checkout</div>
                     </div>
                     <div class="step-item">
                       <button
@@ -70,7 +70,7 @@
             <!-- End Stepper -->
             <!-- start cart section -->
             <div class="card-body">
-              <div class="cart-section d-none">
+              <div class="section cart-section">
                 <h5
                   class="card-title mt-0 text-center mb-4"
                   style="letter-spacing: 0.2rem"
@@ -122,22 +122,34 @@
                   </div>
                 </div>
                 <hr />
+                <div class="d-flex justify-content-end align-items-center mb-5">
+                  <button
+                    class="showbtn col-auto fw-bold px-lg-5 p-1 py-3 text-light"
+                  >
+                    Next <i class="bx bx-right-arrow-alt"></i>
+                  </button>
+                </div>
               </div>
               <!-- end cart section -->
               <!-- ----------------------------- -->
               <!-- start checkout section -->
-              <div class="checkout-section d-flex flex-column">
-                <p class="section-title h2">Checkout</p>
+              <div class="section checkout-section d-flex flex-column d-none">
+                <h5
+                  class="card-title mt-0 text-center mb-4 section-title"
+                  style="letter-spacing: 0.2rem"
+                >
+                  CHECKOUT
+                </h5>
                 <p>Personal info</p>
                 <input
                   type="text"
-                  class="form-control mb-3"
+                  class="form-control mb-3 checkout-input"
                   id="exampleFormControlInput1"
                   placeholder="Full name(e.g Paul Joe)*"
                 />
                 <input
                   type="tel"
-                  class="form-control mb-3"
+                  class="form-control mb-3 checkout-input"
                   id="exampleFormControlInput1"
                   placeholder="Phone number*"
                 />
@@ -147,7 +159,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="City*"
                       />
@@ -155,7 +167,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="Country*"
                       />
@@ -165,7 +177,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="Region*"
                       />
@@ -173,7 +185,7 @@
                     <div class="col-md-6 col-sm-12">
                       <input
                         type="text"
-                        class="form-control mb-3"
+                        class="form-control mb-3 checkout-input"
                         id="exampleFormControlInput1"
                         placeholder="Postal code*"
                       />
@@ -213,16 +225,76 @@
               <!-- end checkout section -->
             </div>
           </div>
-
-          <!-- </div> -->
-          <!-- </div>
-          <-- <div class="col-md-6 checkOutImg"></div> -->
-          <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 col-md-6 checkOutImg-section">
             <img
               src="../assets/products/decorations/image-3.jpg"
               class="img-fluid checkOutImg"
               alt=""
             />
+            <div class="summary-section">
+              <div class="card">
+                <h5
+                  class="card-title mt-3 mb-0 text-center"
+                  style="letter-spacing: 0.2rem"
+                >
+                  Your Order
+                </h5>
+                <hr />
+                <div class="card-body">
+                  <div class="container totalPrice-section w-100">
+                    <div class="row flex-nowrap justify-content-between w-75">
+                      <p>Subtotal:</p>
+                      <p>$25.00</p>
+                    </div>
+                    <div class="row flex-nowrap justify-content-between w-75">
+                      <p>Delivery:</p>
+                      <p>$2.75</p>
+                    </div>
+                    <div
+                      class="row flex-nowrap justify-content-between fs-6 fw-bold w-75"
+                    >
+                      <p>Total:</p>
+                      <p>$27.75</p>
+                    </div>
+                    <hr class="mb-0 mt-0" />
+                    <div class="count-elements">3 items</div>
+                    <div class="summary-element-imgs">
+                      <ul
+                        class="list-group list-group-flush list-group-horizontal gap-2"
+                      >
+                        <li
+                          class="list-group-item border-0 m-0 summary-element p-2"
+                        >
+                          <img
+                            class="summary-element-img"
+                            src="../assets/Mirrors and decorations/pexels-laura-the-explaura-10015480.jpg"
+                            alt=""
+                          />
+                        </li>
+                        <li
+                          class="list-group-item border-0 summary-element p-2"
+                        >
+                          <img
+                            class="summary-element-img"
+                            src="../assets/Mirrors and decorations/pexels-ylanite-koppens-1445416.jpg"
+                            alt=""
+                          />
+                        </li>
+                        <li
+                          class="list-group-item border-0 summary-element p-2"
+                        >
+                          <img
+                            class="summary-element-img"
+                            src="../assets/Mirrors and decorations/pexels-dominika-roseclay-2146109.jpg"
+                            alt=""
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -232,5 +304,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/checkout.js"></script>
   </body>
 </html>
