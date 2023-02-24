@@ -2,7 +2,7 @@
     "page": 5,
     "per_page": 5,
     "total": 25,
-    "chair": [
+    "chairs": [
         {
             "id": 1,
             "category": "chair",
@@ -49,7 +49,7 @@
             "sale": 8999.00
         }
     ],
-    "bed": [
+    "beds": [
         {
             "id": 6,
             "category": "bed",
