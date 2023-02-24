@@ -1,0 +1,241 @@
+{
+    "page": 5,
+    "per_page": 5,
+    "total": 25,
+    "chair": [
+        {
+            "id": 1,
+            "category": "chair",
+            "title": "leather and wood Chair",
+            "description": "Hot selling Cheap chair for the living room with white leather and a leg of high quality wood.",
+            "avatar": "./assets/products/chairs/image-1.avif",
+            "price": 2500.00,
+            "sale": 2000.00
+        },
+        {
+            "id": 2,
+            "category": "chair",
+            "title": "Modern Interior with Chairs",
+            "description": "modern chair with a unique design that we present can carry sophistication to space, making it appear comfy and visually appealing",
+            "avatar": "./assets/products/chairs/image-2.jpg",
+            "price": 10000.00,
+            "sale": 8900.00
+        },
+        {
+            "id": 3,
+            "category": "chair",
+            "title": "Wooden Chairs and a Round Table",
+            "description": "we adding comfort to your luxury interiors and beautifying your contemporary interior design set, these stunning furniture design pieces are an important decorative element",
+            "avatar": "./assets/products/chairs/image-4.jpg",
+            "price": 9999.0,
+            "sale": 8900.0
+        },
+        {
+            "id": 4,
+            "category": "chair",
+            "title": "Two Black Wooden Bar Stools",
+            "description": "was carefully developed to enhance your dining experience, providing you with the best quality seating solutions.",
+            "avatar": "./assets/products/chairs/image-8.jpg",
+            "price": 8000.00,
+            "sale": 7500.00
+        },
+        {
+            "id": 5,
+            "category": "chair",
+            "title": "Gray Chair With Metal Legs",
+            "description": "Handsomely crafted from solid brass, this modern chair combining an avant-garde approach with classic and emblematic lines.",
+            "avatar": "./assets/products/chairs/image-6.jpg",
+            "price": 9999.00,
+            "sale": 8999.00
+        }
+    ],
+    "bed": [
+        {
+            "id": 6,
+            "category": "bed",
+            "title": "Well-lit Bedroom",
+            "description": "simple and elegant decorating. A seating area or just a bench with soft cushions.",
+            "avatar": "./assets/products/beds/image-1.jpg",
+            "price": 21000.00,
+            "sale": 20000.00
+        },
+        {
+            "id": 7,
+            "category": "bed",
+            "title": "Brown Bed and White Mattress",
+            "description": "Wooden bedroom furniture in contemporary style, the wood ,  furniture design, natural and relaxing room colors are modern design trends.",
+            "avatar": "./assets/products/beds/image-6.jpg",
+            "price": 25000.00,
+            "sale": 25000.00
+        },
+        {
+            "id": 8,
+            "category": "bed",
+            "title": "Single Beds Like a Hotel Room",
+            "description": "Prepared like the design of hotel rooms in order to accommodate more than one person and give you a modern feel.",
+            "avatar": "./assets/products/beds/image-5.jpg",
+            "price": 15000.0,
+            "sale": 15000.0
+        },
+        {
+            "id": 9,
+            "category": "bed",
+            "title": "White bed with mattress",
+            "description": "The bedroom has a comfortable and modern feel, with mattresses and pillows with cover.",
+            "avatar": "./assets/products/beds/image-4.jpg",
+            "price": 29999.00,
+            "sale": 29000.00
+        },
+        {
+            "id": 10,
+            "category": "bed",
+            "title": "Bed With Metal Legs",
+            "description": "A bed with metal legs in a modern design for a large room. The leg contains rubber to secure the bed to the ground.",
+            "avatar": "./assets/products/beds/image-2.jpg",
+            "price": 25000.00,
+            "sale": 24500.00
+        }
+    ],
+    "mirrors": [
+        {
+            "id": 11,
+            "category": "mirrors",
+            "title": "Framed Mirrors Above a Fireplace",
+            "description": "A Reclaimed Wood frame Our talented designers used it to create this stunning, functional, extremely durable, and environmentally friendly piece of accessories. ",
+            "avatar": "./assets/products/decorations/image-11.jpg",
+            "price": 500.00,
+            "sale": 500.00
+        },
+        {
+            "id": 12,
+            "category": "mirrors",
+            "title": "Rectangle Wall Hanging Mirror",
+            "description": "Perfect for home,This product will be an excellent pick for you,Easy installation, and Comes in a proper and secure packaging.",
+            "avatar": "./assets/products/decorations/image-9.jpg",
+            "price": 700.00,
+            "sale": 650.00
+        },
+        {
+            "id": 13,
+            "category": "mirrors",
+            "title": "Mirror With White Frame",
+            "description": "Made of mirrored mirrored glass, this mirror wrapped in an engineered wood frame is versatile for many spaces.",
+            "avatar": "./assets/products/decorations/image-8.jpg",
+            "price": 650.0,
+            "sale": 650.0
+        },
+        {
+            "id": 14,
+            "category": "mirrors",
+            "title": "Mirror With Black Frame",
+            "description": "Perfect whether you want to hang it on the wall or place it next to your dresser, this mirror can be used both horizontally and vertically.",
+            "avatar": "./assets/products/decorations/image-6.jpg",
+            "price": 650.00,
+            "sale": 650.00
+        },
+        {
+            "id": 15,
+            "category": "mirrors",
+            "title": "Bathroom Mirror",
+            "description": "We are making a product with good quality so that we can fulfill our customer needs.You Can Use It As Wall Mirror Or Bathroom Mirror Unique Gift for your loved ones on special occasions such as house warming ceremony and festivals.",
+            "avatar": "./assets/products/decorations/image-5.jpg",
+            "price": 450.00,
+            "sale": 400.00
+        }
+    ],
+    "sofas": [
+        {
+            "id": 16,
+            "category": "sofas",
+            "title": "3 Seater Sofa",
+            "description": "3-Seat Section, Safe to use, Make addition to your home, Easy store and Well packaged.",
+            "avatar": "./assets/products/sofas/image-1.jpg",
+            "price": 5000.00,
+            "sale": 5000.00
+        },
+        {
+            "id": 17,
+            "category": "sofas",
+            "title": "brown Mechanical Sofa",
+            "description": "A sweet and heavy material that is not tiring and comfortable in the base, and the bed comes with nuts to install the armrests of the sofa. And its packaging is sweet, and it comes with two pillows, which are very uncertain about their color.",
+            "avatar": "./assets/products/sofas/image-3.jpg",
+            "price": 7000.00,
+            "sale": 6500.00
+        },
+        {
+            "id": 18,
+            "category": "sofas",
+            "title": "Old Bexley Sofa",
+            "description": "Sofa Bed Chaise Wood Mechanical Beech Iron Jajour Mens Acrylic Ivory Sofa.",
+            "avatar": "./assets/products/sofas/image-6.jpg",
+            "price": 6500.0,
+            "sale": 6500.0
+        },
+        {
+            "id": 19,
+            "category": "sofas",
+            "title": "Collins Sofa | Beige",
+            "description": "Beige polyester fabric upholstery Solid rubber wood frame Machine washable covers Dense foam padded cushions Mid-century modern style.",
+            "avatar": "./assets/products/sofas/image-2.jpg",
+            "price": 10000.00,
+            "sale": 10000.00
+        },
+        {
+            "id": 20,
+            "category": "sofas",
+            "title": "Brown Velvet Sofa",
+            "description": "Contemporary chocolate brown velvet sofa with chrome plated rectangular legs, two seat cushions, a button tufted back, and two matching throw pillows.",
+            "avatar": "./assets/products/sofas/image-5.jpg",
+            "price": 8000.00,
+            "sale": 8000.00
+        }
+    ],
+    "tables": [
+        {
+            "id": 21,
+            "category": "tables",
+            "title": "White and Black Desk",
+            "description": "This sturdy desk is guaranteed to outlast years of coffee and hard work. You get a generous work surface and a clever solution to keep cables in place underneath.",
+            "avatar": "./assets/products/tables/image-2.jpg",
+            "price": 3000.00,
+            "sale": 3000.00
+        },
+        {
+            "id": 22,
+            "category": "tables",
+            "title": "white table with black legs",
+            "description": "Mix and match your choice of table top and legs – or choose this ready-made combination. Strong and light-weight, made with a technique that uses less raw materials, reducing the impact on the environment.",
+            "avatar": "./assets/products/tables/image-1.jpg",
+            "price": 7000.00,
+            "sale": 6500.00
+        },
+        {
+            "id": 23,
+            "category": "tables",
+            "title": "Modern Dining Table",
+            "description": "HANDMADE SOLID WOODEN DINING TABLE WITH 6 CUSHION CHAIR SET !.",
+            "avatar": "./assets/products/tables/image-4.jpg",
+            "price": 34500.0,
+            "sale": 34000.0
+        },
+        {
+            "id": 24,
+            "category": "tables",
+            "title": "Modern White Desk ",
+            "description": "Brand: Solid MDF the color is white Height (cm): 75 Width (cm): 50 Material: Melamine Adjustable table: no",
+            "avatar": "./assets/products/tables/image-5.jpg",
+            "price": 2000.00,
+            "sale": 1999.00
+        },
+        {
+            "id": 25,
+            "category": "tables",
+            "title": "Brown Wooden Sideboard",
+            "description": "METOD  system gives you endless possibilities to design your dream. Paired with dark brown SINARP fronts with solid wood edging, you get a design that is full of character and fine detail.",
+            "avatar": "./assets/products/tables/image-6.jpg",
+            "price": 8000.00,
+            "sale": 7500.00
+        }
+    ]
+
+}
