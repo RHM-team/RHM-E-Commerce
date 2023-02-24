@@ -167,7 +167,8 @@ body {
 
 /* start cart section  */
 .cart-section {
-  overflow-y: auto; height:510px;
+  overflow-y: auto; 
+  height:510px;
 }
 .cart-item {
   border: none !important;
