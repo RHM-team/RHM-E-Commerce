@@ -31,7 +31,8 @@ function goPrev() {
 function progressBehave() {
   progress.setAttribute("value", (curStep * 100) / (stepButtons.length - 1));
   stepButtons[curStep].classList.add("done");
-  stepButtons[curStep - 1].firstElementChild.classList.remove("d-none");
+  if (stepButtons[curStep - 1])
+    stepButtons[curStep - 1].firstElementChild.classList.remove("d-none");
   stepButtons[curStep].setAttribute("aria-expanded", true);
   Array.from(stepButtons)
     .filter((_, i) => i != curStep)
@@ -51,7 +52,7 @@ Array.from(next).forEach((nextBtu) => {
 Array.from(prev).forEach((prevBtu) => {
   prevBtu.addEventListener("click", (e) => {
     let prevSection = e.target.closest(".section").previousElementSibling;
-    console.log(prevSection);
+    // console.log(prevSection);
     e.target.closest(".section").classList.add("d-none");
     prevSection.classList.remove("d-none");
     summarySection.classList.add("d-none");
