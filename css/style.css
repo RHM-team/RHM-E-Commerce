@@ -152,3 +152,11 @@ body {
     opacity:0;
     transform: translateY(8rem);
 }
+
+/* modal */
+ .modal-content {
+    background-color: transparent;
+ }
+ #textarea,#contactInput:focus{
+    outline: none;
+ }
