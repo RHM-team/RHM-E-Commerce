@@ -22,6 +22,17 @@ body {
   background-color: var(--clr-neutral-white);
   transition: 4s;
 }
+.bx-check{
+  color: var(--clr-primary-cream);
+}
+.bx-x{
+  color: var(--primary-color);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.bx-x:hover{
+  transform: scale(1.5) rotate(180deg);
+}
 .step-button[aria-expanded="true"] {
   width: 25px;
   height: 25px;
@@ -53,7 +64,7 @@ body {
   transition: 0.5s ease;
 }
 #progress::-webkit-progress-bar {
-  background-color: gray;
+  background-color: var(--clr-primary-cream);
 }
 /* start stepper */
 /*     */
@@ -66,26 +77,6 @@ body {
   /* height: 60vh; */
   /* height: 100%; */
 }
-/* .test {
-  animation: slide 4s ease-in-out;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
-  
-  75% {
-    transform: translateX(-25%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-} */
-/**/
 .checkOut-container {
   margin-top: 3%;
 }
@@ -126,9 +117,23 @@ body {
   height: 30px;
 }
 .showbtn {
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color);
   border: none;
+  color: var(--clr-neutral-white); */
+  cursor: pointer;
+  text-decoration: none;
+  gap: 0.8rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   color: var(--clr-neutral-white);
+  background-color: var(--primary-color);
+  font-size: 0.95rem;
+  font-weight: var(--fw-bold);
+ border-style: none;
+  border-radius: 0.5rem;
+
+  padding: 0.5rem ;
 }
 .back {
   cursor: pointer;
@@ -195,6 +200,9 @@ body {
 }
 .product__details {
   padding-top: 0px !important;
+}
+.quantityBtn{
+  cursor: pointer;
 }
 /* end cart section  */
 /* start image section */
