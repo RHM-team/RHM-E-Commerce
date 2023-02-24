@@ -3,20 +3,20 @@ const progress = document.querySelector("#progress");
 const next = document.querySelectorAll(".showbtn");
 const prev = document.querySelectorAll(".back");
 const summarySection = document.querySelector(".summary-section");
-Array.from(stepButtons).forEach((button, index) => {
-  button.addEventListener("click", () => {
-    progress.setAttribute("value", (index * 100) / (stepButtons.length - 1)); //there are 3 buttons. 2 spaces.
+// Array.from(stepButtons).forEach((button, index) => {
+//   button.addEventListener("click", () => {
+//     progress.setAttribute("value", (index * 100) / (stepButtons.length - 1)); //there are 3 buttons. 2 spaces.
 
-    stepButtons.forEach((item, secindex) => {
-      if (index > secindex) {
-        item.classList.add("done");
-      }
-      if (index < secindex) {
-        item.classList.remove("done");
-      }
-    });
-  });
-});
+//     stepButtons.forEach((item, secindex) => {
+//       if (index > secindex) {
+//         item.classList.add("done");
+//       }
+//       if (index < secindex) {
+//         item.classList.remove("done");
+//       }
+//     });
+//   });
+// });
 curStep = 0;
 function goNext() {
   if (curStep < stepButtons.length) {
