@@ -21,7 +21,7 @@
     <div class="container checkOut-container">
       <div class="card mb-3 checkOut-card rounded-start">
         <div class="row g-0" style="height: 100%">
-          <div class="col-md-6 col-sm-12 checkOut-body p-3 ">
+          <div class="col-md-6 col-sm-12 checkOut-body p-3">
             <div class="row m-3 mb-0">
               <div class="container pb-0 mb-0">
                 <div class="accordion" id="accordionExample">
@@ -31,36 +31,42 @@
                     <progress id="progress" value="0" max="100"></progress>
                     <div class="step-item">
                       <button
-                        class="step-button text-center cart-step"
+                        class="step-button text-center cart-step d-flex justify-content-center align-items-center"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
                         aria-expanded="true"
                         aria-controls="collapseOne"
-                      ></button>
+                      >
+                        <i class="bx bx-check d-none"></i>
+                      </button>
                       <div class="step-title">Cart</div>
                     </div>
 
                     <div class="step-item">
                       <button
-                        class="step-button text-center"
+                        class="step-button text-center d-flex justify-content-center align-items-center"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
                         aria-expanded="false"
                         aria-controls="collapseOne"
-                      ></button>
+                      >
+                        <i class="bx bx-check d-none"></i>
+                      </button>
                       <div class="step-title">Checkout</div>
                     </div>
                     <div class="step-item">
                       <button
-                        class="step-button text-center"
+                        class="step-button text-center d-flex justify-content-center align-items-center"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapseOne"
                         aria-expanded="false"
                         aria-controls="collapseOne"
-                      ></button>
+                      >
+                        <i class="bx bx-check d-none"></i>
+                      </button>
                       <div class="step-title">Checkout</div>
                     </div>
                   </div>
@@ -93,7 +99,20 @@
                           <h5 class="card-title product__title">
                             leather and wood Chair
                           </h5>
-                          <p class="product__price">$149.99</p>
+                          <div
+                            class="d-flex align-items-baseline justify-content-between"
+                          >
+                            <p class="product__price">$149.99</p>
+                            <i class="bx bx-x"></i>
+                          </div>
+                          <div
+                            class="d-flex align-items-baseline justify-content-between"
+                          >
+                            <p>Quantity</p>
+                            <i class="bx bx-chevron-left quantityBtn"></i>
+                            <p class="product__quantity">1</p>
+                            <i class="bx bx-chevron-right quantityBtn"></i>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -115,19 +134,39 @@
                           <h5 class="card-title product__title">
                             leather and wood Chair
                           </h5>
-                          <p class="product__price">$149.99</p>
+                          <div
+                            class="d-flex align-items-baseline justify-content-between"
+                          >
+                            <p class="product__price">$149.99</p>
+                            <i class="bx bx-x"></i>
+                          </div>
+                          <div
+                            class="d-flex align-items-baseline justify-content-between"
+                          >
+                            <p>Quantity</p>
+                            <i class="bx bx-chevron-left quantityBtn"></i>
+                            <p class="product__quantity">1</p>
+                            <i class="bx bx-chevron-right quantityBtn"></i>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
-                <div class="d-flex justify-content-end align-items-center mb-5">
-                  <button
-                    class="showbtn col-auto fw-bold px-lg-5 p-1 py-3 text-light"
+                <div class="d-flex flex-nowrap justify-content-between mt-4">
+                  <p class="back">
+                    <i class="bx bx-left-arrow-alt"></i>Back to shop
+                  </p>
+                  <div
+                    class="d-flex justify-content-end align-items-center mb-5"
                   >
-                    Next <i class="bx bx-right-arrow-alt"></i>
-                  </button>
+                    <button
+                      class="showbtn col-auto fw-bold px-lg-5 p-1 py-3 text-light"
+                    >
+                      Checkout<i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
               <!-- end cart section -->
@@ -227,11 +266,11 @@
           </div>
           <div class="col-sm-12 col-md-6 checkOutImg-section">
             <img
-              src="../assets/products/decorations/image-3.jpg"
+              src="../assets/products/decorations/image-1.jpg"
               class="img-fluid checkOutImg"
               alt=""
             />
-            <div class="summary-section">
+            <div class="summary-section d-none">
               <div class="card">
                 <h5
                   class="card-title mt-3 mb-0 text-center"
