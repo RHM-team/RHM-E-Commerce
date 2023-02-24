@@ -21,7 +21,7 @@
     <div class="container checkOut-container">
       <div class="card mb-3 checkOut-card rounded-start">
         <div class="row g-0" style="height: 100%">
-          <div class="col-md-6 col-sm-12 checkOut-body p-3">
+          <div class="col-md-6 col-sm-12 checkOut-body p-3 h-100">
             <div class="row m-3 mb-0">
               <div class="container pb-0 mb-0">
                 <div class="accordion" id="accordionExample">
@@ -67,7 +67,7 @@
                       >
                         <i class="bx bx-check d-none"></i>
                       </button>
-                      <div class="step-title">Checkout</div>
+                      <div class="step-title">Payment</div>
                     </div>
                   </div>
                 </div>
@@ -75,7 +75,7 @@
             </div>
             <!-- End Stepper -->
             <!-- start cart section -->
-            <div class="card-body">
+            <div class="card-body card-body-details">
               <div class="section cart-section">
                 <h5
                   class="card-title mt-0 text-center mb-4"
@@ -262,6 +262,63 @@
                 </div>
               </div>
               <!-- end checkout section -->
+              <!-- start Payment section -->
+              <div
+                class="section payment-section d-flex flex-column d-none align-items-center"
+              >
+                <div class="visa-image">
+                  <img src="../assets/Visa_Card.png" alt="" class="w-100" />
+                </div>
+                <div class="visa-info mt-2">
+                  <input
+                    type="text"
+                    class="mb-3 visa-input col-sm-12 rounded-2 p-2"
+                    id="exampleFormControlInput1"
+                    placeholder="CARD NUMBER"
+                  />
+                  <input
+                    type="text"
+                    class="mb-3 visa-input col-sm-12 rounded-2 p-2"
+                    id="exampleFormControlInput1"
+                    placeholder="CARDHOLDER NAME"
+                  />
+                  <div class="row gap-2 form-control visa-info-details">
+                    <input
+                      type="text"
+                      class="mb-3 visa-input col-sm-4 rounded-2 p-2"
+                      id="exampleFormControlInput1"
+                      placeholder="MM"
+                    />
+                    <input
+                      type="text"
+                      class="mb-3 visa-input col-sm-4 rounded-2 p-2"
+                      id="exampleFormControlInput1"
+                      placeholder="YY"
+                    />
+                    <input
+                      type="text"
+                      class="mb-3 visa-input col-sm-4 rounded-2 p-2"
+                      id="exampleFormControlInput1"
+                      placeholder="CVV"
+                    />
+                  </div>
+                  <div class="d-flex flex-nowrap justify-content-between mt-4">
+                    <p class="back">
+                      <i class="bx bx-left-arrow-alt"></i>Back to checkout
+                    </p>
+                    <div
+                      class="d-flex justify-content-end align-items-center mb-5"
+                    >
+                      <button
+                        class="showbtn col-auto fw-bold px-lg-5 p-3 py-3 text-light"
+                      >
+                        PUY NOW<i class="bx bx-right-arrow-alt"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end Payment section -->
             </div>
           </div>
           <div class="col-sm-12 col-md-6 checkOutImg-section">
