@@ -1,79 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The RHM Store | Products</title>
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-    crossorigin="anonymous"
-  />
-  <link
-    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/productPage.css">
-</head>
-<body>
-
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/productPage.css" />
+  </head>
+  <body>
     <!------------Products Page Container------------>
     <div class="all container-fluid">
-        <!------------NavBar------------>
-        <div class="row">
-          <nav
-            class="navbar fixed-top navbar-expand-md justify-content-center bg-dark py-md-2"
-          >
-            <div class="container-fluid">
-              <button
-                class="navbar-toggler p-1 rounded-2 ms-auto bg-light"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+      <!------------NavBar------------>
+      <div class="row">
+        <nav
+          class="navbar fixed-top navbar-expand-md justify-content-center bg-dark py-md-2"
+        >
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler p-1 rounded-2 ms-auto bg-light"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarNav"
+            >
+              <!--Buttons Section-->
+              <div class="col-12 col-md-4 d-md-flex justify-content-md-start">
+                <div class="col-12 d-md-flex justify-content-md-evenly">
+                  <a
+                    class="col-12 col-md-auto nav-link active d-block d-md-flex align-items-md-center text-light text-center my-sm-3 my-md-0"
+                    aria-current="page"
+                    href="#product"
+                    >OUR PRODUCT</a
+                  >
+                  <a
+                    class="col-12 col-md-auto nav-link d-block d-md-flex align-items-md-center text-secondary text-center link-light my-sm-3 my-md-0"
+                    href="#about"
+                    >ABOUT</a
+                  >
+                  <a
+                    class="col-12 col-md-auto nav-link d-block d-md-flex align-items-md-center text-secondary text-center link-light my-sm-3 my-md-0"
+                    href="#contact"
+                    >CONTACT US</a
+                  >
+                </div>
+              </div>
+              <!--End of Buttons Section-->
+
+              <!--Logo Section-->
+              <a
+                class="col-md-4 nav-link justify-content-center d-none d-md-flex mt-2"
+                href="/index.html"
+                style="z-index: 100"
               >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div
-                class="collapse navbar-collapse justify-content-between"
-                id="navbarNav"
-              >
-                <!--Buttons Section-->
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-start">
-                  <div class="col-12 d-md-flex justify-content-md-evenly">
-                    <a
-                      class="col-12 col-md-auto nav-link active d-block d-md-flex align-items-md-center text-light text-center my-sm-3 my-md-0"
-                      aria-current="page"
-                      href="#product"
-                      >OUR PRODUCT</a
-                    >
-                    <a
-                      class="col-12 col-md-auto nav-link d-block d-md-flex align-items-md-center text-secondary text-center link-light my-sm-3 my-md-0"
-                      href="#about"
-                      >ABOUT</a
-                    >
-                    <a
-                      class="col-12 col-md-auto nav-link d-block d-md-flex align-items-md-center text-secondary text-center link-light my-sm-3 my-md-0"
-                      href="#contact"
-                      >CONTACT US</a
-                    >
+                <div class="cube">
+                  <div class="top"></div>
+                  <div>
+                    <span style="--i: 0">
+                      <h2>RHM</h2>
+                      <h2>RHM</h2>
+                    </span>
+                    <span style="--i: 1">
+                      <h2>RHM</h2>
+                      <h2>RHM</h2>
+                    </span>
+                    <span style="--i: 2">
+                      <h2>RHM</h2>
+                      <h2>RHM</h2>
+                    </span>
+                    <span style="--i: 3">
+                      <h2>RHM</h2>
+                      <h2>RHM</h2>
+                    </span>
                   </div>
                 </div>
-                <!--End of Buttons Section-->
-  
-                <!--Logo Section-->
-                <a
-                  class="col-md-4 nav-link justify-content-center d-none d-md-flex mt-2"
-                  href="#logo" style="z-index: 100;"
+              </a>
+              <!--End of Logo Section-->
+
+              <!--Registeration Buttons Section-->
+              <div class="col-12 col-md-4 d-md-flex justify-content-md-end">
+                <div class="col-md-12 d-md-flex justify-content-md-evenly">
+                  <a
+                    class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0"
+                  >
+                    <button
+                      class="btn btn-dark col-4 col-md-auto fw-bold px-lg-5 rounded-5 border-light"
+                    >
+                      LogIn
+                    </button>
+                  </a>
+                  <a
+                    class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0"
+                  >
+                    <button
+                      class="btn btn-light col-4 col-md-auto fw-bold px-lg-5 rounded-5"
+                    >
+                      Sign Up
+                    </button>
+                  </a>
+                  <a
+                    class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0"
+                  >
+                    <img
+                      id="cart-icon"
+                      src="../assets/icons/icon-cart.svg"
+                      alt="cart"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!--End of Registeration Buttons Section-->
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--End of NavBar Section-->
+
+      <!------------Products Section---------->
+      <div id="product" class="productsPage">
+        <div class="container">
+          <!--Filter Section-->
+          <div class="filter my-5 d-flex justify-content-center">
+            <div
+              class="col-12 col-sm-11 col-md-8 col-lg-6 d-flex justify-content-between"
+            >
+              <div class="allproducts">All</div>
+              <div>Tables</div>
+              <div>Chairs</div>
+              <div>Beds</div>
+              <div>Decorations</div>
+              <div>Sofas</div>
+            </div>
+          </div>
+          <!--End of Filter Section-->
+
+          <!--Products Cards-->
+          <div
+            class="productsCard row justify-content-center justify-content-md-evenly"
+          >
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+
+            <!--Card Style-->
+            <div class="col-10 col-sm-8 col-md-4 col-lg-3">
+              <div class="col-12 card product-card">
+                <div class="card-body">
+                  <img
+                    src="../assets/products/chairs/image-1.avif"
+                    class="card-img-top mb-3"
+                    alt="Image"
+                    height="220vh"
+                    style="border-radius: 5%"
+                  />
+                  <div class="social">
+                    <i class="bx bx-heart"></i>
+                    <i class="bx bx-cart"></i>
+                  </div>
+                  <h5 class="card-title">Valvet Dinning Chair</h5>
+                  <p class="card-text product-desc">
+                    Leisure Armrest Chairs Upholstered with Backrest, Metal Legs
+                    Bracket, for Living Room Kitchen and Breakfast Armchair
+                  </p>
+                </div>
+                <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
+                <div
+                  class="card-body d-flex justify-content-between"
+                  style="margin-top: -6%"
+                >
+                  <div
+                    class="d-flex justify-content-between align-items-lg-baseline"
+                  >
+                    <i class="bx bx-money"></i>
+                    <p class="card-text price"><span>$</span>60.00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End of Card Style-->
+          </div>
+          <!--End of Products Cards-->
+        </div>
+      </div>
+      <!-------End of Products Section-------->
+
+      <!------------Footer------------>
+      <div class="row mb-0">
+        <footer class="bg-dark text-center text-lg-start text-white">
+          <!-- Grid container -->
+          <div class="container p-4">
+            <!--Grid row-->
+            <div class="row my-4">
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div
+                  class="rounded-circle bg-dark shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+                  style="width: 150px; height: 150px"
                 >
                   <div class="cube">
                     <div class="top"></div>
@@ -96,500 +498,126 @@
                       </span>
                     </div>
                   </div>
-                </a>
-                <!--End of Logo Section-->
-  
-                <!--Registeration Buttons Section-->
-                <div class="col-12 col-md-4 d-md-flex justify-content-md-end">
-                  <div class="col-md-12 d-md-flex justify-content-md-evenly">
-                    <a
-                      class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0"
-                    >
-                      <button
-                        class="btn btn-dark col-4 col-md-auto fw-bold px-lg-5 rounded-5 border-light"
-                      >
-                        LogIn
-                      </button>
+                </div>
+                <p class="text-center"><em>"Think outside the box"</em></p>
+                <ul
+                  class="list-unstyled d-flex flex-row justify-content-center"
+                >
+                  <li>
+                    <a class="text-white px-2" href="#!">
+                      <i class="fab fa-facebook-square"></i>
                     </a>
-                    <a
-                      class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0"
-                    >
-                      <button
-                        class="btn btn-light col-4 col-md-auto fw-bold px-lg-5 rounded-5"
-                      >
-                        Sign Up
-                      </button>
+                  </li>
+                  <li>
+                    <a class="text-white px-2" href="#!">
+                      <i class="fab fa-instagram"></i>
                     </a>
-                    <a
-                      class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0"
-                    >
-                      <img
-                        id="cart-icon"
-                        src="../assets/icons/icon-cart.svg"
-                        alt="cart"
-                      />
+                  </li>
+                  <li>
+                    <a class="text-white ps-2" href="#!">
+                      <i class="fab fa-youtube"></i>
                     </a>
-                  </div>
-                </div>
-                <!--End of Registeration Buttons Section-->
+                  </li>
+                </ul>
               </div>
-            </div>
-          </nav>
-        </div>
-        <!--End of NavBar Section-->
-         
-        <!------------Products Section---------->
-        <div id="product" class="productsPage">
-            <div class="container">
-              <!--Filter Section-->
-              <div class="filter my-5 d-flex justify-content-center">
-                    <div class="col-12 col-sm-11 col-md-8 col-lg-6 d-flex justify-content-between">
-                        <div class="allproducts">All</div>
-                        <div>Tables</div>
-                        <div>Chairs</div>
-                        <div>Beds</div>
-                        <div>Decorations</div>
-                        <div>Sofas</div>
-                    </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div id="about" class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">About US</h5>
+                <q
+                  ><i
+                    >Hi, We are RHM. <br />
+                    We began with a simple vision where we aim to offer our
+                    customers</i
+                  ></q
+                >
               </div>
-              <!--End of Filter Section-->
-              
-              <!--Products Cards-->
-              <div class="productsCard row justify-content-center justify-content-md-evenly">
+              <!--Grid column-->
 
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                    <div class="col-12 card product-card">
-                      <div class="card-body">
-                        <img
-                          src="../assets/products/chairs/image-1.avif"
-                          class="card-img-top mb-3"
-                          alt="Image"
-                          height="220vh"
-                          style="border-radius: 5%"
-                        />
-                        <div class="social">
-                          <i class="bx bx-heart"></i>
-                          <i class="bx bx-cart"></i>
-                        </div>
-                        <h5 class="card-title">Valvet Dinning Chair</h5>
-                        <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                      </div>
-                      <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                      <div
-                        class="card-body d-flex justify-content-between"
-                        style="margin-top: -6%"
-                      >
-                          <div
-                              class="d-flex justify-content-between align-items-lg-baseline"
-                          >
-                              <i class="bx bx-money"></i>
-                              <p class="card-text price"><span>$</span>60.00</p>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                <!--End of Card Style--> 
-
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                  <div class="col-12 card product-card">
-                    <div class="card-body">
-                      <img
-                        src="../assets/products/chairs/image-1.avif"
-                        class="card-img-top mb-3"
-                        alt="Image"
-                        height="220vh"
-                        style="border-radius: 5%"
-                      />
-                      <div class="social">
-                        <i class="bx bx-heart"></i>
-                        <i class="bx bx-cart"></i>
-                      </div>
-                      <h5 class="card-title">Valvet Dinning Chair</h5>
-                      <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                    </div>
-                    <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                    <div
-                      class="card-body d-flex justify-content-between"
-                      style="margin-top: -6%"
-                    >
-                        <div
-                            class="d-flex justify-content-between align-items-lg-baseline"
-                        >
-                            <i class="bx bx-money"></i>
-                            <p class="card-text price"><span>$</span>60.00</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--End of Card Style--> 
-
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                  <div class="col-12 card product-card">
-                    <div class="card-body">
-                      <img
-                        src="../assets/products/chairs/image-1.avif"
-                        class="card-img-top mb-3"
-                        alt="Image"
-                        height="220vh"
-                        style="border-radius: 5%"
-                      />
-                      <div class="social">
-                        <i class="bx bx-heart"></i>
-                        <i class="bx bx-cart"></i>
-                      </div>
-                      <h5 class="card-title">Valvet Dinning Chair</h5>
-                      <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                    </div>
-                    <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                    <div
-                      class="card-body d-flex justify-content-between"
-                      style="margin-top: -6%"
-                    >
-                        <div
-                            class="d-flex justify-content-between align-items-lg-baseline"
-                        >
-                            <i class="bx bx-money"></i>
-                            <p class="card-text price"><span>$</span>60.00</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--End of Card Style--> 
-
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                  <div class="col-12 card product-card">
-                    <div class="card-body">
-                      <img
-                        src="../assets/products/chairs/image-1.avif"
-                        class="card-img-top mb-3"
-                        alt="Image"
-                        height="220vh"
-                        style="border-radius: 5%"
-                      />
-                      <div class="social">
-                        <i class="bx bx-heart"></i>
-                        <i class="bx bx-cart"></i>
-                      </div>
-                      <h5 class="card-title">Valvet Dinning Chair</h5>
-                      <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                    </div>
-                    <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                    <div
-                      class="card-body d-flex justify-content-between"
-                      style="margin-top: -6%"
-                    >
-                        <div
-                            class="d-flex justify-content-between align-items-lg-baseline"
-                        >
-                            <i class="bx bx-money"></i>
-                            <p class="card-text price"><span>$</span>60.00</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--End of Card Style--> 
-
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                  <div class="col-12 card product-card">
-                    <div class="card-body">
-                      <img
-                        src="../assets/products/chairs/image-1.avif"
-                        class="card-img-top mb-3"
-                        alt="Image"
-                        height="220vh"
-                        style="border-radius: 5%"
-                      />
-                      <div class="social">
-                        <i class="bx bx-heart"></i>
-                        <i class="bx bx-cart"></i>
-                      </div>
-                      <h5 class="card-title">Valvet Dinning Chair</h5>
-                      <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                    </div>
-                    <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                    <div
-                      class="card-body d-flex justify-content-between"
-                      style="margin-top: -6%"
-                    >
-                        <div
-                            class="d-flex justify-content-between align-items-lg-baseline"
-                        >
-                            <i class="bx bx-money"></i>
-                            <p class="card-text price"><span>$</span>60.00</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--End of Card Style--> 
-
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                  <div class="col-12 card product-card">
-                    <div class="card-body">
-                      <img
-                        src="../assets/products/chairs/image-1.avif"
-                        class="card-img-top mb-3"
-                        alt="Image"
-                        height="220vh"
-                        style="border-radius: 5%"
-                      />
-                      <div class="social">
-                        <i class="bx bx-heart"></i>
-                        <i class="bx bx-cart"></i>
-                      </div>
-                      <h5 class="card-title">Valvet Dinning Chair</h5>
-                      <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                    </div>
-                    <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                    <div
-                      class="card-body d-flex justify-content-between"
-                      style="margin-top: -6%"
-                    >
-                        <div
-                            class="d-flex justify-content-between align-items-lg-baseline"
-                        >
-                            <i class="bx bx-money"></i>
-                            <p class="card-text price"><span>$</span>60.00</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--End of Card Style--> 
-
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                  <div class="col-12 card product-card">
-                    <div class="card-body">
-                      <img
-                        src="../assets/products/chairs/image-1.avif"
-                        class="card-img-top mb-3"
-                        alt="Image"
-                        height="220vh"
-                        style="border-radius: 5%"
-                      />
-                      <div class="social">
-                        <i class="bx bx-heart"></i>
-                        <i class="bx bx-cart"></i>
-                      </div>
-                      <h5 class="card-title">Valvet Dinning Chair</h5>
-                      <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                    </div>
-                    <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                    <div
-                      class="card-body d-flex justify-content-between"
-                      style="margin-top: -6%"
-                    >
-                        <div
-                            class="d-flex justify-content-between align-items-lg-baseline"
-                        >
-                            <i class="bx bx-money"></i>
-                            <p class="card-text price"><span>$</span>60.00</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--End of Card Style--> 
-
-                <!--Card Style-->
-                <div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                  <div class="col-12 card product-card">
-                    <div class="card-body">
-                      <img
-                        src="../assets/products/chairs/image-1.avif"
-                        class="card-img-top mb-3"
-                        alt="Image"
-                        height="220vh"
-                        style="border-radius: 5%"
-                      />
-                      <div class="social">
-                        <i class="bx bx-heart"></i>
-                        <i class="bx bx-cart"></i>
-                      </div>
-                      <h5 class="card-title">Valvet Dinning Chair</h5>
-                      <p class="card-text product-desc">Leisure Armrest Chairs Upholstered with Backrest, Metal Legs Bracket, for Living Room Kitchen and Breakfast Armchair</p>
-                    </div>
-                    <div class="bg-secondary mb-2" style="height: 0.1vh"></div>
-                    <div
-                      class="card-body d-flex justify-content-between"
-                      style="margin-top: -6%"
-                    >
-                        <div
-                            class="d-flex justify-content-between align-items-lg-baseline"
-                        >
-                            <i class="bx bx-money"></i>
-                            <p class="card-text price"><span>$</span>60.00</p>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <!--End of Card Style--> 
-
+              <!--Grid column-->
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">FOLLOW US</h5>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="" class="text-white me-4"
+                      ><i
+                        class="bx bxl-facebook-circle"
+                        style="font-size: 25px"
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-white me-4"
+                      ><i class="bx bxl-twitter" style="font-size: 25px"></i
+                    ></a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-white me-4"
+                      ><i
+                        class="bx bxl-instagram-alt"
+                        style="font-size: 25px"
+                      ></i
+                    ></a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-white me-4"
+                      ><i class="bx bxl-reddit" style="font-size: 25px"></i
+                    ></a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-white me-4"
+                      ><i class="bx bxl-vk" style="font-size: 25px"></i
+                    ></a>
+                  </li>
+                </ul>
               </div>
-              <!--End of Products Cards-->
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div id="contact" class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4">Contact US</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <p>
+                      <i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57
+                      Street, Poland
+                    </p>
+                  </li>
+                  <li>
+                    <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="fas fa-envelope pe-2 mb-0"></i>RHM@gmail.com
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <!--Grid column-->
             </div>
-        </div>
-        <!-------End of Products Section-------->
+            <!--Grid row-->
+          </div>
+          <!-- Grid container -->
 
-        <!------------Footer------------>
-        <div class="row mb-0">
-            <footer class="bg-dark text-center text-lg-start text-white">
-            <!-- Grid container -->
-            <div class="container p-4">
-                <!--Grid row-->
-                <div class="row my-4">
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <div
-                    class="rounded-circle bg-dark shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
-                    style="width: 150px; height: 150px"
-                    >
-                    <div class="cube">
-                        <div class="top"></div>
-                        <div>
-                        <span style="--i: 0">
-                            <h2>RHM</h2>
-                            <h2>RHM</h2>
-                        </span>
-                        <span style="--i: 1">
-                            <h2>RHM</h2>
-                            <h2>RHM</h2>
-                        </span>
-                        <span style="--i: 2">
-                            <h2>RHM</h2>
-                            <h2>RHM</h2>
-                        </span>
-                        <span style="--i: 3">
-                            <h2>RHM</h2>
-                            <h2>RHM</h2>
-                        </span>
-                        </div>
-                    </div>
-                    </div>
-                    <p class="text-center"><em>"Think outside the box"</em></p>
-                    <ul
-                    class="list-unstyled d-flex flex-row justify-content-center"
-                    >
-                    <li>
-                        <a class="text-white px-2" href="#!">
-                        <i class="fab fa-facebook-square"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="text-white px-2" href="#!">
-                        <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="text-white ps-2" href="#!">
-                        <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div id="about" class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4">About US</h5>
-                    <q
-                    ><i
-                        >Hi, We are RHM. <br />
-                        We began with a simple vision where we aim to offer our
-                        customers</i
-                    ></q
-                    >
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4">FOLLOW US</h5>
-                    <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <a href="" class="text-white me-4"
-                        ><i
-                            class="bx bxl-facebook-circle"
-                            style="font-size: 25px"
-                        ></i
-                        ></a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="" class="text-white me-4"
-                        ><i class="bx bxl-twitter" style="font-size: 25px"></i
-                        ></a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="" class="text-white me-4"
-                        ><i
-                            class="bx bxl-instagram-alt"
-                            style="font-size: 25px"
-                        ></i
-                        ></a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="" class="text-white me-4"
-                        ><i class="bx bxl-reddit" style="font-size: 25px"></i
-                        ></a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="" class="text-white me-4"
-                        ><i class="bx bxl-vk" style="font-size: 25px"></i
-                        ></a>
-                    </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                <div id="contact" class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4">Contact US</h5>
-                    <ul class="list-unstyled">
-                    <li>
-                        <p>
-                        <i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57
-                        Street, Poland
-                        </p>
-                    </li>
-                    <li>
-                        <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
-                    </li>
-                    <li>
-                        <p>
-                        <i class="fas fa-envelope pe-2 mb-0"></i>RHM@gmail.com
-                        </p>
-                    </li>
-                    </ul>
-                </div>
-                <!--Grid column-->
-                </div>
-                <!--Grid row-->
-            </div>
-            <!-- Grid container -->
-
-            <!-- Copyright -->
-            <div
-                class="row text-center p-3"
-                style="background-color: rgba(0, 0, 0, 0.2)"
-            >
-                <span>© 2023 Copyright: RHM</span>
-            </div>
-            <!-- Copyright -->
-            </footer>
-        </div>
-        <!-- End of Footer Section -->
-        
+          <!-- Copyright -->
+          <div
+            class="row text-center p-3"
+            style="background-color: rgba(0, 0, 0, 0.2)"
+          >
+            <span>© 2023 Copyright: RHM</span>
+          </div>
+          <!-- Copyright -->
+        </footer>
+      </div>
+      <!-- End of Footer Section -->
     </div>
-    <!--End of Products Page Container--> 
+    <!--End of Products Page Container-->
 
     <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"
-    ></script> 
-</body>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
