@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin-bottom:150px ;
+    margin-bottom:130px ;
+    margin-top: -50px;
 }
 .imgOne{
     width: 300px !important; 

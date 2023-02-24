@@ -137,3 +137,18 @@ body {
         display: none;
     }
 }
+
+
+/* Lazy loading of page sections */
+.section--1, .section--2, .section--3 {
+    padding: 1rem 0rem;
+}
+.section {
+    /* border-top: 1px solid var(--clr-neutral-dark-blue); */
+  
+    transition: transform 1s, opacity 1s;
+}
+.section--hidden {
+    opacity:0;
+    transform: translateY(8rem);
+}
