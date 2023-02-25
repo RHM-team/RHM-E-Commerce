@@ -14,8 +14,7 @@
 .productsCard{
     margin-top: 10vh;
 }
-.allproducts{
-    text-decoration: underline solid var(--secondary-color) 5px;
+#allproducts{
     font-weight:bolder;
 }
 .card{
