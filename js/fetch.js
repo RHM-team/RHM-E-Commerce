@@ -1,4 +1,3 @@
-var url = "../data.json";
 var productContainer = document.getElementById("productContainer");
 var filterElement = document.querySelectorAll(".filterElement");
 var cardContainer = document.querySelector('.productsCard');
@@ -10,13 +9,13 @@ var beds = document.getElementById('beds');
 var decorations = document.getElementById('decorations');
 var sofas = document.getElementById('sofas');
 
-var fetchProducts = fetchData(url); //calling fn
+var fetchProducts = fetchData(); //calling fn
 
-fetchData(url).then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
+fetchData().then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
 allproducts.style.textDecoration = "underline solid #61876E 5px"; 
 
-export async function fetchData(url) {
-  let response = await fetch(url); //fetch data by url
+export async function fetchData() {
+  let response = await fetch("../data.json"); //fetch data by url
   let fetchedData = await response.text();
   let data = JSON.parse(fetchedData);
   return data;
@@ -97,7 +96,7 @@ function removeElements (){
 allproducts.addEventListener('click', function(){
     removeElements();
     allproducts.style.textDecoration = "underline solid #61876E 5px"; 
-    fetchData(url).then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
+    fetchData().then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
     
 })
 
@@ -105,31 +104,31 @@ allproducts.addEventListener('click', function(){
 tables.addEventListener('click', function(){
     removeElements();
     tables.style.textDecoration = "underline solid #61876E 5px"; 
-    fetchData(url).then(data =>getArray(data.tables)).catch(err=>console.log(err)); //Show tables
+    fetchData().then(data =>getArray(data.tables)).catch(err=>console.log(err)); //Show tables
 
 });
 
 chairs.addEventListener('click', function(){
     removeElements();
     chairs.style.textDecoration = "underline solid #61876E 5px"; 
-    fetchData(url).then(data =>getArray(data.chairs)).catch(err=>console.log(err)); //Show chairs
+    fetchData().then(data =>getArray(data.chairs)).catch(err=>console.log(err)); //Show chairs
 
 });
 
 decorations.addEventListener('click', function(){
     removeElements();
     decorations.style.textDecoration = "underline solid #61876E 5px"; 
-    fetchData(url).then(data =>getArray(data.mirrors)).catch(err=>console.log(err)); //Show tables
+    fetchData().then(data =>getArray(data.mirrors)).catch(err=>console.log(err)); //Show tables
 });
 
 beds.addEventListener('click', function(){
     removeElements();
     beds.style.textDecoration = "underline solid #61876E 5px"; 
-    fetchData(url).then(data =>getArray(data.beds)).catch(err=>console.log(err)); //Show tables
+    fetchData().then(data =>getArray(data.beds)).catch(err=>console.log(err)); //Show tables
 });
 
 sofas.addEventListener('click', function(){
     removeElements();
     sofas.style.textDecoration = "underline solid #61876E 5px"; 
-    fetchData(url).then(data =>getArray(data.sofas)).catch(err=>console.log(err)); //Show tables
+    fetchData().then(data =>getArray(data.sofas)).catch(err=>console.log(err)); //Show tables
 });
