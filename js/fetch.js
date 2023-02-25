@@ -1,30 +1,38 @@
 var url = "../data.json";
 var productContainer = document.getElementById("productContainer");
 
-fetchData(url); //calling fn
+var fetchProducts = fetchData(url); //calling fn
 
-async function fetchData(url) {
-  let response = await fetch(url); //fetch data by url
-  let fetchedData = await response.text();
-  let chairsArray = JSON.parse(fetchedData).chairs;
-  let bedsArray = JSON.parse(fetchedData).beds;
-  let mirrorsArray = JSON.parse(fetchedData).mirrors;
-  let sofasArray = JSON.parse(fetchedData).sofas;
-  let tablesArray = JSON.parse(fetchedData).tables;
+fetchData(url).then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
 
-  let productsArray = [];
+async function fetchData(url){
+    let response = await fetch(url);   //fetch data by url
+    let fetchedData = await response.text();  
+    let data=JSON.parse(fetchedData)
+  return data;
+}
 
-  for (let i = 0; i < 5; i++) {
-    productsArray.push(chairsArray[i]);
-    productsArray.push(bedsArray[i]);
-    productsArray.push(mirrorsArray[i]);
-    productsArray.push(sofasArray[i]);
-    productsArray.push(tablesArray[i]);
-  }
-  console.log(productsArray);
-  getArray(productsArray); //Get Products to Products Page
+function displayAllProduct(fetchProducts){
+    
+    let  chairsArray = fetchProducts.chairs;
+    let  bedsArray = fetchProducts.beds;
+    let  mirrorsArray = fetchProducts.mirrors;
+    let  sofasArray = fetchProducts.sofas;
+    let  tablesArray = fetchProducts.tables;
+  
+    let productsArray = [];
 
-  return productsArray;
+    for(let i=0; i < 5;i++){
+        productsArray.push(chairsArray[i]);
+        productsArray.push(bedsArray[i]);
+        productsArray.push(mirrorsArray[i]);
+        productsArray.push(sofasArray[i]);
+        productsArray.push(tablesArray[i]);
+    }
+
+    getArray(productsArray); //Get Products to Products Page  
+
+   return productsArray;
 }
 
 function getArray(productsArray) {
