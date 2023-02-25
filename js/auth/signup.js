@@ -14,6 +14,7 @@ class SignupPage {
   uPassword;
   user;
   constructor() {
+    this._activationSetting();
     emailInput.addEventListener("input", (E) => {
       duplicatemsg.style.display = "none";
     });
@@ -57,6 +58,13 @@ class SignupPage {
       }
     }
     return false;
+  }
+  _activationSetting() {
+    if (JSON.parse(localStorage.getItem("users"))) {
+      JSON.parse(localStorage.getItem("users")).forEach(
+        (u) => (u.active = false)
+      );
+    }
   }
 }
 const signupPage = new SignupPage();
