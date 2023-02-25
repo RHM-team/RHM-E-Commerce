@@ -204,10 +204,10 @@
         </div>
       </div>
       <!--End of Banner Section-->
-      <hr class="line">
+      <hr class="line section--1">
       
       <!------------Graphics Section------------>
-      <div class="row belowContainer">
+      <div class="row belowContainer section--1 section">
         <img  class="imgOne" src="./assets/graphicsSection/image-1.jpg" alt="">
         <img class="imgTwo" src="./assets/graphicsSection/image-2.jpg" alt="">
         <img class="imgThree" src="./assets/graphicsSection/image-3.jpg" alt="" >
@@ -215,10 +215,10 @@
         <span class="frameTwo"></span>
       </div>
       <!--End of Graphics Section-->
-      <hr class="line">
+      <hr class="line section--1">
 
       <!---------Products Section--------->
-      <div class="products SectionTwo">
+      <div class="products SectionTwo section--2 section">
         <div class="container">
           <div class="row sorting text-center">
             <h2>OUR PRODUCTS</h2>
@@ -359,10 +359,10 @@
         </div>
       </div>
       <!--End of Products Section-->
-      <hr>
+      <hr class="line section--2">
 
       <!--------New Collection Section-------->
-      <div class="container">
+      <div class="container section--3 section">
         <div class="row d-flex my-5 ">
           <img src="./assets/new_Collection.png" alt="New Collection Image">
         </div>
@@ -371,7 +371,7 @@
     
 
       <!------------Footer------------>
-      <div class="row mb-0">
+      <div class="row mb-0 section--4 section">
         <footer class="bg-dark text-center text-lg-start text-white">
         <!-- Grid container -->
         <div class="container p-4">
@@ -435,7 +435,7 @@
                 ><i
                     >Hi, We are RHM. <br />
                     We began with a simple vision where we aim to offer our
-                    customers</i
+                    customers the widest variety of choices in Furniture and Home Decor!</i
                 ></q
                 >
             </div>
@@ -482,7 +482,52 @@
 
             <!--Grid column-->
             <div id="contact" class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Contact US</h5>
+                <!-- <h5 class="text-uppercase mb-4">Contact US</h5> -->
+                    <!-- Button trigger modal-->
+                  <button type="button" 
+                  class="btn btn-dark mb-3" 
+                  data-bs-toggle="modal" 
+                  data-bs-target="#staticBackdrop"
+                  style="box-shadow: 1px 1px 10px -5px white, -1px -1px 10px -5px white; font-weight: 700; margin-top: -5px;">
+                    CONTACT US
+                    </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" 
+                  id="staticBackdrop" 
+                  data-bs-backdrop="static" 
+                  data-bs-keyboard="false" 
+                  tabindex="-1" 
+                  aria-labelledby="staticBackdropLabel" 
+                  aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-white" 
+                          id="staticBackdropLabel">
+                            We would love to hear from you!
+                          </h5>
+                          <button type="button" 
+                          class="btn-close bg-white" 
+                          data-bs-dismiss="modal" 
+                          aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column gap-2 justify-content-center">
+                            <p class="text-white">Comments / Questions</p>
+                            <input type="text" id="contactInput" placeholder="Your Name" class="w-50">
+                            <textarea name="textarea" id="textarea" cols="50" rows="6" maxlength="250"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button"
+                           class="btn btn-secondary" 
+                           data-bs-dismiss="modal">Close</button>
+                          <button type="button" 
+                          class="btn text-light" 
+                          style="background-color: var(--primary-color)">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 <ul class="list-unstyled">
                 <li>
                     <p>
@@ -526,6 +571,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="js/lazy-loading.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>
