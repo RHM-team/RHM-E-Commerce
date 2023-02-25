@@ -35,12 +35,17 @@ class SignupPage {
       true
     );
     let users = [];
-    users = JSON.parse(localStorage.getItem("users"));
-    if (!this._isDuplicated(this.user.email)) {
+    if (JSON.parse(localStorage.getItem("users"))) {
+      users = JSON.parse(localStorage.getItem("users"));
+      if (!this._isDuplicated(this.user.email)) {
+        users.push(this.user);
+        localStorage.setItem("users", JSON.stringify(users));
+      }
+    } else {
       users.push(this.user);
       localStorage.setItem("users", JSON.stringify(users));
-      window.open("../index.html", "_self");
     }
+    window.open("../index.html", "_self");
   }
   _isDuplicated(userEmail) {
     let users = JSON.parse(localStorage.getItem("users"));
