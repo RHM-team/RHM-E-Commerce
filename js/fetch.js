@@ -59,8 +59,8 @@ function getArray(productsArray) {
                                         <i class="bx bx-heart"></i>
                                         <i class="bx bx-cart"></i>
                                         </div>
-                                        <h5 class="card-title">${element["title"]}</h5>
-                                        <p class="card-text product-desc">${element["description"]}</p>
+                                        <h5 class="card-title text-truncate">${element["title"]}</h5>
+                                        <p class="card-text product-desc text-truncate">${element["description"]}</p>
                                     </div>
                                     <hr>
                                     <div
