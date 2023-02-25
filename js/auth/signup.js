@@ -50,6 +50,7 @@ class SignupPage {
     window.open("../index.html", "_self");
   }
   _isDuplicated(userEmail) {
+    let users = [];
     users = JSON.parse(localStorage.getItem("users"));
     if (users) {
       let emailDuplicated = users.find((u) => u.email === userEmail);
