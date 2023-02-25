@@ -1,39 +1,36 @@
-var url = '../data.json';
-var productContainer = document.getElementById('productContainer');
+var url = "../data.json";
+var productContainer = document.getElementById("productContainer");
 
 fetchData(url); //calling fn
 
-async function fetchData(url){
+async function fetchData(url) {
+  let response = await fetch(url); //fetch data by url
+  let fetchedData = await response.text();
+  let chairsArray = JSON.parse(fetchedData).chairs;
+  let bedsArray = JSON.parse(fetchedData).beds;
+  let mirrorsArray = JSON.parse(fetchedData).mirrors;
+  let sofasArray = JSON.parse(fetchedData).sofas;
+  let tablesArray = JSON.parse(fetchedData).tables;
 
-    let response = await fetch(url);   //fetch data by url
-    let fetchedData = await response.text();  
-    let  chairsArray = JSON.parse(fetchedData).chairs;
-    let  bedsArray = JSON.parse(fetchedData).beds;
-    let  mirrorsArray = JSON.parse(fetchedData).mirrors;
-    let  sofasArray = JSON.parse(fetchedData).sofas;
-    let  tablesArray = JSON.parse(fetchedData).tables;
-    
-    let productsArray = [];
+  let productsArray = [];
 
-    for(let i=0; i < 5;i++){
-        productsArray.push(chairsArray[i]);
-        productsArray.push(bedsArray[i]);
-        productsArray.push(mirrorsArray[i]);
-        productsArray.push(sofasArray[i]);
-        productsArray.push(tablesArray[i]);
-    }
-    console.log(productsArray);
-    getArray(productsArray); //Get Products to Products Page  
+  for (let i = 0; i < 5; i++) {
+    productsArray.push(chairsArray[i]);
+    productsArray.push(bedsArray[i]);
+    productsArray.push(mirrorsArray[i]);
+    productsArray.push(sofasArray[i]);
+    productsArray.push(tablesArray[i]);
+  }
+  console.log(productsArray);
+  getArray(productsArray); //Get Products to Products Page
 
-   return productsArray; 
+  return productsArray;
 }
 
-function getArray(productsArray){
-    
-    productsArray.forEach(element => {
-
-        let productCard =  `<div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                                <div  class="col-12 card product-card">
+function getArray(productsArray) {
+  productsArray.forEach((element) => {
+    let productCard = `<div class="col-10 col-sm-8 col-md-4 col-lg-3">
+                                <div  class="col-12 card product-card" data-id="${element["id"]}">
                                     <div class="card-body">
                                         <img
                                         src= ${element["avatar"]}
@@ -63,9 +60,7 @@ function getArray(productsArray){
                                     </div>
                                 </div>
                             </div>`;
-                            
-        productContainer.insertAdjacentHTML('beforeend', productCard);            
 
-    });
-    
-} 
+    productContainer.insertAdjacentHTML("beforeend", productCard);
+  });
+}
