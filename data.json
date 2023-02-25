@@ -6,7 +6,7 @@
         {
             "id": 1,
             "category": "chair",
-            "title": "leather and wood Chair",
+            "title": "Leather and Wood Chair",
             "description": "Hot selling Cheap chair for the living room with white leather and a leg of high quality wood.",
             "avatar": "../assets/products/chairs/image-1.avif",
             "price": 2500.00,
@@ -80,7 +80,7 @@
         {
             "id": 9,
             "category": "bed",
-            "title": "White bed with mattress",
+            "title": "White Bed with Mattress",
             "description": "The bedroom has a comfortable and modern feel, with mattresses and pillows with cover.",
             "avatar": "../assets/products/beds/image-4.jpg",
             "price": 29999.00,
@@ -147,7 +147,7 @@
         {
             "id": 16,
             "category": "sofas",
-            "title": "3 Seater Sofa",
+            "title": "Three Seater Sofa",
             "description": "3-Seat Section, Safe to use, Make addition to your home, Easy store and Well packaged.",
             "avatar": "../assets/products/sofas/image-1.jpg",
             "price": 5000.00,
@@ -156,7 +156,7 @@
         {
             "id": 17,
             "category": "sofas",
-            "title": "brown Mechanical Sofa",
+            "title": "Brown Mechanical Sofa",
             "description": "A sweet and heavy material that is not tiring and comfortable in the base, and the bed comes with nuts to install the armrests of the sofa. And its packaging is sweet, and it comes with two pillows, which are very uncertain about their color.",
             "avatar": "../assets/products/sofas/image-3.jpg",
             "price": 7000.00,
@@ -203,7 +203,7 @@
         {
             "id": 22,
             "category": "tables",
-            "title": "white table with black legs",
+            "title": "white Table With Black Legs",
             "description": "Mix and match your choice of table top and legs – or choose this ready-made combination. Strong and light-weight, made with a technique that uses less raw materials, reducing the impact on the environment.",
             "avatar": "../assets/products/tables/image-1.jpg",
             "price": 7000.00,
