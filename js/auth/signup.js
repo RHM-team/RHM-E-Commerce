@@ -1,4 +1,5 @@
 import { User } from "../user.js";
+import { v4 as uuidv4 } from "uuid";
 
 const nameInput = document.querySelector(".user-name-input");
 const emailInput = document.querySelector(".user-email-input");
@@ -25,7 +26,14 @@ class SignupPage {
     this.uName = nameInput.value;
     this.uEmail = emailInput.value;
     this.uPassword = passInput.value;
-    this.user = new User(this.uName, this.uEmail, this.uPassword, [], true);
+    this.user = new User(
+      uuidv4(),
+      this.uName,
+      this.uEmail,
+      this.uPassword,
+      [],
+      true
+    );
     let users = [];
     users = JSON.parse(localStorage.getItem("users"));
     if (!this._isDuplicated(this.user.email)) {

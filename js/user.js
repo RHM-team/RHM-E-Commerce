@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
 
 export class User {
   id;
@@ -7,8 +6,8 @@ export class User {
   email;
   active;
   cart;
-  constructor(name, email, password, cart, active) {
-    this.id = uuidv4();
+  constructor(id,name, email, password, cart, active) {
+    this.id = id;
     this.name = name;
     this.email = email;
     this.password = password;
