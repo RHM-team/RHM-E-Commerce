@@ -24,10 +24,5 @@
 .product-desc{
     font-size: small;
 }
-.product-card:hover{
-   cursor: pointer; 
-   transform: scale(0.93);
-}
-.product-card:hover img{
-    transform: scale(1.05);
-}
+
+
