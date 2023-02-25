@@ -1,5 +1,5 @@
-var url = '../data.json';
-var productContainer = document.getElementById('productContainer');
+var url = "../data.json";
+var productContainer = document.getElementById("productContainer");
 
 var fetchProducts = fetchData(url); //calling fn
 
@@ -35,12 +35,10 @@ function displayAllProduct(fetchProducts){
    return productsArray;
 }
 
-function getArray(productsArray){
-    
-    productsArray.forEach(element => {
-
-        let productCard =  `<div class="col-10 col-sm-8 col-md-4 col-lg-3">
-                                <div  class="col-12 card product-card">
+function getArray(productsArray) {
+  productsArray.forEach((element) => {
+    let productCard = `<div class="col-10 col-sm-8 col-md-4 col-lg-3">
+                                <div  class="col-12 card product-card" data-id="${element["id"]}">
                                     <div class="card-body">
                                         <img
                                         src= ${element["avatar"]}
@@ -70,9 +68,7 @@ function getArray(productsArray){
                                     </div>
                                 </div>
                             </div>`;
-                            
-        productContainer.insertAdjacentHTML('beforeend', productCard);            
 
-    });
-    
-} 
+    productContainer.insertAdjacentHTML("beforeend", productCard);
+  });
+}
