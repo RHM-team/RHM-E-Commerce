@@ -1,122 +1,120 @@
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: "poppins", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    background-image: url("../assets/loginpage/blurcackground.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/loginpage/blurcackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
-.class-box{
-    background-color: transparent;
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 0.9rem;
-    backdrop-filter: blur(15px);
-    position: relative;
-    width: 400px;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.class-box {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.9rem;
+  backdrop-filter: blur(15px);
+  position: relative;
+  width: 400px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-h2{
-    font-size: 2rem;
-color: white;
-text-align: center;
+h2 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
 }
-.inputBox{
-    position: relative;
-    margin: 30px 0;
-    width: 310px;
-    border-bottom: 2px solid white;
+.inputBox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+  border-bottom: 2px solid white;
 }
-.inputBox label{
-      position: absolute;
-      top: 50%;
-      left: 5px;
-      transform:translateY(-50%) ;
-      color: white;
-      font-size: 1rem;
-      pointer-events: none;
-      transition: 0.5s;
+.inputBox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.5s;
 }
 input:focus ~ label,
-input:valid ~ label
-
-{
-top: -5px;
+input:valid ~ label {
+  top: -5px;
 }
-.inputBox input{
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
-    border-style: none;
-    outline: none;
-    font-size: 1rem;
-    color: white;
-    padding:0 35px 0 5px ;
+.inputBox input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border-style: none;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  padding: 0 35px 0 5px;
 }
-.inputBox ion-icon{
-    position: absolute;
-    right:8px;
-    color: white;
-    font-size: 1.3rem;
-    top:20px;
+.inputBox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: white;
+  font-size: 1.3rem;
+  top: 20px;
 }
-.forget{
-    margin: -15px 0 15px 0;
-    font-size: 1rem;
-    color: white;
-    display: flex;
-    justify-content: center;
+.forget {
+  margin: -15px 0 15px 0;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
-.forget label input{
-    margin-right: 4px;
+.forget label input {
+  margin-right: 4px;
 }
-.forget label a{
-   color: white;
-   text-decoration: none;
-   font-weight: bolder;
+.forget label a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
 }
-.forget label a:hover{
-    text-decoration: underline;
+.forget label a:hover {
+  text-decoration: underline;
 }
-button{
-    width: 100%;
-    height: 40px;
-    margin-top: 20px;
-    background-color: #3C6255;
-    border-radius: 0.9rem;
-    border-style: none;
-    outline: none;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
+button {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  background-color: #3c6255;
+  border-radius: 0.9rem;
+  border-style: none;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
 }
-.register{
-    font-size: 0.9rem;
-    color: white;
-    text-align: center;
-    margin:25px 0 10px;
+.register {
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  margin: 25px 0 10px;
 }
-.register p a{
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
+.register p a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
 }
-.register p a:hover{
-    text-decoration: underline;
+.register p a:hover {
+  text-decoration: underline;
 }
-
+input:focus #duplicated-lable {
+  display: none;
+}

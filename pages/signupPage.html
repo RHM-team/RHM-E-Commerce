@@ -11,7 +11,7 @@
     <section>
       <div class="class-box">
         <div class="form-value">
-          <form action="">
+          <form class="signup-form" action="">
             <h2>Signup</h2>
             <div class="inputBox">
               <ion-icon name="person-outline"></ion-icon>
@@ -21,18 +21,29 @@
             <div class="inputBox">
               <ion-icon name="mail-outline"></ion-icon>
               <input class="user-email-input" type="email" required />
-              <label for=""> Email</label>
+              <label id="email-lable" for=""> Email</label>
+              <p id="duplicated-lable" style="color: red; display: none">
+                this email is used before
+              </p>
             </div>
             <div class="inputBox">
               <ion-icon name="lock-closed-outline"></ion-icon>
               <input class="user-pass-input" type="password" required />
               <label for="">Password</label>
             </div>
-            <button>Sign Up</button>
+            <button id="signup-btn">Sign Up</button>
           </form>
         </div>
       </div>
     </section>
+    <script type="importmap">
+      {
+        "imports": {
+          "uuid": "https://cdn.skypack.dev/uuid"
+        }
+      }
+    </script>
+    <script src="../js/auth/signup.js" type="module"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
