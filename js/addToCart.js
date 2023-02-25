@@ -1,11 +1,12 @@
-import { User } from "./user.js";
+// import { User } from "./user.js";
 const product = document.querySelector("#testProduct");
-let users = [];
-users.push(new User("1", "mariam", "111", "mariam@gmail.com", [], false));
-users.push(new User("2", "hager", "111", "hager@gmail.com", [], true));
-const setLocalStorage = () => {
-  localStorage.setItem("users", JSON.stringify(users));
-};
+// let users = [];
+// users.push(new User("1", "mariam", "111", "mariam@gmail.com", [], false));
+// users.push(new User("2", "hager", "111", "hager@gmail.com", [], true));
+// const setLocalStorage = () => {
+//   localStorage.setItem("users", JSON.stringify(users));
+// };
+
 const getActiveuser = () => {
   const data = JSON.parse(localStorage.getItem("users"));
   if (!data) return;
@@ -32,5 +33,5 @@ export const AddToCart = () => {
     localStorage.setItem("users", JSON.stringify(users));
   }
 };
-setLocalStorage();
+// setLocalStorage();
 product.addEventListener("click", () => AddToCart());
