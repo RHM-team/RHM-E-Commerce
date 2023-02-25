@@ -21,7 +21,7 @@ export async function fetchData() {
   return data;
 }
 
-function displayAllProduct(fetchProducts) {
+export function displayAllProduct(fetchProducts) {
   let chairsArray = fetchProducts.chairs;
   let bedsArray = fetchProducts.beds;
   let mirrorsArray = fetchProducts.mirrors;
