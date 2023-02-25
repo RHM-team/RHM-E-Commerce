@@ -1,9 +1,19 @@
 var url = "../data.json";
 var productContainer = document.getElementById("productContainer");
+var filterElement = document.querySelectorAll(".filterElement");
+var cardContainer = document.querySelector('.productsCard');
+
+var allproducts = document.getElementById('allproducts');
+var tables = document.getElementById('tables');
+var chairs = document.getElementById('chairs');
+var beds = document.getElementById('beds');
+var decorations = document.getElementById('decorations');
+var sofas = document.getElementById('sofas');
 
 var fetchProducts = fetchData(url); //calling fn
 
 fetchData(url).then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
+allproducts.style.textDecoration = "underline solid #61876E 5px"; 
 
 async function fetchData(url){
     let response = await fetch(url);   //fetch data by url
@@ -37,7 +47,7 @@ function displayAllProduct(fetchProducts){
 
 function getArray(productsArray) {
   productsArray.forEach((element) => {
-    let productCard = `<div class="col-10 col-sm-8 col-md-4 col-lg-3">
+    let productCard = `<div class="col-10 col-sm-8 col-md-4 col-lg-3 cardContainer">
                                 <div  class="col-12 card product-card" data-id="${element["id"]}">
                                     <div class="card-body">
                                         <img
@@ -70,5 +80,57 @@ function getArray(productsArray) {
                             </div>`;
 
     productContainer.insertAdjacentHTML("beforeend", productCard);
-  });
+});
 }
+
+function removeElements (){
+
+    cardContainer.innerHTML="";
+    console.log(filterElement);
+    (filterElement).forEach(element => {
+        element.style.textDecoration = "none";
+    });
+
+
+}
+
+
+allproducts.addEventListener('click', function(){
+    removeElements();
+    allproducts.style.textDecoration = "underline solid #61876E 5px"; 
+    fetchData(url).then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
+    
+})
+
+
+tables.addEventListener('click', function(){
+    removeElements();
+    tables.style.textDecoration = "underline solid #61876E 5px"; 
+    fetchData(url).then(data =>getArray(data.tables)).catch(err=>console.log(err)); //Show tables
+
+});
+
+chairs.addEventListener('click', function(){
+    removeElements();
+    chairs.style.textDecoration = "underline solid #61876E 5px"; 
+    fetchData(url).then(data =>getArray(data.chairs)).catch(err=>console.log(err)); //Show chairs
+
+});
+
+decorations.addEventListener('click', function(){
+    removeElements();
+    decorations.style.textDecoration = "underline solid #61876E 5px"; 
+    fetchData(url).then(data =>getArray(data.mirrors)).catch(err=>console.log(err)); //Show tables
+});
+
+beds.addEventListener('click', function(){
+    removeElements();
+    beds.style.textDecoration = "underline solid #61876E 5px"; 
+    fetchData(url).then(data =>getArray(data.beds)).catch(err=>console.log(err)); //Show tables
+});
+
+sofas.addEventListener('click', function(){
+    removeElements();
+    sofas.style.textDecoration = "underline solid #61876E 5px"; 
+    fetchData(url).then(data =>getArray(data.sofas)).catch(err=>console.log(err)); //Show tables
+});
