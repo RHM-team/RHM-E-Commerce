@@ -15,34 +15,33 @@ var fetchProducts = fetchData(url); //calling fn
 fetchData(url).then(data =>displayAllProduct(data)).catch(err=>console.log(err)); //Show All Products
 allproducts.style.textDecoration = "underline solid #61876E 5px"; 
 
-async function fetchData(url){
-    let response = await fetch(url);   //fetch data by url
-    let fetchedData = await response.text();  
-    let data=JSON.parse(fetchedData)
+export async function fetchData(url) {
+  let response = await fetch(url); //fetch data by url
+  let fetchedData = await response.text();
+  let data = JSON.parse(fetchedData);
   return data;
 }
 
-function displayAllProduct(fetchProducts){
-    
-    let  chairsArray = fetchProducts.chairs;
-    let  bedsArray = fetchProducts.beds;
-    let  mirrorsArray = fetchProducts.mirrors;
-    let  sofasArray = fetchProducts.sofas;
-    let  tablesArray = fetchProducts.tables;
-  
-    let productsArray = [];
+function displayAllProduct(fetchProducts) {
+  let chairsArray = fetchProducts.chairs;
+  let bedsArray = fetchProducts.beds;
+  let mirrorsArray = fetchProducts.mirrors;
+  let sofasArray = fetchProducts.sofas;
+  let tablesArray = fetchProducts.tables;
 
-    for(let i=0; i < 5;i++){
-        productsArray.push(chairsArray[i]);
-        productsArray.push(bedsArray[i]);
-        productsArray.push(mirrorsArray[i]);
-        productsArray.push(sofasArray[i]);
-        productsArray.push(tablesArray[i]);
-    }
+  let productsArray = [];
 
-    getArray(productsArray); //Get Products to Products Page  
+  for (let i = 0; i < 5; i++) {
+    productsArray.push(chairsArray[i]);
+    productsArray.push(bedsArray[i]);
+    productsArray.push(mirrorsArray[i]);
+    productsArray.push(sofasArray[i]);
+    productsArray.push(tablesArray[i]);
+  }
 
-   return productsArray;
+  getArray(productsArray); //Get Products to Products Page
+
+  return productsArray;
 }
 
 function getArray(productsArray) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../assets/cube.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/cube.png" type="image/x-icon" />
     <title>The RHM Store | Products</title>
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,9 +23,9 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/productPage.css">
-    <link rel="stylesheet" href="../css/productsSection.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/productPage.css" />
+    <link rel="stylesheet" href="../css/productsSection.css" />
   </head>
   <body>
     <!------------Products Page Container------------>
@@ -166,16 +166,14 @@
           <div
             id="productContainer"
             class="productsCard row justify-content-center justify-content-md-evenly"
-          >
-
-          </div>
+          ></div>
           <!--End of Products Cards-->
         </div>
       </div>
       <!-------End of Products Section-------->
 
       <!------------Footer------------>
-      <div class="row mb-0">
+      <div class="row mb-0 section--4 section">
         <footer class="bg-dark text-center text-lg-start text-white">
           <!-- Grid container -->
           <div class="container p-4">
@@ -239,7 +237,8 @@
                   ><i
                     >Hi, We are RHM. <br />
                     We began with a simple vision where we aim to offer our
-                    customers</i
+                    customers the widest variety of choices in Furniture and
+                    Home Decor!</i
                   ></q
                 >
               </div>
@@ -286,7 +285,86 @@
 
               <!--Grid column-->
               <div id="contact" class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Contact US</h5>
+                <!-- <h5 class="text-uppercase mb-4">Contact US</h5> -->
+                <!-- Button trigger modal-->
+                <button
+                  type="button"
+                  class="btn btn-dark mb-3"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  style="
+                    box-shadow: 1px 1px 10px -5px white,
+                      -1px -1px 10px -5px white;
+                    font-weight: 700;
+                    margin-top: -5px;
+                  "
+                >
+                  CONTACT US
+                </button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="staticBackdrop"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  tabindex="-1"
+                  aria-labelledby="staticBackdropLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5
+                          class="modal-title text-white"
+                          id="staticBackdropLabel"
+                        >
+                          We would love to hear from you!
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close bg-white"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div
+                        class="modal-body d-flex flex-column gap-2 justify-content-center"
+                      >
+                        <p class="text-white">Comments / Questions</p>
+                        <input
+                          type="text"
+                          id="contactInput"
+                          placeholder="Your Name"
+                          class="w-50"
+                        />
+                        <textarea
+                          name="textarea"
+                          id="textarea"
+                          cols="50"
+                          rows="6"
+                          maxlength="250"
+                        ></textarea>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button
+                          type="button"
+                          class="btn text-light"
+                          style="background-color: var(--primary-color)"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <ul class="list-unstyled">
                   <li>
                     <p>
@@ -330,6 +408,5 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    
   </body>
 </html>

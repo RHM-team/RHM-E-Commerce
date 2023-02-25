@@ -13,7 +13,9 @@ class SignupPage {
   uEmail;
   uPassword;
   user;
+  // users = [];
   constructor() {
+    this._activationSetting();
     emailInput.addEventListener("input", (E) => {
       duplicatemsg.style.display = "none";
     });
@@ -48,7 +50,8 @@ class SignupPage {
     window.open("../index.html", "_self");
   }
   _isDuplicated(userEmail) {
-    let users = JSON.parse(localStorage.getItem("users"));
+    let users = [];
+    users = JSON.parse(localStorage.getItem("users"));
     if (users) {
       let emailDuplicated = users.find((u) => u.email === userEmail);
       if (emailDuplicated) {
@@ -57,6 +60,15 @@ class SignupPage {
       }
     }
     return false;
+  }
+  _activationSetting() {
+    let users = [];
+    users = JSON.parse(localStorage.getItem("users"));
+    if (users) {
+      users.forEach((u) => (u.active = false));
+      // console.log(users);
+      localStorage.setItem("users", JSON.stringify(users));
+    }
   }
 }
 const signupPage = new SignupPage();
