@@ -5,14 +5,14 @@ export class Product {
   description;
   avatar;
   price;
-  quntity;
-  constructor(id, category, title, description, avatar, price, quntity) {
+  quantity;
+  constructor(id, category, title, description, avatar, price, quantity) {
     this.id = id;
     this.category = category;
     this.title = title;
     this.description = description;
     this.avatar = avatar;
     this.price = price;
-    this.quntity = quntity;
+    this.quantity = quantity;
   }
 }
