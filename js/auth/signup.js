@@ -39,7 +39,6 @@ class SignupPage {
     if (users) {
       let emailDuplicated = users.find((u) => u.email === userEmail);
       if (emailDuplicated) {
-        alert("this email is used");
         duplicatemsg.style.display = "block";
         return true;
       }
