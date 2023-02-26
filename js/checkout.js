@@ -8,6 +8,7 @@ const paymentIcon = document.querySelectorAll(".payment-icon");
 const paymentSubmit = document.getElementById("paymentSubmit");
 const buyNowBtn = document.getElementById("buyNowBtn");
 const summarySection = document.querySelector(".summary-section");
+const allOrder = document.getElementById("order");
 const backToHomeBtn = document.getElementById("backToHomeBtn");
 
 curStep = 0;
@@ -44,6 +45,7 @@ Array.from(next).forEach((nextBtu) => {
       nextSection.classList.add("test");
       goNext();
       progressBehave();
+      showProducts();
     }
   });
 });
@@ -100,11 +102,81 @@ paymentSubmit.addEventListener('submit',function(e){
       goNext();
       progressBehave();
 });
+
 /*------Card Data Submit------*/
 buyNowBtn.addEventListener('click',function(){
-  summarySection.style.display = "none";
+  summarySection.style.animation = "displayNone 2s ease-out";
+  setTimeout(function(){
+    summarySection.style.display = "none";
+  },2000); 
 });
 
 backToHomeBtn.addEventListener('click',function(){
   window.location.href = "../index.html";
-})
+});
+
+/*---------Your Order Section----------*/
+
+const showProducts = () => {
+
+  let activeUser = getActiveuser();
+  var totalPrice = 0;
+  var totalItems = 0;
+  var deliveryFees = 2.75;
+  var itemsImg = [];
+
+  if (activeUser) {
+    let cart = activeUser.cart;
+    cart.forEach((item) => {
+      totalItems += item.quantity;
+      totalPrice += ((item.price) * (item.quantity));
+      itemsImg.push(item.avatar);
+    });
+    if(!totalItems){
+      deliveryFees = 0;
+    }
+    addOrder(totalPrice,totalItems,deliveryFees,itemsImg);
+  }
+};
+
+function addOrder(totalPrice,totalItems,deliveryFees,itemsImg){
+  
+  var order = `<div class="card-body">
+                  <div class="container totalPrice-section w-100">
+                    <div class="row flex-nowrap justify-content-between w-75">
+                      <p>Subtotal:</p>
+                      <p>$${totalPrice}</p>
+                    </div>
+                    <div class="row flex-nowrap justify-content-between w-75">
+                      <p>Delivery:</p>
+                      <p>$${deliveryFees}</p>
+                    </div>
+                    <div
+                      class="row flex-nowrap justify-content-between fs-6 fw-bold w-75"
+                    >
+                      <p>Total:</p>
+                      <p>$${totalPrice + deliveryFees}</p>
+                    </div>
+                    <hr class="mb-0 mt-0" />
+                    <div class="count-elements">${totalItems} items</div>
+                    <div class="summary-element-imgs">
+                      <ul id="orderImageContainer" class="list-group list-group-flush list-group-horizontal gap-2">
+                      </ul>
+                    </div>    
+                  </div>
+                </div>`;              
+
+  allOrder.insertAdjacentHTML("beforeend", order); 
+  var orderImageContainer = document.getElementById("orderImageContainer");
+
+  itemsImg.forEach((elem) => {
+    var OrderImage = `<li class="list-group-item border-0 m-0 summary-element p-2">
+                        <img
+                          class="summary-element-img"
+                          src= ${elem}
+                          alt="item-image"
+                        />
+                      </li>`;
+    orderImageContainer.insertAdjacentHTML("beforeend", OrderImage); 
+  });               
+}
