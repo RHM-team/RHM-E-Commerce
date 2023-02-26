@@ -419,11 +419,11 @@ input[type="text"]:valid + .cardValidation{
 }
 .summary-section {
   position: absolute;
-  min-width: 50%;
+  min-width: 60%;
   height: 50%;
   top: 25%;
-  left: 25%;
-  right: 25%;
+  left: 20%;
+  right: 20%;
   animation: zoom-in-zoom-out 2s ease-out;
 }
 
@@ -438,13 +438,22 @@ input[type="text"]:valid + .cardValidation{
     transform: scale(1, 1);
   }
 }
+
+@keyframes displayNone {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0, 0);
+  }
+}
 .summary-element {
   background-color: var(--clr-primary-cream);
   border-radius: 6px;
   height: 50px;
 }
 .summary-element-img {
-  width: 100%;
+  width: 30px;
   height: 100%;
 }
 .count-elements {
