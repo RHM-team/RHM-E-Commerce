@@ -21,7 +21,20 @@ export const AddToCart = (product) => {
   } else {
     let users = JSON.parse(localStorage.getItem("users"));
     let activIndex = users.findIndex((u) => u.id == activeUser.id);
-    users[activIndex].cart.push(product);
+    // if(users[activIndex].cart)
+    // {
+
+    // }
+    if (users[activIndex].cart.find((cartItem) => cartItem.id == product.id)) {
+      product.quantity++;
+      let test = users[activIndex].cart.filter((i) => i.id != product.id);
+      // console.log({});
+      test.push(product);
+      users[activIndex].cart = test;
+    } else {
+      users[activIndex].cart.push(product);
+    }
+
     localStorage.setItem("users", JSON.stringify(users));
   }
 };
@@ -33,22 +46,17 @@ product.addEventListener("click", (e) => {
       let productItem = allProduct(data).find(
         (item) => item.id == addItem.dataset.id
       );
-      //see if product in cart or not
-      console.log(data);
-      if (false) {
-      } else {
-        let product = new Product(
-          productItem.id,
-          productItem.category,
-          productItem.title,
-          productItem.description,
-          productItem.avatar,
-          productItem.price,
-          1
-        );
+      let product = new Product(
+        productItem.id,
+        productItem.category,
+        productItem.title,
+        productItem.description,
+        productItem.avatar,
+        productItem.price,
+        1
+      );
 
-        AddToCart(product);
-      }
+      AddToCart(product);
     });
   }
 });
