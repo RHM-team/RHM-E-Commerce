@@ -28,6 +28,9 @@ class LoginPage {
       );
       let passErr = users.find((u) => u.email == uEmail && u.password != uPass);
       if (isLoggin) {
+        isLoggin.active = true;
+        localStorage.setItem("user", JSON.stringify(isLoggin));
+
         window.open("../index.html", "_self");
       } else if (passErr) {
         document.querySelector(".error-pass").style.display = "block";
