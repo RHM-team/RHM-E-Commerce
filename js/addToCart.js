@@ -21,10 +21,6 @@ export const AddToCart = (product) => {
   } else {
     let users = JSON.parse(localStorage.getItem("users"));
     let activIndex = users.findIndex((u) => u.id == activeUser.id);
-    // if(users[activIndex].cart)
-    // {
-
-    // }
     if (users[activIndex].cart.find((cartItem) => cartItem.id == product.id)) {
       product.quantity++;
       let test = users[activIndex].cart.filter((i) => i.id != product.id);
