@@ -1,4 +1,4 @@
-let container = document.querySelector('.all');
+let container = document.querySelector(".all");
 
 let navbar = `<div class="row">
 <nav
@@ -110,6 +110,6 @@ let navbar = `<div class="row">
   </div>
 </nav>
 </div>
-<!--End of NavBar Section-->`
+<!--End of NavBar Section-->`;
 
-container.insertAdjacentHTML("afterbegin",navbar);
+container.insertAdjacentHTML("afterbegin", navbar);

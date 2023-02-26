@@ -85,7 +85,7 @@ function getArray(productsArray) {
 
 function removeElements() {
   cardContainer.innerHTML = "";
-  
+
   filterElement.forEach((element) => {
     element.style.textDecoration = "none";
   });

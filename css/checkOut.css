@@ -356,7 +356,7 @@ input[type="text"]:valid + .cardValidation{
 }
 .product__title {
   font-family: var(--ff-fraunces);
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--clr-neutral-dark-blue);
   line-height: 1;
 }
