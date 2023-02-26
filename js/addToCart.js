@@ -9,33 +9,29 @@ async function fetchData() {
 }
 
 export const getActiveuser = () => {
-  const data = JSON.parse(localStorage.getItem("users"));
-  if (!data) return;
-  return data.find((u) => u.active == true);
+  const activeUser = JSON.parse(localStorage.getItem("user"));
+  if (!activeUser) return;
+  return activeUser;
 };
 
-export const AddToCart = (product) => {
+export const addProduct = (product) => {
   let activeUser = getActiveuser();
   if (activeUser == undefined) {
     window.open("../pages/loginPage.html", "_self");
   } else {
-    let users = JSON.parse(localStorage.getItem("users"));
-    let activIndex = users.findIndex((u) => u.id == activeUser.id);
-    if (users[activIndex].cart.find((cartItem) => cartItem.id == product.id)) {
+    if (activeUser.cart.find((cartItem) => cartItem.id == product.id)) {
       product.quantity++;
-      let test = users[activIndex].cart.filter((i) => i.id != product.id);
-      // console.log({});
+      let test = activeUser.cart.filter((i) => i.id != product.id);
       test.push(product);
-      users[activIndex].cart = test;
+      activeUser.cart = test;
     } else {
-      users[activIndex].cart.push(product);
+      activeUser.cart.push(product);
     }
 
-    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("user", JSON.stringify(activeUser));
   }
 };
-
-product.addEventListener("click", (e) => {
+const addToCart = (e) => {
   if (e.target.classList.contains("bx-cart")) {
     let addItem = e.target.closest(".product-card");
     fetchData("../data.json").then((data) => {
@@ -52,10 +48,11 @@ product.addEventListener("click", (e) => {
         1
       );
 
-      AddToCart(product);
+      addProduct(product);
     });
   }
-});
+};
+product.addEventListener("click", (e) => addToCart(e));
 
 function allProduct(fetchProducts) {
   let chairsArray = fetchProducts.chairs;
