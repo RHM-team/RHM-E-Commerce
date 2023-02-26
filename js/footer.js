@@ -230,5 +230,3 @@ let footer = `<div class="row mb-0 section--4 section">
 <!--End of Products Page Container-->`;
 
 footerContainer.insertAdjacentHTML("beforeend", footer);
-
-footerContainer.insertAdjacentHTML("beforeend",footer);
