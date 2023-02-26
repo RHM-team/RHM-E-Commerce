@@ -1,4 +1,4 @@
-let container = document.querySelector('.all');
+let footerContainer = document.querySelector(".all");
 
 let footer = `<div class="row mb-0 section--4 section">
 <footer class="bg-dark text-center text-lg-start text-white">
@@ -227,6 +227,6 @@ let footer = `<div class="row mb-0 section--4 section">
 </div>
 <!-- End of Footer Section -->
 </div>
-<!--End of Products Page Container-->`
+<!--End of Products Page Container-->`;
 
-container.insertAdjacentHTML("beforeend",footer);
+footerContainer.insertAdjacentHTML("beforeend", footer);
