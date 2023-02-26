@@ -57,7 +57,7 @@
                   <a
                     class="col-12 col-md-auto nav-link active d-block d-md-flex align-items-md-center text-light text-center my-sm-3 my-md-0"
                     aria-current="page"
-                    href="#home"
+                    href="../index.html"
                     >Home</a
                   >
                   <a
@@ -149,14 +149,15 @@
           <!--Filter Section-->
           <div class="filter my-5 d-flex justify-content-center">
             <div
+              id="filterList"
               class="col-12 col-sm-11 col-md-8 col-lg-6 d-flex justify-content-between"
             >
-              <div class="allproducts">All</div>
-              <div>Tables</div>
-              <div>Chairs</div>
-              <div>Beds</div>
-              <div>Decorations</div>
-              <div>Sofas</div>
+              <div class = "filterElement" id="allproducts">All</div>
+              <div class = "filterElement" id="tables">Tables</div>
+              <div class = "filterElement"id="chairs">Chairs</div>
+              <div class = "filterElement" id="beds">Beds</div>
+              <div class = "filterElement" id="decorations">Decorations</div>
+              <div class = "filterElement" id="sofas">Sofas</div>
             </div>
           </div>
           <!--End of Filter Section-->
@@ -401,7 +402,7 @@
     </div>
     <!--End of Products Page Container-->
 
-    <script src="../js/fetch.js"></script>
+    <script src="../js/fetch.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

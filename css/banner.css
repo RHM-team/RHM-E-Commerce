@@ -18,9 +18,12 @@
     -webkit-border-radius:10px;
     -moz-border-radius:10px;
     -ms-border-radius:10px;
-    -o-border-radius:10px;
-    
+    -o-border-radius:10px;  
 }
+.shop_btn a{
+    text-decoration: none;
+    color: white;
+  }
 .trending__desc{
   
     letter-spacing: 2.7px;
