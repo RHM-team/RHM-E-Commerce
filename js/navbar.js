@@ -155,7 +155,7 @@ let navbar = `<div class="row">
   </div>
 </nav>
 </div>
-<!--End of NavBar Section-->`
+<!--End of NavBar Section-->`;
 
 container.insertAdjacentHTML("afterbegin",navbar);
 

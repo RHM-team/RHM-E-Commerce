@@ -6,7 +6,6 @@ const emailInput = document.querySelector(".user-email-input");
 const passInput = document.querySelector(".user-pass-input");
 const signupbtn = document.querySelector("#signup-btn");
 const signupForm = document.querySelector(".signup-form");
-const emailLable = document.querySelector("#email-lable");
 const duplicatemsg = document.querySelector("#duplicated-lable");
 class SignupPage {
   uName;
@@ -42,12 +41,17 @@ class SignupPage {
       if (!this._isDuplicated(this.user.email)) {
         users.push(this.user);
         localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("user" , JSON.stringify(this.user))
+        window.open("../index.html", "_self");
+        return this.user;
       }
     } else {
       users.push(this.user);
       localStorage.setItem("users", JSON.stringify(users));
+      localStorage.setItem("user" , JSON.stringify(this.user))
+
+      window.open("../index.html", "_self");
     }
-    window.open("../index.html", "_self");
   }
   _isDuplicated(userEmail) {
     let users = [];
