@@ -456,6 +456,43 @@ input[type="text"]:valid + .cardValidation{
 
 
 .empty-img{
-  width: 100%;
-  height: 200px;
+  width: 50%;
+  height: 100px;
+  -webkit-animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both  infinite;
+  animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955)  both infinite;
+  animation-timing-function: linear;
+
+}
+@keyframes shake-bottom {
+  0%,
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  2% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  4%,
+  8%,
+  12% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  6%,
+  10%,
+  14% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  16% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  18% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
 }

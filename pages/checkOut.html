@@ -79,7 +79,7 @@
             <div class="card-body card-body-details mt-0">
               <div class="section cart-section mt-0">
                 <h5
-                  class="card-title mt-0 text-center my-4 "
+                  class="card-title mt-0 text-center my-4"
                   style="letter-spacing: 0.2rem"
                 >
                   YOUR ORDER
@@ -103,7 +103,7 @@
                 </div>
               </div>
               <!-- end cart section -->
-              
+
               <!-- start checkout section -->
               <div class="section checkout-section d-flex flex-column d-none">
                 <h5
@@ -118,11 +118,13 @@
                     type="text"
                     class="form-control mb-3 checkout-input"
                     id="exampleFormControlInput1"
-                    placeholder="Full name(e.g Paul Joe)*" 
+                    placeholder="Full name(e.g Paul Joe)*"
                     pattern="(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})"
                     required
                   />
-                  <p class="nameValidation">Please Enter a Valid Name.Special Characters Not Allowed</p>
+                  <p class="nameValidation">
+                    Please Enter a Valid Name.Special Characters Not Allowed
+                  </p>
                   <input
                     type="tel"
                     class="form-control mb-3 checkout-input"
@@ -131,7 +133,9 @@
                     pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{6}$"
                     required
                   />
-                  <p class="telValidation">Please Enter Your Tel in this Format +20xxxxxxxxxx</p>
+                  <p class="telValidation">
+                    Please Enter Your Tel in this Format +20xxxxxxxxxx
+                  </p>
                   <p>Address</p>
                   <div class="address-container d-grid">
                     <div class="row">
@@ -177,17 +181,28 @@
                   </div>
                   <p>Payment Method</p>
                   <div class="row align-baseline gap-2">
-                    <div class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center">
-                      <img src="../assets/icons/visa-icon.svg" alt="visa"/>
+                    <div
+                      class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center"
+                    >
+                      <img src="../assets/icons/visa-icon.svg" alt="visa" />
                     </div>
-                    <div class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center">
-                      <img src="../assets/icons/maestro-icon.svg" alt="maestro"/>
+                    <div
+                      class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center"
+                    >
+                      <img
+                        src="../assets/icons/maestro-icon.svg"
+                        alt="maestro"
+                      />
                     </div>
-                    <div class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center">
-                      <img src="../assets/icons/paypal-icon.svg" alt="paypal"/>
+                    <div
+                      class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center"
+                    >
+                      <img src="../assets/icons/paypal-icon.svg" alt="paypal" />
                     </div>
-                    <div class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center">
-                      <img src="../assets/icons/gpay-icon.svg" alt="gpay"/>
+                    <div
+                      class="col-md-2 col-sm-4 payment-icon d-flex justify-content-center"
+                    >
+                      <img src="../assets/icons/gpay-icon.svg" alt="gpay" />
                     </div>
                   </div>
                   <div class="d-flex flex-nowrap justify-content-between mt-4">
@@ -197,7 +212,8 @@
                     <div
                       class="d-flex justify-content-end align-items-center mb-5"
                     >
-                      <button type="submit"
+                      <button
+                        type="submit"
                         class="showbtn col-auto fw-bold px-lg-5 p-1 py-3 text-light"
                       >
                         Proceed Payment <i class="bx bx-right-arrow-alt"></i>
@@ -225,7 +241,9 @@
                       pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
                       required
                     />
-                    <p class="cardValidation">Please Enter a Valid Card Number ****-****-****-****</p>
+                    <p class="cardValidation">
+                      Please Enter a Valid Card Number ****-****-****-****
+                    </p>
                     <input
                       type="text"
                       class="mb-3 visa-input col-sm-12 rounded-2 p-2"
@@ -234,7 +252,9 @@
                       pattern="(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})"
                       required
                     />
-                    <p class="nameValidation">Please Enter a Valid Card-Holder Name</p>
+                    <p class="nameValidation">
+                      Please Enter a Valid Card-Holder Name
+                    </p>
                     <div class="row gap-2 form-control visa-info-details">
                       <input
                         type="text"
@@ -258,26 +278,34 @@
                         required
                       />
                     </div>
-                  </form>
-                  <div class="d-flex flex-nowrap justify-content-between mt-4">
-                    <p class="back">
-                      <i class="bx bx-left-arrow-alt"></i>Back to checkout
-                    </p>
-                    <div class="d-flex justify-content-end align-items-center">
-                      <button
-                        id="buyNowBtn"
-                        class="showbtn col-auto fw-bold px-lg-5 p-3 py-3 text-light"
+
+                    <div
+                      class="d-flex flex-nowrap justify-content-between mt-4"
+                    >
+                      <p class="back">
+                        <i class="bx bx-left-arrow-alt"></i>Back to checkout
+                      </p>
+                      <div
+                        class="d-flex justify-content-end align-items-center"
                       >
-                        BUY NOW<i class="bx bx-right-arrow-alt"></i>
-                      </button>
+                        <button
+                          id="buyNowBtn"
+                          class="showbtn col-auto fw-bold px-lg-5 p-3 py-3 text-light"
+                        >
+                          BUY NOW<i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
+
               <!-- End Of Payment section -->
 
               <!-- start Success Message section -->
-              <div class="success-checkmark section checkout-section d-flex flex-column d-none">
+              <div
+                class="success-checkmark section checkout-section d-flex flex-column d-none"
+              >
                 <div class="check-icon">
                   <span class="icon-line line-tip"></span>
                   <span class="icon-line line-long"></span>
@@ -285,9 +313,12 @@
                   <div class="icon-fix"></div>
                 </div>
                 <div class="success-title text-center">
-                  PAYMENT<br>SUCCESSFUL
+                  PAYMENT<br />SUCCESSFUL
                 </div>
-                <div id="backToHomeBtn" class="d-flex justify-content-end align-items-center">
+                <div
+                  id="backToHomeBtn"
+                  class="d-flex justify-content-end align-items-center"
+                >
                   <button
                     class="showbtn col-auto fw-bold px-lg-5 p-3 py-3 text-light my-5 mr-0"
                   >
