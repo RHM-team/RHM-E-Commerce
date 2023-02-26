@@ -2,6 +2,7 @@ const stepButtons = document.querySelectorAll(".step-button");
 const progress = document.querySelector("#progress");
 const next = document.querySelectorAll(".showbtn");
 const prev = document.querySelectorAll(".back");
+const backToShopBtn = document.getElementById("backbtn");
 const summarySection = document.querySelector(".summary-section");
 curStep = 0;
 function goNext() {
@@ -37,12 +38,17 @@ Array.from(next).forEach((nextBtu) => {
 });
 Array.from(prev).forEach((prevBtu) => {
   prevBtu.addEventListener("click", (e) => {
-    let prevSection = e.target.closest(".section").previousElementSibling;
-    // console.log(prevSection);
-    e.target.closest(".section").classList.add("d-none");
-    prevSection.classList.remove("d-none");
-    summarySection.classList.add("d-none");
-    goPrev();
-    progressBehave();
+    if(e != prev[0]){
+      let prevSection = e.target.closest(".section").previousElementSibling;
+      e.target.closest(".section").classList.add("d-none");
+      prevSection.classList.remove("d-none");
+      summarySection.classList.add("d-none");
+      goPrev();
+      progressBehave();
+    }
   });
 });
+
+backToShopBtn.addEventListener('click',function(){
+  window.location.href = "../pages/productPage.html";
+})
