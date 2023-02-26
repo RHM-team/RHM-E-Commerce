@@ -13,8 +13,7 @@ const showAllProducts = () => {
       });
     } else {
       let emptyCart = `
-      <div class="d-flex justify-content-center align-items-center flex-column">
-      <h2 >Your Cart is Empty</h2>
+      <div class="d-flex justify-content-center align-items-center flex-column h-100">
       <img src="/assets/icons/emptyCart.svg" class="empty-img" />
       </div>
       `;
