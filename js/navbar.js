@@ -1,4 +1,44 @@
-let container = document.querySelector(".all");
+let container = document.querySelector('.all');
+
+
+let userDetails = `<div class="all row">
+<aside class="profile-card">
+    <header>
+      <a target="_blank" href="#">
+        <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink">
+      </a>
+      <h1>John Doe</h1>
+      <h2>Better Visuals</h2>
+    </header>
+    <div class="profile-bio">
+      <p>
+        It takes monumental improvement for us to change how we live our lives. Design is the way we access that improvement.
+      </p>
+    </div>
+    <ul class="profile-social-links">
+      <li>
+        <a target="_blank" href="https://www.facebook.com/creativedonut">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://twitter.com/dropyourbass">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://github.com/vipulsaxena">
+          <i class="fa fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.behance.net/vipulsaxena">
+          <i class="fa fa-behance"></i>
+        </a>
+      </li>
+    </ul>
+  </aside>
+</div>`
 
 let navbar = `<div class="row">
 <nav
@@ -80,7 +120,7 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/loginPage.html"
           >
             <button
-              class="btn btn-dark col-4 col-md-auto fw-bold px-lg-5 rounded-5 border-light"
+              class="btn btn-dark col-4 col-md-auto fw-bold px-lg-5 rounded-5 border-light logSign"
             >
               LogIn
             </button>
@@ -89,11 +129,16 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href = "../pages/signupPage.html"
           >
             <button
-              class="btn btn-light col-4 col-md-auto fw-bold px-lg-5 rounded-5"
+              class="btn btn-light col-4 col-md-auto fw-bold px-lg-5 rounded-5 logSign"
             >
               Sign Up
             </button>
           </a>
+          <div class="user-icon d-flex align-items-center gap-3"  style="align-items: baseline; cursor: pointer;">
+          <img src="../assets/user-removebg-preview.png" style="width: 40px; height: 80%; border-radius: 50%; box-shadow: 1px 1px 10px -5px white,
+          -1px -1px 10px -5px white;" alt="user">
+          <p style="font-size: 15px;" class = "text-white">Lorem</p>
+          </div>
           <a
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/checkOut.html"
           >
@@ -112,4 +157,10 @@ let navbar = `<div class="row">
 </div>
 <!--End of NavBar Section-->`;
 
-container.insertAdjacentHTML("afterbegin", navbar);
+container.insertAdjacentHTML("afterbegin",navbar);
+
+let userIcon = document.querySelector('.user-icon');
+
+userIcon.addEventListener('click', function(){
+  document.body.insertAdjacentHTML("afterbegin",userDetails)
+})
