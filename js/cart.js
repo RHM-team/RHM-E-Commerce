@@ -26,8 +26,9 @@ const renderProduct = (product) => {
         <div class="col-sm-4">
           <img
             src=${product.avatar}
-            class="img-fluid rounded-start"
-            alt="..."
+            class="img-fluid rounded-3"
+            alt="image"
+            style="height: 150px;width:150px"
           />
         </div>
         <div class="col-sm-8">
