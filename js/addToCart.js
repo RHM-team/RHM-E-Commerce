@@ -1,21 +1,12 @@
 import { Product } from "./product.js";
+import ActiveUser from "./modules/ActiveUser.js";
+import fetchData from "./modules/fetchData.js";
+import getAllProduct from "./modules/getAllProduct.js";
+
 const product = document.querySelector(".products");
 
-async function fetchData() {
-  let response = await fetch("../data.json"); //fetch data by url
-  let fetchedData = await response.text();
-  let data = JSON.parse(fetchedData);
-  return data;
-}
-
-export const getActiveuser = () => {
-  const activeUser = JSON.parse(localStorage.getItem("user"));
-  if (!activeUser) return;
-  return activeUser;
-};
-
-export const addProduct = (product) => {
-  let activeUser = getActiveuser();
+const addProduct = (product) => {
+  let activeUser = ActiveUser();
   if (!activeUser) {
     window.open("../pages/loginPage.html", "_self");
   } else {
@@ -35,7 +26,7 @@ const addToCart = (e) => {
   if (e.target.classList.contains("bx-cart")) {
     let addItem = e.target.closest(".product-card");
     fetchData("../data.json").then((data) => {
-      let productItem = allProduct(data).find(
+      let productItem = getAllProduct(data).find(
         (item) => item.id == addItem.dataset.id
       );
       let product = new Product(
@@ -53,20 +44,3 @@ const addToCart = (e) => {
   }
 };
 product.addEventListener("click", (e) => addToCart(e));
-
-function allProduct(fetchProducts) {
-  let chairsArray = fetchProducts.chairs;
-  let bedsArray = fetchProducts.beds;
-  let mirrorsArray = fetchProducts.mirrors;
-  let sofasArray = fetchProducts.sofas;
-  let tablesArray = fetchProducts.tables;
-
-  let productsArray = [
-    ...bedsArray,
-    ...chairsArray,
-    ...mirrorsArray,
-    ...sofasArray,
-    ...tablesArray,
-  ];
-  return productsArray;
-}

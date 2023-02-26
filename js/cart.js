@@ -1,20 +1,27 @@
+import ActiveUser from "./modules/ActiveUser.js";
+
 const cartSection = document.querySelector(".product-card-container");
-
-// const decrease = document.querySelector(".dec");
-
-const getActiveuser = () => {
-  const activeUser = JSON.parse(localStorage.getItem("user"));
-  if (!activeUser) return;
-  return activeUser;
-};
+const checkoutBtn = document.querySelector("#checkout-btn");
 
 const showAllProducts = () => {
-  let activeUser = getActiveuser();
+  let activeUser = ActiveUser();
   if (activeUser) {
     let cart = activeUser.cart;
-    cart.forEach((item) => {
-      renderProduct(item);
-    });
+    if (cart.length != 0) {
+      cart.forEach((item) => {
+        renderProduct(item);
+      });
+    } else {
+      let emptyCart = `
+      <div class="d-flex justify-content-center align-items-center flex-column">
+      <h2 >Your Cart is Empty</h2>
+      <img src="/assets/icons/emptyCart.svg" class="empty-img" />
+      </div>
+      `;
+      cartSection.insertAdjacentHTML("afterbegin", emptyCart);
+    }
+  } else {
+    window.open("../pages/loginPage.html", "_self");
   }
 };
 
@@ -60,20 +67,34 @@ const renderProduct = (product) => {
 
   cartSection.insertAdjacentHTML("afterbegin", html);
 };
-// const increaseQuantity = () => {};
 
-// decrement.addEventListener("click", () => {
-//   count = count - 1;
-//   console.log(count);
-//   count <= -1 ? (count = 0) : count;
-//   countText.innerText = count;
-// });
 showAllProducts();
 const quantityContanier = document.querySelectorAll(".quantity-contanier");
+
 quantityContanier.forEach((i) =>
   i.addEventListener("click", (e) => {
     if (e.target.classList.contains("inc")) {
-      console.log(e.target.classList.contains("inc").nextElement);
+      e.target.parentElement.querySelector(".counter__text").textContent++;
+    }
+
+    if (e.target.classList.contains("dec")) {
+      e.target.parentElement.querySelector(".counter__text").textContent--;
     }
   })
 );
+
+checkoutBtn.addEventListener("click", (e) => {
+  console.log(
+    e.target.parentElement.parentElement.parentElement.querySelector(
+      ".counter__text"
+    )
+  );
+  let activeUser = ActiveUser();
+  activeUser.cart.forEach((c) => {
+    c.quantity =
+      e.target.parentElement.parentElement.parentElement.querySelector(
+        ".counter__text"
+      ).textContent;
+  });
+  localStorage.setItem("user", JSON.stringify(activeUser));
+});
