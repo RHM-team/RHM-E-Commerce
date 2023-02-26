@@ -41,13 +41,14 @@ class SignupPage {
       if (!this._isDuplicated(this.user.email)) {
         users.push(this.user);
         localStorage.setItem("users", JSON.stringify(users));
+        window.open("../index.html", "_self");
         return this.user;
       }
     } else {
       users.push(this.user);
       localStorage.setItem("users", JSON.stringify(users));
+      window.open("../index.html", "_self");
     }
-    window.open("../index.html", "_self");
   }
   _isDuplicated(userEmail) {
     let users = [];

@@ -118,3 +118,10 @@ button {
 input:focus #duplicated-lable {
   display: none;
 }
+.error-email,
+.error-pass {
+  color: red;
+  padding-left: 5px;
+  font-weight: bold;
+  display: none;
+}
