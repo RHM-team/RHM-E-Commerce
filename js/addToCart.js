@@ -9,49 +9,50 @@ async function fetchData() {
 }
 
 export const getActiveuser = () => {
-  const data = JSON.parse(localStorage.getItem("users"));
-  if (!data) return;
-  return data.find((u) => u.active == true);
+  const activeUser = JSON.parse(localStorage.getItem("user"));
+  if (!activeUser) return;
+  return activeUser;
 };
 
-export const AddToCart = (product) => {
+export const addProduct = (product) => {
   let activeUser = getActiveuser();
   if (activeUser == undefined) {
     window.open("../pages/loginPage.html", "_self");
   } else {
-    let users = JSON.parse(localStorage.getItem("users"));
-    let activIndex = users.findIndex((u) => u.id == activeUser.id);
-    users[activIndex].cart.push(product);
-    localStorage.setItem("users", JSON.stringify(users));
+    if (activeUser.cart.find((cartItem) => cartItem.id == product.id)) {
+      product.quantity++;
+      let test = activeUser.cart.filter((i) => i.id != product.id);
+      test.push(product);
+      activeUser.cart = test;
+    } else {
+      activeUser.cart.push(product);
+    }
+
+    localStorage.setItem("user", JSON.stringify(activeUser));
   }
 };
-
-product.addEventListener("click", (e) => {
+const addToCart = (e) => {
   if (e.target.classList.contains("bx-cart")) {
     let addItem = e.target.closest(".product-card");
     fetchData("../data.json").then((data) => {
       let productItem = allProduct(data).find(
         (item) => item.id == addItem.dataset.id
       );
-      //see if product in cart or not
-      console.log(data);
-      if (false) {
-      } else {
-        let product = new Product(
-          productItem.id,
-          productItem.category,
-          productItem.title,
-          productItem.description,
-          productItem.avatar,
-          productItem.price,
-          1
-        );
+      let product = new Product(
+        productItem.id,
+        productItem.category,
+        productItem.title,
+        productItem.description,
+        productItem.avatar,
+        productItem.price,
+        1
+      );
 
-        AddToCart(product);
-      }
+      addProduct(product);
     });
   }
-});
+};
+product.addEventListener("click", (e) => addToCart(e));
 
 function allProduct(fetchProducts) {
   let chairsArray = fetchProducts.chairs;
