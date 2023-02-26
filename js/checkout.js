@@ -1,3 +1,5 @@
+import ActiveUser from "./modules/ActiveUser.js";
+
 const stepButtons = document.querySelectorAll(".step-button");
 const progress = document.querySelector("#progress");
 const next = document.querySelectorAll(".showbtn");
@@ -11,7 +13,7 @@ const summarySection = document.querySelector(".summary-section");
 const allOrder = document.getElementById("order");
 const backToHomeBtn = document.getElementById("backToHomeBtn");
 
-curStep = 0;
+var curStep = 0;
 
 function goNext() {
   if (curStep < stepButtons.length) {
@@ -119,7 +121,7 @@ backToHomeBtn.addEventListener('click',function(){
 
 const showProducts = () => {
 
-  let activeUser = getActiveuser();
+  let activeUser = ActiveUser();
   var totalPrice = 0;
   var totalItems = 0;
   var deliveryFees = 2.75;
@@ -127,12 +129,15 @@ const showProducts = () => {
 
   if (activeUser) {
     let cart = activeUser.cart;
-    cart.forEach((item) => {
-      totalItems += item.quantity;
-      totalPrice += ((item.price) * (item.quantity));
-      itemsImg.push(item.avatar);
-    });
-    if(!totalItems){
+    if(cart.length !== 0){
+      cart.forEach((item) => {
+        totalItems += Number(item.quantity);
+        totalPrice += ((item.price) * (item.quantity));
+        itemsImg.push(item.avatar);
+        console.log(totalPrice,totalItems,deliveryFees)
+      });
+    }
+    else{
       deliveryFees = 0;
     }
     addOrder(totalPrice,totalItems,deliveryFees,itemsImg);
