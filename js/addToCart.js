@@ -16,7 +16,7 @@ export const getActiveuser = () => {
 
 export const addProduct = (product) => {
   let activeUser = getActiveuser();
-  if (activeUser == undefined) {
+  if (!activeUser) {
     window.open("../pages/loginPage.html", "_self");
   } else {
     if (activeUser.cart.find((cartItem) => cartItem.id == product.id)) {

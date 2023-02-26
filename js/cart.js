@@ -10,10 +10,12 @@ const getActiveuser = () => {
 
 const showAllProducts = () => {
   let activeUser = getActiveuser();
-  let cart = activeUser.cart;
-  cart.forEach((item) => {
-    renderProduct(item);
-  });
+  if (activeUser) {
+    let cart = activeUser.cart;
+    cart.forEach((item) => {
+      renderProduct(item);
+    });
+  }
 };
 
 const renderProduct = (product) => {
