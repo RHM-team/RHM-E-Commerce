@@ -1,0 +1,25 @@
+
+.profile-card{
+    height: 400px !important;
+    width: 400px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    /* gap: 10px !important; */
+    justify-content: space-between !important;
+}
+.profile-bio{
+    font-weight: 900 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 60px;
+
+}
+.favorites{
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.modal-content{
+    background: transparent;
+}
