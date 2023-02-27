@@ -1,4 +1,5 @@
 import ActiveUser from "./modules/ActiveUser.js";
+import updateActiveUser from "./modules/updateActiveUser.js";
 
 const cartSection = document.querySelector(".product-card-container");
 const checkoutBtn = document.querySelector("#checkout-btn");
@@ -96,4 +97,5 @@ checkoutBtn.addEventListener("click", (e) => {
       ).textContent;
   });
   localStorage.setItem("user", JSON.stringify(activeUser));
+  updateActiveUser();
 });

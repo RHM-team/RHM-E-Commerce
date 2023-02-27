@@ -1,19 +1,28 @@
-export async function fetchData() {
-    let response = await fetch("../data.json"); //fetch data by url
-    let fetchedData = await response.text();
-    let data = JSON.parse(fetchedData);
-    return data;
-  }
+import addProduct from "./modules/addProduct.js";
+import getAllProduct from "./modules/getAllProduct.js";
+import { Product } from "./product.js";
 
+export async function fetchData() {
+  let response = await fetch("../data.json"); //fetch data by url
+  let fetchedData = await response.text();
+  let data = JSON.parse(fetchedData);
+  return data;
+}
 
 let myModal = document.querySelector(".modal-dialog");
 
 productContainer.addEventListener("click", function (e) {
-    let productCardData = e.target.closest(".product-card");
-    console.log(productCardData);
+  let productCardData = e.target.closest(".product-card");
+  console.log(productCardData);
   fetchData().then((data) => {
-      showDetilsData(allProduct(data).find((item) => item.id == productCardData.dataset.id));
-      incAndDec();
+    showDetilsData(
+      allProduct(data).find((item) => item.id == productCardData.dataset.id)
+    );
+    incAndDec();
+    const addCartBtn = document.querySelector(".add__button");
+    addCartBtn.addEventListener("click", (e) => {
+      addToCart(e);
+    });
   });
 });
 
@@ -34,13 +43,12 @@ function allProduct(fetchProducts) {
   return productsArray;
 }
 
-
-function showDetilsData(newData) { 
-  let detailesData =`
+function showDetilsData(newData) {
+  let detailesData = `
 
   <div class="modal-content">
   <div class="modal-body">
-      <article class="product">
+      <article class="product product-container-card" data-id="${newData.id}">
         <picture class="product__img">
           <img src= ${newData.avatar} alt=" Gabrielle Essence Perfume bottle flat on a table">
         </picture>
@@ -59,20 +67,19 @@ function showDetilsData(newData) {
             <h2 class="counter__text">0</h2>
             <button class="count__btn dec">-</button>
           </div>
-          <button class="add__button" data-icon="shopping-cart">Add to Cart</button>
+          <button class="add__button add__to__cart" data-icon="shopping-cart">Add to Cart</button>
         </div>
       </article>
       </div>
       </div>
-`
-clearModel();
+`;
+  clearModel();
   myModal.insertAdjacentHTML("afterbegin", detailesData);
 }
 
 function clearModel() {
   myModal.innerHTML = "";
 }
-
 
 function incAndDec() {
   let increment = document.querySelector(".inc");
@@ -84,10 +91,39 @@ function incAndDec() {
     countText.innerText = count;
   });
   decrement.addEventListener("click", () => {
-      count--;
+    count--;
     count <= -1 ? (count = 0) : count;
     countText.innerText = count;
   });
 }
 
+const addToCart = (e) => {
+  let addItem = e.target.closest(".product-container-card");
+  fetchData().then((data) => {
+    let productItem = getAllProduct(data).find(
+      (item) => item.id == addItem.dataset.id
+    );
+    document
+      .querySelector(".count__container")
+      .addEventListener("click", (e) => {
+        if (e.target.classList.contains("inc")) {
+          e.target.parentElement.querySelector(".counter__text").textContent++;
+        }
 
+        if (e.target.classList.contains("dec")) {
+          e.target.parentElement.querySelector(".counter__text").textContent--;
+        }
+      });
+    let product = new Product(
+      productItem.id,
+      productItem.category,
+      productItem.title,
+      productItem.description,
+      productItem.avatar,
+      productItem.price,
+      e.target.parentElement.querySelector(".counter__text").textContent
+    );
+
+    addProduct(product);
+  });
+};
