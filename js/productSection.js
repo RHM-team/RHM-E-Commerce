@@ -1,65 +1,73 @@
-var productSectionContainer = document.getElementById("productSectionContainer");
+var productSectionContainer = document.getElementById(
+  "productSectionContainer"
+);
 
-fetchData().then(data =>displaySamoleOfProducts(data)).catch(err=>console.log(err)); //Show Sample of Products
+fetchData()
+  .then((data) => displaySamoleOfProducts(data))
+  .catch((err) => console.log(err)); //Show Sample of Products
 
 async function fetchData() {
-    let response = await fetch("../data.json"); //fetch data by url
-    let fetchedData = await response.text();
-    let data = JSON.parse(fetchedData);
-    return data;
+  let response = await fetch("../data.json"); //fetch data by url
+  let fetchedData = await response.text();
+  let data = JSON.parse(fetchedData);
+  return data;
 }
 
 function displaySamoleOfProducts(fetchProducts) {
+  let chairsArray = fetchProducts.chairs;
+  let bedsArray = fetchProducts.beds;
+  let mirrorsArray = fetchProducts.mirrors;
+  let sofasArray = fetchProducts.sofas;
+  let tablesArray = fetchProducts.tables;
 
-    let chairsArray = fetchProducts.chairs;
-    let bedsArray = fetchProducts.beds;
-    let mirrorsArray = fetchProducts.mirrors;
-    let sofasArray = fetchProducts.sofas;
-    let tablesArray = fetchProducts.tables;
-  
-    let productsArray = [...chairsArray,...bedsArray,...mirrorsArray,...sofasArray,...tablesArray];
+  let productsArray = [
+    ...chairsArray,
+    ...bedsArray,
+    ...mirrorsArray,
+    ...sofasArray,
+    ...tablesArray,
+  ];
 
-    let oldRandNum = [];
-    let newRandNum = null;
-    let flag;
-    
-    let sampleProductsArray = [];
-    for(let i = 0 ; i < 4 ; i++){
-        newRandNum = Math.floor(Math.random() * productsArray.length);
-        sampleProductsArray.push(productsArray[newRandNum]);
-    }
+  let oldRandNum = [];
+  let newRandNum = null;
+  let flag;
 
-    // for(let i = 0 ; i < 4 ; i++){
-    //     flag = true;
-    //     newRandNum = Math.floor(Math.random() * productsArray.length);
-    //     console.log(newRandNum);
-
-    //     for(newRandNum in sampleProductsArray){
-    //         i--;
-    //         flag = false;
-    //       break;  
-    //     }
-
-    //     if(flag == true){
-    //         sampleProductsArray.push(productsArray[newRandNum]);
-    //         oldRandNum.push(newRandNum); 
-    //         console.log(oldRandNum)
-    //     }
-        
-         
-    // }
-
-    console.log(sampleProductsArray);
-
-    getSampleProducts(sampleProductsArray); //Get Products to Products Section 
-  
-    return sampleProductsArray;
+  let sampleProductsArray = [];
+  for (let i = 0; i < 4; i++) {
+    newRandNum = Math.floor(Math.random() * productsArray.length);
+    sampleProductsArray.push(productsArray[newRandNum]);
   }
 
-  function getSampleProducts(sampleProductsArray) {
-    sampleProductsArray.forEach((element) => {
-      let productCard = `<div class="col-10 col-sm-8 col-md-4 col-lg-3 cardContainer">
-                                  <div  class="col-12 card product-card" data-id="${element["id"]}" data-toggle="modal" data-target="#exampleModalLong">
+  // for(let i = 0 ; i < 4 ; i++){
+  //     flag = true;
+  //     newRandNum = Math.floor(Math.random() * productsArray.length);
+  //     console.log(newRandNum);
+
+  //     for(newRandNum in sampleProductsArray){
+  //         i--;
+  //         flag = false;
+  //       break;
+  //     }
+
+  //     if(flag == true){
+  //         sampleProductsArray.push(productsArray[newRandNum]);
+  //         oldRandNum.push(newRandNum);
+  //         console.log(oldRandNum)
+  //     }
+
+  // }
+
+  console.log(sampleProductsArray);
+
+  getSampleProducts(sampleProductsArray); //Get Products to Products Section
+
+  return sampleProductsArray;
+}
+
+function getSampleProducts(sampleProductsArray) {
+  sampleProductsArray.forEach((element) => {
+    let productCard = `<div class="col-10 col-sm-8 col-md-4 col-lg-3 cardContainer products">
+                                  <div  class="col-12 card product-card product-container-card" data-id="${element["id"]}" data-toggle="modal" data-target="#exampleModalLong">
                                       <div class="card-body">
                                           <img
                                           src= ${element["avatar"]}
@@ -70,7 +78,7 @@ function displaySamoleOfProducts(fetchProducts) {
                                           />
                                           <div class="social">
                                           <i class="bx bx-heart"></i>
-                                          <i class="bx bx-cart"></i>
+                                          <i class="bx bx-cart add__to__cart"></i>
                                           </div>
                                           <h5 class="card-title text-truncate">${element["title"]}</h5>
                                           <p class="card-text product-desc text-truncate">${element["description"]}</p>
@@ -89,20 +97,21 @@ function displaySamoleOfProducts(fetchProducts) {
                                       </div>
                                   </div>
                               </div>`;
-  
+
     productSectionContainer.insertAdjacentHTML("beforeend", productCard);
   });
 }
-  
 
 let myModal = document.querySelector(".modal-dialog");
 
 productSectionContainer.addEventListener("click", function (e) {
-    let productCardData = e.target.closest(".product-card");
-    console.log(productCardData);
+  let productCardData = e.target.closest(".product-card");
+  console.log(productCardData);
   fetchData().then((data) => {
-      showDetilsData(allProduct(data).find((item) => item.id == productCardData.dataset.id));
-      incAndDec();
+    showDetilsData(
+      allProduct(data).find((item) => item.id == productCardData.dataset.id)
+    );
+    incAndDec();
   });
 });
 
@@ -123,9 +132,8 @@ function allProduct(fetchProducts) {
   return productsArray;
 }
 
-
-function showDetilsData(newData) { 
-  let detailesData =`
+function showDetilsData(newData) {
+  let detailesData = `
 
   <div class="modal-content">
   <div class="modal-body">
@@ -153,15 +161,14 @@ function showDetilsData(newData) {
       </article>
       </div>
       </div>
-`
-clearModel();
+`;
+  clearModel();
   myModal.insertAdjacentHTML("afterbegin", detailesData);
 }
 
 function clearModel() {
   myModal.innerHTML = "";
 }
-
 
 function incAndDec() {
   let increment = document.querySelector(".inc");
@@ -173,7 +180,7 @@ function incAndDec() {
     countText.innerText = count;
   });
   decrement.addEventListener("click", () => {
-      count--;
+    count--;
     count <= -1 ? (count = 0) : count;
     countText.innerText = count;
   });

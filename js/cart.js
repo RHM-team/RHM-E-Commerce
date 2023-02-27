@@ -1,4 +1,5 @@
 import ActiveUser from "./modules/ActiveUser.js";
+import updateActiveUser from "./modules/updateActiveUser.js";
 
 const cartSection = document.querySelector(".product-card-container");
 const checkoutBtn = document.querySelector("#checkout-btn");
@@ -13,8 +14,7 @@ const showAllProducts = () => {
       });
     } else {
       let emptyCart = `
-      <div class="d-flex justify-content-center align-items-center flex-column">
-      <h2 >Your Cart is Empty</h2>
+      <div class="d-flex justify-content-center align-items-center flex-column h-100">
       <img src="/assets/icons/emptyCart.svg" class="empty-img" />
       </div>
       `;
@@ -97,4 +97,5 @@ checkoutBtn.addEventListener("click", (e) => {
       ).textContent;
   });
   localStorage.setItem("user", JSON.stringify(activeUser));
+  updateActiveUser();
 });

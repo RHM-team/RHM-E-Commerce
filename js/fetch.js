@@ -48,7 +48,7 @@ export function displayAllProduct(fetchProducts) {
 function getArray(productsArray) {
   productsArray.forEach((element) => {
     let productCard = `<div class="col-10 col-sm-8 col-md-4 col-lg-3 cardContainer">
-                                <div  class="col-12 card product-card" data-id="${element["id"]}" data-toggle="modal" data-target="#exampleModalLong">
+                                <div  class="col-12 card product-card product-container-card" data-id="${element["id"]}" data-toggle="modal" data-target="#exampleModalLong">
                                     <div class="card-body">
                                         <img
                                         src= ${element["avatar"]}
@@ -59,7 +59,7 @@ function getArray(productsArray) {
                                         />
                                         <div class="social">
                                         <i class="bx bx-heart"></i>
-                                        <i class="bx bx-cart"></i>
+                                        <i class="bx bx-cart add__to__cart"></i>
                                         </div>
                                         <h5 class="card-title text-truncate">${element["title"]}</h5>
                                         <p class="card-text product-desc text-truncate">${element["description"]}</p>
