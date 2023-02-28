@@ -1,5 +1,8 @@
+*{
+  font-family: var(--ff-montserrat);
+}
 .profile-card {
-    background: #ffb3003b;
+    background: var(--secondary-color);
     width: 56px;
     height: 56px;
     position: absolute;
@@ -120,7 +123,7 @@
   
   @keyframes moveUp {
     0% {
-      background: #ffb30059;
+      background: var(--primary-color);
       top: 100%;
     }
     50% {
@@ -241,24 +244,10 @@
   }
 
 .profile-card{
-  height: 300px !important;
-  width: 300px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-evenly !important;
+  height: 400px !important;
+  width: 400px !important;
 }
-.profile-bio{
-  font-weight: 900 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  gap: 30px;
 
-}
-.favorites{
-  display: flex !important;
-  justify-content: space-between;
-}
 .User-Content{
   margin-top: 0 !important; 
 }
