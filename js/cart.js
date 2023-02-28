@@ -4,6 +4,7 @@ import updateActiveUser from "./modules/updateActiveUser.js";
 const cartSection = document.querySelector(".product-card-container");
 const checkoutBtn = document.querySelector("#checkout-btn");
 
+
 const showAllProducts = () => {
   let activeUser = ActiveUser();
   if (activeUser) {
@@ -125,6 +126,8 @@ function removefromarray(array,id){
   document.querySelector(`[data-id="${id}"]`).remove();
   return filteredarray;
   }
+
+
 
 
 

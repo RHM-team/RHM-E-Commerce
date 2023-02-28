@@ -2,8 +2,10 @@ import { Product } from "./models/product.js";
 import fetchData from "./modules/fetchData.js";
 import getAllProduct from "./modules/getAllProduct.js";
 import addProduct from "./modules/addProduct.js";
+import ActiveUser from "./modules/ActiveUser.js";
 
 const product = document.querySelector(".products");
+const notification = document.querySelector(".notification");
 
 const addToCart = (e) => {
   if (e.target.classList.contains("add__to__cart")) {
@@ -26,6 +28,8 @@ const addToCart = (e) => {
     });
   }
 };
-product.addEventListener("click", (e) => addToCart(e));
+
+
+product.addEventListener("click", (e) => {addToCart(e)});
 
 // addCartBtn.addEventListener("click", () => console.log("jsj"));
