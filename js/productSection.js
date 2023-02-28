@@ -153,7 +153,7 @@ function showDetilsData(newData) {
           </div>
           <div class="count__container">
             <button class="count__btn inc">+</button>
-            <h2 class="counter__text">0</h2>
+            <h2 class="counter__text">1</h2>
             <button class="count__btn dec">-</button>
           </div>
           <button class="add__button" data-icon="shopping-cart">Add to Cart</button>
@@ -181,7 +181,7 @@ function incAndDec() {
   });
   decrement.addEventListener("click", () => {
     count--;
-    count <= -1 ? (count = 0) : count;
+    count <= 0 ? (count = 1) : count;
     countText.innerText = count;
   });
 }
