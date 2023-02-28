@@ -1,4 +1,5 @@
 import ActiveUser from "./modules/ActiveUser.js";
+import updateActiveUser from "./modules/updateActiveUser.js";
 
 const stepButtons = document.querySelectorAll(".step-button");
 const progress = document.querySelector("#progress");
@@ -116,8 +117,16 @@ paymentSubmit.addEventListener('submit',function(e){
 });
 
 /*------Card Data Submit------*/
-
 buyNowBtn.addEventListener('click',hideOrderSection);
+buyNowBtn.addEventListener('click', function(){
+  let activeUser = ActiveUser();
+    if (activeUser) {
+      let cart = activeUser.cart;
+      activeUser.cart = [];
+      localStorage.setItem("user", JSON.stringify(activeUser));
+      updateActiveUser();
+  }
+});
 
 backToHomeBtn.addEventListener('click',function(){
   window.location.href = "../index.html";
