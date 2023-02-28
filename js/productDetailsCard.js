@@ -57,9 +57,9 @@ function showDetilsData(newData) {
           <h1 class="product__title">${newData.title}</h1>
           <p class="product__description">${newData.description}</p>
         <div class="flex-group">
-            <p class="product__price">EGP${newData.price}</p>
+            <p class="product__price">EGP${newData.sale}</p>
             <s>
-              <p class="product__original__price">EGP${newData.sale}</p>
+              <p class="product__original__price">EGP${newData.price}</p>
             </s>
           </div>
           <div class="count__container">
