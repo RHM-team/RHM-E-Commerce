@@ -144,8 +144,6 @@ body {
     padding: 1rem 0rem;
 }
 .section {
-    /* border-top: 1px solid var(--clr-neutral-dark-blue); */
-  
     transition: transform 1s, opacity 1s;
 }
 .section--hidden {
@@ -154,6 +152,7 @@ body {
 }
 
 /* modal */
+
  .contact-body {
     background-color: transparent !important;
  }
@@ -164,14 +163,14 @@ body {
 /* Lines in home page */
 
 .line {
-    overflow: visible; /* For IE */
+    overflow: visible;
     height: 30px;
     border-style: solid;
     border-color: black;
     border-width: 2px 0 0 0;
     border-radius: 20px;
 }
-.line::before { /* Not really supposed to work, but does */
+.line::before { 
     display: block;
     content: "";
     height: 30px;
