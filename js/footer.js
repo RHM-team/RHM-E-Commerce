@@ -140,7 +140,7 @@ let footer = `<div class="row mb-0 section--4 section">
           aria-hidden="true"
         >
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content contact-body">
               <div class="modal-header">
                 <h5
                   class="modal-title text-white"
