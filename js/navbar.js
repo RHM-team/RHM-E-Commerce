@@ -64,10 +64,10 @@ let navbar = `<div class="row">
       <div class="col-12 col-md-4 d-md-flex justify-content-md-start">
         <div class="col-12 d-md-flex justify-content-md-evenly">
           <a
-            class="col-12 col-md-auto nav-link active d-block d-md-flex align-items-md-center text-light text-center my-sm-3 my-md-0"
+            class="col-12 col-md-auto nav-link active fw-bold d-block d-md-flex align-items-md-center text-light text-center my-sm-3 my-md-0"
             aria-current="page"
             href="../index.html"
-            >Home</a
+            >HOME</a
           >
           <a
             class="col-12 col-md-auto nav-link d-block d-md-flex align-items-md-center text-secondary text-center link-light my-sm-3 my-md-0"
@@ -120,7 +120,7 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/loginPage.html"
           >
             <button
-              class="btn btn-dark col-4 col-md-auto fw-bold px-lg-5 rounded-5 border-light logSign"
+              class="btn nav-link text-light col-4 col-md-auto link-secondary logSign"
             >
               LogIn
             </button>
@@ -129,7 +129,7 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href = "../pages/signupPage.html"
           >
             <button
-              class="btn btn-light col-4 col-md-auto fw-bold px-lg-5 rounded-5 logSign"
+              class="btn nav-link text-light col-4 col-md-auto link-secondary logSign"
             >
               Sign Up
             </button>
