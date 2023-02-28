@@ -89,10 +89,10 @@ function getSampleProducts(sampleProductsArray) {
                                           style="margin-top: -6%"
                                       >
                                           <div
-                                          class="d-flex justify-content-between align-items-lg-baseline"
+                                          class="d-flex justify-content-between align-items-md-center gap-2"
                                           >
                                           <i class="bx bx-money"></i>
-                                          <p class="card-text price"><span>$</span>${element["price"]}</p>
+                                          <p class="card-text price"><span>EGP </span>${element["sale"]}</p>
                                           </div>
                                       </div>
                                   </div>
