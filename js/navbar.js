@@ -138,14 +138,15 @@ let navbar = `<div class="row">
           <a
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center p-0 pt-md-3 "
           >
-            <div class="user-icon d-flex align-items-center gap-3" style="cursor: pointer;">
+            <div class="user-icon d-flex align-items-center" style="cursor: pointer;">
               <p>
-                <img src="../assets/user-removebg-preview.png" style="width: 40px; height: 40px; border-radius: 50%; box-shadow: 1px 1px 10px -5px white,-1px -1px 10px -5px white;" alt="user">
+                <button style="border-radius: 50%;" type="button" class="btn d-block " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <img src="../assets/userIcon.png" style="width: 40px; height: 40px; border-radius: 50%;" alt="user">
+                </button>
               </p>
               <p class = "text-light fs-15px">Lorem</p>
             </div>
           </a>
-
           <a
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/checkOut.html"
           >
@@ -168,6 +169,6 @@ container.insertAdjacentHTML("afterbegin",navbar);
 
 let userIcon = document.querySelector('.user-icon');
 
-userIcon.addEventListener('click', function(){
-  document.body.insertAdjacentHTML("afterbegin",userDetails)
-})
+// userIcon.addEventListener('click', function(){
+//   document.body.insertAdjacentHTML("afterbegin",userDetails)
+// })
