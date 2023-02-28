@@ -11,21 +11,12 @@
 * {
   margin: 0;
 }
-
-
-
-
-
-
-
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
-
-
 p,
 h1,
 h2,
@@ -120,7 +111,6 @@ h6 {
   font-weight: var(--fw-bold);
  border-style: none;
   border-radius: 0.5rem;
-
   padding: 0.5rem ;
   
 
@@ -162,8 +152,8 @@ h6 {
   }
 
   .product__description{
-    line-height:1.3;
-    height: 90px;
+    line-height:1.25;
+    height: 100px;
     overflow: hidden;
   }
   .product__content { 
@@ -176,6 +166,6 @@ h6 {
   .modal-content {
     width: 600px !important;
     margin-left: -50px !important;
-    margin-top: 110px!important;
+    margin-top: 40px!important;
   }
 }

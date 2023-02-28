@@ -155,6 +155,7 @@ let navbar = `<div class="row">
               src="../assets/icons/icon-cart.svg"
               alt="cart"
             />
+            <span class="notification text-light bg-danger"></span>
           </a>
         </div>
       </div>

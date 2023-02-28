@@ -33,7 +33,8 @@ class SignupPage {
       this.uEmail,
       this.uPassword,
       [],
-      true
+      true,
+      []
     );
     let users = [];
     if (JSON.parse(localStorage.getItem("users"))) {
@@ -41,14 +42,14 @@ class SignupPage {
       if (!this._isDuplicated(this.user.email)) {
         users.push(this.user);
         localStorage.setItem("users", JSON.stringify(users));
-        localStorage.setItem("user" , JSON.stringify(this.user))
+        localStorage.setItem("user", JSON.stringify(this.user));
         window.open("../index.html", "_self");
         return this.user;
       }
     } else {
       users.push(this.user);
       localStorage.setItem("users", JSON.stringify(users));
-      localStorage.setItem("user" , JSON.stringify(this.user))
+      localStorage.setItem("user", JSON.stringify(this.user));
 
       window.open("../index.html", "_self");
     }

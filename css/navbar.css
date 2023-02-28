@@ -1,3 +1,17 @@
+#cart-icon{
+    display: absolute;
+}
 #cart-icon:hover{
     cursor: pointer;
+}
+.notification{
+    display: none;
+    vertical-align: top;
+    margin-top:-20px;
+    margin-left:-5px;
+    width: 20px; 
+    height: 20px;
+    text-align: center;
+    font-size: small;
+    border-radius: 50%;
 }
