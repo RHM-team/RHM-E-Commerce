@@ -135,8 +135,9 @@ let navbar = `<div class="row">
             </button>
           </a>
           <div class="user-icon d-flex align-items-center gap-3"  style="align-items: baseline; cursor: pointer;">
-          <img src="../assets/user-removebg-preview.png" style="width: 40px; height: 80%; border-radius: 50%; box-shadow: 1px 1px 10px -5px white,
-          -1px -1px 10px -5px white;" alt="user">
+          <button style="border-radius: 50%;" type="button" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <img src="../assets/userIcon.png" style="width: 50px; height: 50px; border-radius: 50%;" alt="">
+          </button>
           <p style="font-size: 15px;" class = "text-white">Lorem</p>
           </div>
           <a
@@ -161,6 +162,6 @@ container.insertAdjacentHTML("afterbegin",navbar);
 
 let userIcon = document.querySelector('.user-icon');
 
-userIcon.addEventListener('click', function(){
-  document.body.insertAdjacentHTML("afterbegin",userDetails)
-})
+// userIcon.addEventListener('click', function(){
+//   document.body.insertAdjacentHTML("afterbegin",userDetails)
+// })
