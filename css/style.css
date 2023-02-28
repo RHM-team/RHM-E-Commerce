@@ -154,8 +154,8 @@ body {
 }
 
 /* modal */
- .modal-content {
-    background-color: transparent;
+ .contact-body {
+    background-color: transparent !important;
  }
  #textarea,#contactInput:focus{
     outline: none;
