@@ -1,6 +1,6 @@
 import addProduct from "./modules/addProduct.js";
 import getAllProduct from "./modules/getAllProduct.js";
-import { Product } from "./product.js";
+import { Product } from "./models/product.js";
 
 export async function fetchData() {
   let response = await fetch("../data.json"); //fetch data by url

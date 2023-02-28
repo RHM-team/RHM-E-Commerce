@@ -1,5 +1,7 @@
 import ActiveUser from "./modules/ActiveUser.js";
 import updateActiveUser from "./modules/updateActiveUser.js";
+import { v4 as uuidv4 } from "uuid";
+import { Order } from "./models/order.js";
 
 const stepButtons = document.querySelectorAll(".step-button");
 const progress = document.querySelector("#progress");
@@ -28,7 +30,7 @@ function goPrev() {
 }
 function progressBehave() {
   progress.setAttribute("value", (curStep * 100) / (stepButtons.length - 1));
-  if(curStep < 3){
+  if (curStep < 3) {
     stepButtons[curStep].classList.add("done");
     if (stepButtons[curStep - 1])
       stepButtons[curStep - 1].firstElementChild.classList.remove("d-none");
@@ -40,7 +42,7 @@ function progressBehave() {
 }
 Array.from(next).forEach((nextBtu) => {
   nextBtu.addEventListener("click", (e) => {
-    if(e.target == next[0]){
+    if (e.target == next[0]) {
       let nextSection = e.target.closest(".section").nextElementSibling;
       e.target.closest(".section").classList.add("d-none");
       summarySection.classList.remove("d-none");
@@ -54,94 +56,101 @@ Array.from(next).forEach((nextBtu) => {
 });
 Array.from(prev).forEach((prevBtu) => {
   prevBtu.addEventListener("click", (e) => {
-    if(e.target != prev[0]){
-      if(e.target == prev[1]){
+    if (e.target != prev[0]) {
+      if (e.target == prev[1]) {
         hideOrderSection();
         let prevSection = e.target.closest(".section").previousElementSibling;
         e.target.closest(".section").classList.add("d-none");
         prevSection.classList.remove("d-none");
         goPrev();
         progressBehave();
-      }
-      else{
+      } else {
         let prevSection = e.target.closest(".section").previousElementSibling;
         e.target.closest(".section").classList.add("d-none");
         prevSection.classList.remove("d-none");
         summarySection.classList.add("d-none");
         goPrev();
         progressBehave();
-      } 
+      }
     }
   });
 });
 
-backToShopBtn.addEventListener('click',function(){
+backToShopBtn.addEventListener("click", function () {
   window.location.href = "../pages/productPage.html";
 });
 
-function removePaymentIconSelector(){
-  paymentIcon.forEach((elem)=>{
-    elem.style.border = `solid 1px ${`var(--primary-color)`}`
+function removePaymentIconSelector() {
+  paymentIcon.forEach((elem) => {
+    elem.style.border = `solid 1px ${`var(--primary-color)`}`;
   });
 }
 
-paymentIcon.forEach((elem)=>{
-  elem.addEventListener('click',function(){
+paymentIcon.forEach((elem) => {
+  elem.addEventListener("click", function () {
     removePaymentIconSelector();
     this.style.border = `solid 2px ${`var(--primary-color)`}`;
-  })
+  });
 });
 
 /*------CheckOut Data Submit------*/
-checkOutSubmit.addEventListener('submit',function(e){
-  e.preventDefault(); 
+checkOutSubmit.addEventListener("submit", function (e) {
+  e.preventDefault();
   let nextSection = e.target.closest(".section").nextElementSibling;
-      e.target.closest(".section").classList.add("d-none");
-      summarySection.classList.remove("d-none");
-      nextSection.classList.remove("d-none");
-      nextSection.classList.add("test");
-      goNext();
-      progressBehave();
+  e.target.closest(".section").classList.add("d-none");
+  summarySection.classList.remove("d-none");
+  nextSection.classList.remove("d-none");
+  nextSection.classList.add("test");
+  goNext();
+  progressBehave();
 });
 
 /*------Payment Data Submit------*/
-paymentSubmit.addEventListener('submit',function(e){
-  e.preventDefault(); 
+paymentSubmit.addEventListener("submit", function (e) {
+  e.preventDefault();
   let nextSection = e.target.closest(".section").nextElementSibling;
-      e.target.closest(".section").classList.add("d-none");
-      summarySection.classList.remove("d-none");
-      nextSection.classList.remove("d-none");
-      nextSection.classList.add("test");
-      goNext();
-      progressBehave();
+  e.target.closest(".section").classList.add("d-none");
+  summarySection.classList.remove("d-none");
+  nextSection.classList.remove("d-none");
+  nextSection.classList.add("test");
+  goNext();
+  progressBehave();
 });
 
 /*------Card Data Submit------*/
-buyNowBtn.addEventListener('click',hideOrderSection);
-buyNowBtn.addEventListener('click', function(){
+buyNowBtn.addEventListener("click", hideOrderSection);
+buyNowBtn.addEventListener("click", function () {
   let activeUser = ActiveUser();
-    if (activeUser) {
-      let cart = activeUser.cart;
-      activeUser.cart = [];
-      localStorage.setItem("user", JSON.stringify(activeUser));
-      updateActiveUser();
+  let totalPrice = 0;
+  let deliveryFees = 2.75;
+  if (activeUser) {
+    let cart = activeUser.cart;
+    if (cart.length !== 0) {
+      cart.forEach((item) => {
+        totalPrice += item.price * item.quantity;
+      });
+    }
+    let order = new Order(uuidv4(), new Date(), totalPrice + deliveryFees);
+    activeUser.orders.push(order);
+    activeUser.cart = [];
+    localStorage.setItem("user", JSON.stringify(activeUser));
+    updateActiveUser();
   }
 });
 
-backToHomeBtn.addEventListener('click',function(){
+backToHomeBtn.addEventListener("click", function () {
   window.location.href = "../index.html";
 });
 
 /*---------Your Order Section----------*/
-function hideOrderSection(){
+function hideOrderSection() {
   summarySection.style.animation = "displayNone 2s ease-out";
-  setTimeout(function(){
+  setTimeout(function () {
     summarySection.style.display = "none";
-  },2000);
+  }, 2000);
 }
 
 const showProducts = () => {
-
   let activeUser = ActiveUser();
   var totalPrice = 0;
   var totalItems = 0;
@@ -150,23 +159,22 @@ const showProducts = () => {
 
   if (activeUser) {
     let cart = activeUser.cart;
-    if(cart.length !== 0){
+    if (cart.length !== 0) {
       cart.forEach((item) => {
         totalItems += Number(item.quantity);
-        totalPrice += ((item.price) * (item.quantity));
+        totalPrice += item.price * item.quantity;
         itemsImg.push(item.avatar);
-        console.log(totalPrice,totalItems,deliveryFees)
+        console.log(totalPrice, totalItems, deliveryFees);
       });
-    }
-    else{
+    } else {
       deliveryFees = 0;
     }
-    addOrder(totalPrice,totalItems,deliveryFees,itemsImg);
+    addOrder(totalPrice, totalItems, deliveryFees, itemsImg);
   }
 };
 
-function addOrder(totalPrice,totalItems,deliveryFees,itemsImg){
-  allOrder.innerHTML= "";
+function addOrder(totalPrice, totalItems, deliveryFees, itemsImg) {
+  allOrder.innerHTML = "";
   var order = `<div id="order" class="card">
                   <h5
                     class="card-title mt-3 mb-0 text-center"
@@ -189,7 +197,9 @@ function addOrder(totalPrice,totalItems,deliveryFees,itemsImg){
                           class="row flex-wrap justify-content-between fs-6 fw-bold"
                         >
                           <p class="w-auto text-start">Total:</p>
-                          <p class="w-auto text-end">EGP${totalPrice + deliveryFees}</p>
+                          <p class="w-auto text-end">EGP${
+                            totalPrice + deliveryFees
+                          }</p>
                         </div>
                         <hr class="mb-0 mt-0 text-secondary" />
                         <div class="count-elements">${totalItems} items</div>
@@ -199,9 +209,9 @@ function addOrder(totalPrice,totalItems,deliveryFees,itemsImg){
                         </div>    
                       </div>
                   </div>
-                </div>`;              
+                </div>`;
 
-  allOrder.insertAdjacentHTML("beforeend", order); 
+  allOrder.insertAdjacentHTML("beforeend", order);
   var orderImageContainer = document.getElementById("orderImageContainer");
 
   itemsImg.forEach((elem) => {
@@ -212,6 +222,6 @@ function addOrder(totalPrice,totalItems,deliveryFees,itemsImg){
                           alt="item-image"
                         />
                       </li>`;
-    orderImageContainer.insertAdjacentHTML("beforeend", OrderImage); 
-  });               
+    orderImageContainer.insertAdjacentHTML("beforeend", OrderImage);
+  });
 }

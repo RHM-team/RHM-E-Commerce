@@ -1,4 +1,4 @@
-import { Product } from "./product.js";
+import { Product } from "./models/product.js";
 import fetchData from "./modules/fetchData.js";
 import getAllProduct from "./modules/getAllProduct.js";
 import addProduct from "./modules/addProduct.js";
