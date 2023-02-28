@@ -160,3 +160,24 @@ body {
  #textarea,#contactInput:focus{
     outline: none;
  }
+
+/* Lines in home page */
+
+.line {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 0 0 0;
+    border-radius: 20px;
+}
+.line::before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -46px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 0 0 2px 0;
+    border-radius: 20px;
+}
