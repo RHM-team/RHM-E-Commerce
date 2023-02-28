@@ -102,7 +102,7 @@ function getSampleProducts(sampleProductsArray) {
   });
 }
 
-let myModal = document.querySelector(".modal-dialog");
+let myModal = document.querySelector(".myModal");
 
 productSectionContainer.addEventListener("click", function (e) {
   let productCardData = e.target.closest(".product-card");
