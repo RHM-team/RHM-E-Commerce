@@ -102,7 +102,7 @@ checkoutBtn.addEventListener("click", (e) => {
 
 
 
-// --------------*delete item from local storage and card*----------------
+/*-----------Delete item from local storage and card-----------*/
 const remove__item = document.querySelectorAll(".bx-x");
 
 remove__item.forEach(element => {
@@ -118,7 +118,6 @@ remove__item.forEach(element => {
     }
   })
 });
-
 
 
 function removefromarray(array,id){
