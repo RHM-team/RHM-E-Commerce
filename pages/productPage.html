@@ -27,11 +27,40 @@
     <link rel="stylesheet" href="../css/productPage.css" />
     <link rel="stylesheet" href="../css/productsSection.css" />
     <link rel="stylesheet" href="../css/productDetailsStyling.css" />
+    <link rel="stylesheet" href="../css/user.css">
   </head>
   <body>
     <!------------Products Page Container------------>
     <div class="all container-fluid">
-
+      <div class="modal fade parent-container" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content User-Content" style="background: transparent;">
+            <div class="modal-header">
+              <h5 class="modal-title h5 text-secondary" id="exampleModalLabel">Profile</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <aside class="profile-card d-flex flex-column justify-content-between gap-3">
+                    <header>
+                            <img src="../assets/userIcon.png" style=" margin-top: 8px; width: 40px; height: 40%; border-radius: 50%; box-shadow: 1px 1px 10px -5px white,
+                            -1px -1px 10px -5px white;" alt="user">
+                        <div class="user-icon d-flex align-items-center gap-3"  style="align-items: baseline; cursor: pointer; ">
+                            </div>
+                      </a>
+                      <p style="margin-top: 20px;">Lorem</p>
+                    </header>
+                    <div class="profile-bio">
+                      <p>Your Orders</p>
+                      <div class="Favorites">
+                        <div style="font-size: 20px;">Favorites <i class='bx bx-heart' style="font-size: 20px;"></i></div>
+                      </div>
+                      <div style="font-size: 20px; font-weight: 900;">Log out</div>
+                    </div>
+                  </aside>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!------------Products Section---------->
       <div id="product" class="productsPage">
