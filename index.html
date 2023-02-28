@@ -18,13 +18,43 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/productDetailsStyling.css" />
+    <!-- <link rel="stylesheet" href="../css/userDetails.css"> -->
+    <link rel="stylesheet" href="../css/user.css">
   </head>
 
   <body>
     <!------------Website Container------------>
     <div class="container-fluid all">
       <!------------NavBar------------>
-
+      <div class="modal fade parent-container" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content User-Content" style="background: transparent;">
+            <div class="modal-header">
+              <h5 class="modal-title h5 text-secondary" id="exampleModalLabel">Profile</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <aside class="profile-card">
+                    <header>
+                            <img src="../assets/userIcon.png" style=" margin-top: 8px; width: 60px; height: 40%; border-radius: 50%; box-shadow: 1px 1px 10px -5px white,
+                            -1px -1px 10px -5px white;" alt="user">
+                        <div class="user-icon d-flex align-items-center gap-3"  style="align-items: baseline; cursor: pointer; ">
+                            </div>
+                      </a>
+                      <p style="margin-top: 15px;">User</p>
+                    </header>
+                    <div class="profile-bio fs-5 fw-bold text-center">
+                      <p>Favorites <i class='bx bx-heart' style="font-size: 20px;"></i></p>
+                      <hr>
+                      <div>Your Orders</div>
+                      <hr>
+                      <div>Log out</div>
+                    </div>
+                  </aside>
+            </div>
+          </div>
+        </div>
+      </div>
       <!------------Banner Section------------>
       <div class="row" style="margin-top: 100px">
         <div
@@ -182,7 +212,7 @@
             aria-labelledby="exampleModalLongTitle"
             aria-hidden="true"
           >
-            <div class="modal-dialog" role="document"></div>
+            <div class="modal-dialog myModal" role="document"></div>
           </div>
           <div class="d-flex justify-content-end align-items-center mb-5">
             <button
@@ -218,8 +248,8 @@
     <script src="./js/addToCart.js" type="module"></script>
     <!-- <script src="./js/cart.js" type="module"></script> -->
     <script src="./js/productSection.js" type="module"></script>
-    <script src="../js/navbar.js"></script>
-    <script src="../js/footer.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/footer.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>

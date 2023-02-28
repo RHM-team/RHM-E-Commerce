@@ -416,6 +416,7 @@ input[type="text"]:valid + .cardValidation{
 /* Start Of Image Section */
 .checkOutImg-section {
   position: relative;
+  height: 100%;
 }
 .summary-section {
   position: absolute;
@@ -450,11 +451,18 @@ input[type="text"]:valid + .cardValidation{
 .summary-element {
   background-color: var(--clr-primary-cream);
   border-radius: 6px;
-  height: 50px;
+  height: auto;
 }
 .summary-element-img {
   width: 30px;
   height: 100%;
+}
+.totalPrice-section{
+  width: 100%;
+}
+.totalPrice-section .row{
+  width: 95%;
+  margin-left: 2.5%;
 }
 .count-elements {
   font-family: serif;

@@ -64,10 +64,10 @@ let navbar = `<div class="row">
       <div class="col-12 col-md-4 d-md-flex justify-content-md-start">
         <div class="col-12 d-md-flex justify-content-md-evenly">
           <a
-            class="col-12 col-md-auto nav-link active d-block d-md-flex align-items-md-center text-light text-center my-sm-3 my-md-0"
+            class="col-12 col-md-auto nav-link active fw-bold d-block d-md-flex align-items-md-center text-light text-center my-sm-3 my-md-0"
             aria-current="page"
             href="../index.html"
-            >Home</a
+            >HOME</a
           >
           <a
             class="col-12 col-md-auto nav-link d-block d-md-flex align-items-md-center text-secondary text-center link-light my-sm-3 my-md-0"
@@ -120,7 +120,7 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/loginPage.html"
           >
             <button
-              class="btn btn-dark col-4 col-md-auto fw-bold px-lg-5 rounded-5 border-light logSign"
+              class="btn nav-link text-light col-4 col-md-auto link-secondary logSign"
             >
               LogIn
             </button>
@@ -129,16 +129,24 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href = "../pages/signupPage.html"
           >
             <button
-              class="btn btn-light col-4 col-md-auto fw-bold px-lg-5 rounded-5 logSign"
+              class="btn nav-link text-light col-4 col-md-auto link-secondary logSign"
             >
               Sign Up
             </button>
           </a>
-          <div class="user-icon d-flex align-items-center gap-3"  style="align-items: baseline; cursor: pointer;">
-          <img src="../assets/user-removebg-preview.png" style="width: 40px; height: 80%; border-radius: 50%; box-shadow: 1px 1px 10px -5px white,
-          -1px -1px 10px -5px white;" alt="user">
-          <p style="font-size: 15px;" class = "text-white">Lorem</p>
-          </div>
+
+          <a
+            class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center p-0 pt-md-3 "
+          >
+            <div class="user-icon d-flex align-items-center" style="cursor: pointer;">
+              <p>
+                <button style="border-radius: 50%;" type="button" class="btn d-block " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <img src="../assets/userIcon.png" style="width: 40px; height: 40px; border-radius: 50%;" alt="user">
+                </button>
+              </p>
+              <p class = "text-light fs-15px">Lorem</p>
+            </div>
+          </a>
           <a
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/checkOut.html"
           >
@@ -161,6 +169,6 @@ container.insertAdjacentHTML("afterbegin",navbar);
 
 let userIcon = document.querySelector('.user-icon');
 
-userIcon.addEventListener('click', function(){
-  document.body.insertAdjacentHTML("afterbegin",userDetails)
-})
+// userIcon.addEventListener('click', function(){
+//   document.body.insertAdjacentHTML("afterbegin",userDetails)
+// })
