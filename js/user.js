@@ -5,8 +5,9 @@ export class User {
   email;
   active;
   cart;
-  favorite;
-  constructor(id, name, email, password, cart, active, favorite) {
+  orders;
+  favorite
+  constructor(id, name, email, password, cart, active, orders ,favorite) {
     this.id = id;
     this.name = name;
     this.email = email;
@@ -14,5 +15,6 @@ export class User {
     this.cart = cart;
     this.active = active;
     this.favorite = favorite;
+    this.orders = orders;
   }
 }
