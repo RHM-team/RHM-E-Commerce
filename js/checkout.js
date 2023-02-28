@@ -53,13 +53,23 @@ Array.from(next).forEach((nextBtu) => {
 });
 Array.from(prev).forEach((prevBtu) => {
   prevBtu.addEventListener("click", (e) => {
-    if(e != prev[0]){
-      let prevSection = e.target.closest(".section").previousElementSibling;
-      e.target.closest(".section").classList.add("d-none");
-      prevSection.classList.remove("d-none");
-      summarySection.classList.add("d-none");
-      goPrev();
-      progressBehave();
+    if(e.target != prev[0]){
+      if(e.target == prev[1]){
+        hideOrderSection();
+        let prevSection = e.target.closest(".section").previousElementSibling;
+        e.target.closest(".section").classList.add("d-none");
+        prevSection.classList.remove("d-none");
+        goPrev();
+        progressBehave();
+      }
+      else{
+        let prevSection = e.target.closest(".section").previousElementSibling;
+        e.target.closest(".section").classList.add("d-none");
+        prevSection.classList.remove("d-none");
+        summarySection.classList.add("d-none");
+        goPrev();
+        progressBehave();
+      } 
     }
   });
 });
@@ -106,18 +116,20 @@ paymentSubmit.addEventListener('submit',function(e){
 });
 
 /*------Card Data Submit------*/
-buyNowBtn.addEventListener('click',function(){
-  summarySection.style.animation = "displayNone 2s ease-out";
-  setTimeout(function(){
-    summarySection.style.display = "none";
-  },2000); 
-});
+
+buyNowBtn.addEventListener('click',hideOrderSection);
 
 backToHomeBtn.addEventListener('click',function(){
   window.location.href = "../index.html";
 });
 
 /*---------Your Order Section----------*/
+function hideOrderSection(){
+  summarySection.style.animation = "displayNone 2s ease-out";
+  setTimeout(function(){
+    summarySection.style.display = "none";
+  },2000);
+}
 
 const showProducts = () => {
 
@@ -145,29 +157,38 @@ const showProducts = () => {
 };
 
 function addOrder(totalPrice,totalItems,deliveryFees,itemsImg){
-  
-  var order = `<div class="card-body">
-                  <div class="container totalPrice-section w-100">
-                    <div class="row flex-nowrap justify-content-between w-75">
-                      <p>Subtotal:</p>
-                      <p>$${totalPrice}</p>
-                    </div>
-                    <div class="row flex-nowrap justify-content-between w-75">
-                      <p>Delivery:</p>
-                      <p>$${deliveryFees}</p>
-                    </div>
-                    <div
-                      class="row flex-nowrap justify-content-between fs-6 fw-bold w-75"
-                    >
-                      <p>Total:</p>
-                      <p>$${totalPrice + deliveryFees}</p>
-                    </div>
-                    <hr class="mb-0 mt-0" />
-                    <div class="count-elements">${totalItems} items</div>
-                    <div class="summary-element-imgs">
-                      <ul id="orderImageContainer" class="list-group list-group-flush list-group-horizontal gap-2">
-                      </ul>
-                    </div>    
+  allOrder.innerHTML= "";
+  var order = `<div id="order" class="card">
+                  <h5
+                    class="card-title mt-3 mb-0 text-center"
+                    style="letter-spacing: 0.2rem"
+                  >
+                    Your Order
+                  </h5>
+                  <hr />
+                  <div class="card-body">
+                      <div class="container totalPrice-section d-flex flex-column justify-content-center">
+                        <div class="row flex-wrap justify-content-between">
+                          <p class="w-auto text-start">Subtotal:</p>
+                          <p class="w-auto text-end">EGP${totalPrice}</p>
+                        </div>
+                        <div class="row flex-wrap justify-content-between">
+                          <p class="w-auto text-start">Delivery:</p>
+                          <p class="w-auto text-end">EGP${deliveryFees}</p>
+                        </div>
+                        <div
+                          class="row flex-wrap justify-content-between fs-6 fw-bold"
+                        >
+                          <p class="w-auto text-start">Total:</p>
+                          <p class="w-auto text-end">EGP${totalPrice + deliveryFees}</p>
+                        </div>
+                        <hr class="mb-0 mt-0 text-secondary" />
+                        <div class="count-elements">${totalItems} items</div>
+                        <div class="summary-element-imgs">
+                          <ul id="orderImageContainer" class="list-group list-group-flush list-group-horizontal gap-2 flex-wrap">
+                          </ul>
+                        </div>    
+                      </div>
                   </div>
                 </div>`;              
 
