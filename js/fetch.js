@@ -58,7 +58,7 @@ function getArray(productsArray) {
                                         style="border-radius: 5%"
                                         />
                                         <div class="social">
-                                        <i class="bx bx-heart"></i>
+                                        <i class="bx bx-heart add__to__fav"></i>
                                         <i class="bx bx-cart add__to__cart"></i>
                                         </div>
                                         <h5 class="card-title text-truncate">${element["title"]}</h5>

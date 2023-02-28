@@ -3,7 +3,7 @@ var productSectionContainer = document.getElementById(
 );
 
 fetchData()
-  .then((data) => displaySamoleOfProducts(data))
+  .then((data) => displaySampleOfProducts(data))
   .catch((err) => console.log(err)); //Show Sample of Products
 
 async function fetchData() {
@@ -13,7 +13,7 @@ async function fetchData() {
   return data;
 }
 
-function displaySamoleOfProducts(fetchProducts) {
+function displaySampleOfProducts(fetchProducts) {
   let chairsArray = fetchProducts.chairs;
   let bedsArray = fetchProducts.beds;
   let mirrorsArray = fetchProducts.mirrors;
@@ -77,7 +77,7 @@ function getSampleProducts(sampleProductsArray) {
                                           style="border-radius: 5%"
                                           />
                                           <div class="social">
-                                          <i class="bx bx-heart"></i>
+                                          <i class="bx bx-heart add__to__fav"></i>
                                           <i class="bx bx-cart add__to__cart"></i>
                                           </div>
                                           <h5 class="card-title text-truncate">${element["title"]}</h5>
@@ -106,9 +106,8 @@ let myModal = document.querySelector(".myModal");
 
 productSectionContainer.addEventListener("click", function (e) {
   let productCardData = e.target.closest(".product-card");
-  console.log(productCardData);
   fetchData().then((data) => {
-    showDetilsData(
+    showDetailsData(
       allProduct(data).find((item) => item.id == productCardData.dataset.id)
     );
     incAndDec();
@@ -132,7 +131,7 @@ function allProduct(fetchProducts) {
   return productsArray;
 }
 
-function showDetilsData(newData) {
+function showDetailsData(newData) {
   let detailesData = `
 
   <div class="modal-content">
