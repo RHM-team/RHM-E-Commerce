@@ -171,3 +171,15 @@ h6 {
     margin-top: 40px!important;
   }
 }
+
+.message-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message_img{
+  width: 40%;
+}
+.message_text{
+
+}

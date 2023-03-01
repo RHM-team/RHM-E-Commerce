@@ -1,3 +1,4 @@
+import displayMessage from "./modules/displayMessage.js";
 import fetchData from "./modules/fetchData.js";
 import getAllProduct from "./modules/getAllProduct.js";
 var productSectionContainer = document.getElementById(
@@ -5,10 +6,10 @@ var productSectionContainer = document.getElementById(
 );
 
 fetchData()
-  .then((data) => displaySamoleOfProducts(data))
+  .then((data) => displaySampleOfProducts(data))
   .catch((err) => console.log(err)); //Show Sample of Products
 
-function displaySamoleOfProducts(fetchProducts) {
+function displaySampleOfProducts(fetchProducts) {
   let productsArray = getAllProduct(fetchProducts);
 
   let oldRandNum = [];
@@ -89,13 +90,20 @@ let myModal = document.querySelector(".myModal");
 
 productSectionContainer.addEventListener("click", function (e) {
   let productCardData = e.target.closest(".product-card");
-
-  fetchData().then((data) => {
-    showDetilsData(
-      getAllProduct(data).find((item) => item.id == productCardData.dataset.id)
-    );
-    incAndDec();
-  });
+  if (e.target.classList.contains("add__to__cart")) {
+    displayMessage("cart", "add to cart", myModal);
+  } else if (e.target.classList.contains("add__to__fav")) {
+    displayMessage("fav", "add to cart", myModal);
+  } else {
+    fetchData().then((data) => {
+      showDetilsData(
+        getAllProduct(data).find(
+          (item) => item.id == productCardData.dataset.id
+        )
+      );
+      incAndDec();
+    });
+  }
 });
 
 function showDetilsData(newData) {

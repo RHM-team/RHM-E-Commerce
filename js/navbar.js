@@ -1,5 +1,4 @@
-let container = document.querySelector('.all');
-
+let container = document.querySelector(".all");
 
 let userDetails = `<div class="all row">
 <aside class="profile-card">
@@ -38,7 +37,7 @@ let userDetails = `<div class="all row">
       </li>
     </ul>
   </aside>
-</div>`
+</div>`;
 
 let navbar = `<div class="row">
 <nav
@@ -171,9 +170,9 @@ let navbar = `<div class="row">
 </div>
 <!--End of NavBar Section-->`;
 
-container.insertAdjacentHTML("afterbegin",navbar);
+container.insertAdjacentHTML("afterbegin", navbar);
 
-let userIcon = document.querySelector('.user-icon');
+let userIcon = document.querySelector(".user-icon");
 
 // userIcon.addEventListener('click', function(){
 //   document.body.insertAdjacentHTML("afterbegin",userDetails)

@@ -5,16 +5,16 @@
   --dark-color: #555;
 }
 
-.products{
-    background-color: transparent;
+.products {
+  background-color: transparent;
 }
-.products .sorting{
-   margin:2%;
+.products .sorting {
+  margin: 2%;
 }
-.products p{
+.products p {
   font-size: 14px;
 }
-.products span{
+.products span {
   color: var(--dark-color);
   font-weight: bold;
 }
@@ -26,6 +26,7 @@
   border: none;
   cursor: pointer;
 }
+
 .product-card img {
   display: block;
   border-radius: 0.4rem;
@@ -49,18 +50,18 @@
 }
 
 .product-card:hover {
-  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.2),0 8px 25px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
   animation: pop 0.5s;
 }
 
 @keyframes pop {
-	50% {
-		transform: scale(1.1);
-	}
+  50% {
+    transform: scale(1.1);
+  }
 
-	100% {
-		transform: scale(1);
-	}
+  100% {
+    transform: scale(1);
+  }
 }
 
 .product-card .social {
@@ -84,26 +85,26 @@
   font-size: 18px;
 }
 
-  .product-card .social {
-    position: absolute;
-    top: 30px;
-    opacity: 0;
-    border-radius: 4px;
-    transition: 0.5s;
-    background: rgba(255, 255, 255, 0.3);
-    z-index: 2;
-  }
-  
-  .product-card .social i{
-    transition: color 0.3s;
-    color: rgba(55, 55, 63, 0.4);
-    margin: 20px 12px;
-    display: block;
-    line-height: 0;
-    text-align: center;
-    font-size: 18px;
-  }
-  
+.product-card .social {
+  position: absolute;
+  top: 30px;
+  opacity: 0;
+  border-radius: 4px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.product-card .social i {
+  transition: color 0.3s;
+  color: rgba(55, 55, 63, 0.4);
+  margin: 20px 12px;
+  display: block;
+  line-height: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
 .product-card .social i:hover {
   color: var(--dark-color);
   opacity: 0.9;
@@ -117,8 +118,8 @@
 }
 
 .card-body {
-    background-color: white;
-  }
+  background-color: white;
+}
 .card-title {
   color: #293631 !important;
 }
@@ -131,10 +132,10 @@
   border: none;
   color: #fff;
 }
-.showbtn a{
+.showbtn a {
   text-decoration: none;
   color: white;
 }
-.showbtn:hover{
-  background-color: rgba(0, 0, 0,0.25);
+.showbtn:hover {
+  background-color: rgba(0, 0, 0, 0.25);
 }
