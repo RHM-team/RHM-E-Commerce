@@ -1,5 +1,6 @@
 import ActiveUser from "./modules/ActiveUser.js";
 import updateActiveUser from "./modules/updateActiveUser.js";
+import { removeItemFromList } from "./modules/removeItemFromList.js";
 
 const cartSection = document.querySelector(".product-card-container");
 const checkoutBtn = document.querySelector("#checkout-btn");
@@ -106,26 +107,11 @@ checkoutBtn.addEventListener("click", (e) => {
 /*-----------Delete item from local storage and card-----------*/
 const remove__item = document.querySelectorAll(".bx-x");
 
-remove__item.forEach(element => {
-  element.addEventListener("click", function(e){
-    let activeUser = ActiveUser();
-    if (activeUser) {
-      let cart = activeUser.cart;
-      let ItemtId = e.target.closest(".cart-item").dataset.id;
-      const returnedArray = removefromarray(cart, ItemtId);
-      activeUser.cart = returnedArray;
-      localStorage.setItem("user", JSON.stringify(activeUser));
-      updateActiveUser();
-    }
+remove__item.forEach((e) =>
+  e.addEventListener("click", function (e) {
+    removeItemFromList("cart", e);
   })
-});
-
-
-function removefromarray(array,id){
-  const filteredarray = array.filter((item) => item.id != id);
-  document.querySelector(`[data-id="${id}"]`).remove();
-  return filteredarray;
-  }
+);
 
 
 

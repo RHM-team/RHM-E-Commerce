@@ -35,25 +35,7 @@ let footer = `<div class="row mb-0 section--4 section">
           </div>
         </div>
         <p class="text-center"><em>"Think outside the box"</em></p>
-        <ul
-          class="list-unstyled d-flex flex-row justify-content-center"
-        >
-          <li>
-            <a class="text-white px-2" href="#!">
-              <i class="fab fa-facebook-square"></i>
-            </a>
-          </li>
-          <li>
-            <a class="text-white px-2" href="#!">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a class="text-white ps-2" href="#!">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </li>
-        </ul>
+     
       </div>
       <!--Grid column-->
 
