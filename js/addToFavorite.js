@@ -8,12 +8,16 @@ const product = document.querySelector(".products");
 
 function addToFavorite(product) {
   let activeUser = ActiveUser();
-  let isAdded = activeUser.favorite.find((p) => p.id == product.id);
-  if (!isAdded) {
-    activeUser.favorite.push(product);
+  if (!activeUser) {
+    window.open("../pages/loginPage.html", "_self");
+  } else {
+    let isAdded = activeUser.favorite.find((p) => p.id == product.id);
+    if (!isAdded) {
+      activeUser.favorite.push(product);
+    }
+    localStorage.setItem("user", JSON.stringify(activeUser));
+    updateActiveUser();
   }
-  localStorage.setItem("user", JSON.stringify(activeUser));
-  updateActiveUser();
 }
 product.addEventListener("click", (e) => {
   if (e.target.classList.contains("add__to__fav")) {

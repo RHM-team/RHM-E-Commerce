@@ -9,7 +9,7 @@ fetchData()
   .then((data) => displaySamoleOfProducts(data))
   .catch((err) => console.log(err)); //Show Sample of Products
 
-function displaySamoleOfProducts(fetchProducts) {
+function displaySampleOfProducts(fetchProducts) {
   let productsArray = getAllProduct(fetchProducts);
 
   let oldRandNum = [];
