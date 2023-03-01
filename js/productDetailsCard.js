@@ -1,13 +1,9 @@
 import addProduct from "./modules/addProduct.js";
 import getAllProduct from "./modules/getAllProduct.js";
 import { Product } from "./models/product.js";
+import fetchData from "./modules/fetchData.js";
 
-export async function fetchData() {
-  let response = await fetch("../data.json"); //fetch data by url
-  let fetchedData = await response.text();
-  let data = JSON.parse(fetchedData);
-  return data;
-}
+
 
 let myModal = document.querySelector(".myModal");
 
@@ -46,8 +42,8 @@ function allProduct(fetchProducts) {
 function showDetilsData(newData) {
   let detailesData = `
 
-  <div class="modal-content">
-  <div class="modal-body">
+  <div class="modal-content details__modal__content">
+  <div class="modal-body details__modal__body">
       <article class="product product-container-card" data-id="${newData.id}">
         <picture class="product__img">
           <img src= ${newData.avatar} alt=" Gabrielle Essence Perfume bottle flat on a table">

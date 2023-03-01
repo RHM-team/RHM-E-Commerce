@@ -23,11 +23,13 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/productPage.css" />
     <link rel="stylesheet" href="../css/productsSection.css" />
     <link rel="stylesheet" href="../css/productDetailsStyling.css" />
     <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/search.css">
   </head>
   <body>
     <!------------Products Page Container------------>
@@ -65,6 +67,20 @@
       <!------------Products Section---------->
       <div id="product" class="productsPage">
         <div class="container">
+            <!-- search section -->
+            <div class="search my-5 d-flex justify-content-center">
+              <div class="col-12 col-sm-11 col-md-8 col-lg-8 d-flex justify-content-center">
+                <div class="wrap">
+                  <div class="search">
+                     <input type="text" class="search__input" placeholder="What are you searching for?">
+                     <button type="submit" class="search__btn">
+                       <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+               </div>
+              </div>
+            </div>
+            <!-- end of search section -->
           <!--Filter Section-->
           <div class="filter my-5 d-flex justify-content-center">
             <div
@@ -109,5 +125,6 @@
     ></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/search.js" type="module"></script>
   </body>
 </html>
