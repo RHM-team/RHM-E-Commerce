@@ -184,7 +184,7 @@ body {
 /* modal */
 
  .contact-body {
-    background-color: transparent !important;
+    background-color: rgba(0, 0, 0, 0.541);
  }
  #textarea,#contactInput:focus{
     outline: none;
@@ -209,4 +209,10 @@ body {
     border-color: rgb(0, 0, 0);
     border-width: 0 0 2px 0;
     border-radius: 20px;
+}
+
+/* user details */
+
+.User-Content{
+    background-color: white ;
 }
