@@ -1,3 +1,5 @@
+import fetchData from "./modules/fetchData.js";
+
 var productContainer = document.getElementById("productContainer");
 var filterElement = document.querySelectorAll(".filterElement");
 var cardContainer = document.querySelector(".productsCard");
@@ -15,13 +17,6 @@ fetchData()
   .then((data) => displayAllProduct(data))
   .catch((err) => console.log(err)); //Show All Products
 allproducts.style.textDecoration = "underline solid #61876E 5px";
-
-export async function fetchData() {
-  let response = await fetch("../data.json"); //fetch data by url
-  let fetchedData = await response.text();
-  let data = JSON.parse(fetchedData);
-  return data;
-}
 
 export function displayAllProduct(fetchProducts) {
   let chairsArray = fetchProducts.chairs;

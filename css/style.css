@@ -14,15 +14,10 @@
 }
 
 body {
-  background: linear-gradient(
-    -45deg,
-    var(--primary-color),
-    var(--secondary-color),
-    var(--darkeroffwhite),
-    var(--offwhite)
-  );
-  background-size: 400% 400%;
-  animation: gradient 5s ease infinite;
+    background:linear-gradient(-45deg,var(--primary-color),var(--secondary-color),var(--darkeroffwhite),var(--offwhite));
+    background-size: 400% 400% !important;
+    animation: gradient 5s ease infinite;
+    font-family: var(--ff-montserrat);
 }
 @keyframes gradient {
   0% {
