@@ -15,3 +15,10 @@
     font-size: small;
     border-radius: 50%;
 }
+.fa-search{
+    color: white ;
+}
+.search__btn{
+background-color: transparent;
+border: none;
+}
