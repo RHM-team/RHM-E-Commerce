@@ -34,6 +34,7 @@ class SignupPage {
       this.uPassword,
       [],
       true,
+      [],
       []
     );
     let users = [];

@@ -6,7 +6,7 @@ var productSectionContainer = document.getElementById(
 );
 
 fetchData()
-  .then((data) => displaySamoleOfProducts(data))
+  .then((data) => displaySampleOfProducts(data))
   .catch((err) => console.log(err)); //Show Sample of Products
 
 function displaySamoleOfProducts(fetchProducts) {
