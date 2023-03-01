@@ -84,13 +84,15 @@ h6 {
   color: var(--primary-color);
   text-align: center;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
+  padding: 2px;
 }
 .inc{
   border-radius: 0.2rem 0rem 0rem 0.2rem;
 }
 .dec{
+  font-weight: bolder;
   border-radius: 0rem 0.2rem 0.2rem 0rem;
 }
 .counter__text{
@@ -133,10 +135,10 @@ h6 {
   background-repeat: no-repeat;
   background-position: center;
 }
-.modal-body {
+.details__modal__body {
   min-height: 600px !important;
 }
-.modal-content{
+.details__modal__content{
   background-color: white!important;
 }
 
@@ -159,11 +161,11 @@ h6 {
   .product__content { 
     gap:1.3rem;
   }
-  .modal-body {
+  .details__modal__body {
     width: 600px !important;
     min-height: 500px !important;
   }
-  .modal-content {
+  .details__modal__content {
     width: 600px !important;
     margin-left: -50px !important;
     margin-top: 40px!important;
