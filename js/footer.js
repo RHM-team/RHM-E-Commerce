@@ -35,6 +35,7 @@ let footer = `<div class="row mb-0 section--4 section">
           </div>
         </div>
         <p class="text-center"><em>"Think outside the box"</em></p>
+     
         <ul
           class="list-unstyled d-flex flex-row justify-content-center"
         >
