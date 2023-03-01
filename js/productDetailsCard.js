@@ -2,24 +2,28 @@ import addProduct from "./modules/addProduct.js";
 import getAllProduct from "./modules/getAllProduct.js";
 import { Product } from "./models/product.js";
 import fetchData from "./modules/fetchData.js";
-
-
+import displayMessage from "./modules/displayMessage.js";
 
 let myModal = document.querySelector(".myModal");
 
 productContainer.addEventListener("click", function (e) {
   let productCardData = e.target.closest(".product-card");
-  console.log(productCardData);
-  fetchData().then((data) => {
-    showDetilsData(
-      allProduct(data).find((item) => item.id == productCardData.dataset.id)
-    );
-    incAndDec();
-    const addCartBtn = document.querySelector(".add__button");
-    addCartBtn.addEventListener("click", (e) => {
-      addToCart(e);
+  if (e.target.classList.contains("add__to__cart")) {
+    displayMessage("cart", "added to cart", myModal);
+  } else if (e.target.classList.contains("add__to__fav")) {
+    displayMessage("fav", "added to Favorite", myModal);
+  } else {
+    fetchData().then((data) => {
+      showDetilsData(
+        allProduct(data).find((item) => item.id == productCardData.dataset.id)
+      );
+      incAndDec();
+      const addCartBtn = document.querySelector(".add__button");
+      addCartBtn.addEventListener("click", (e) => {
+        addToCart(e);
+      });
     });
-  });
+  }
 });
 
 function allProduct(fetchProducts) {
