@@ -1,6 +1,8 @@
 import ActiveUser from "./modules/ActiveUser.js";
+import { removeItemFromList } from "./modules/removeItemFromList.js";
 const container = document.querySelector(".product-card-container");
 const backBtn = document.querySelector("#backbtn");
+
 backBtn.addEventListener("click", (e) => {
   window.open("../pages/productPage.html", "_self");
 });
@@ -22,8 +24,8 @@ function renderProduct(product) {
             style="height: 150px;width:150px"
           />
         </div>
-        <div class="col-sm-8">
-          <div class="card-body product__details">
+        <div class="col-sm-8 ">
+          <div class="card-body product__details align-self-center ">
             <h5 class="card-title product__title">
             ${product.title}
             </h5>
@@ -43,3 +45,9 @@ function renderProduct(product) {
 
   container.insertAdjacentHTML("afterbegin", html);
 }
+const remove__item = document.querySelectorAll(".bx-x");
+remove__item.forEach((e) =>
+  e.addEventListener("click", function (e) {
+    removeItemFromList("fav", e);
+  })
+);
