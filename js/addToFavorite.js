@@ -1,6 +1,6 @@
 import ActiveUser from "./modules/ActiveUser.js";
 import updateActiveUser from "./modules/updateActiveUser.js";
-import { Product } from "./product.js";
+import { Product } from "./models/product.js";
 import fetchData from "./modules/fetchData.js";
 import getAllProduct from "./modules/getAllProduct.js";
 
@@ -17,6 +17,9 @@ function addToFavorite(product) {
 }
 product.addEventListener("click", (e) => {
   if (e.target.classList.contains("add__to__fav")) {
+    e.target.classList.remove("bx-heart");
+    e.target.classList.add("bxs-heart");
+    e.target.style.color = "red";
     let addItem = e.target.closest(".product-container-card");
     fetchData().then((data) => {
       let productItem = getAllProduct(data).find(

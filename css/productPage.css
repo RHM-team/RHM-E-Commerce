@@ -1,27 +1,26 @@
-.productsPage{
-    margin-top: 20vh;
-    margin-bottom: 5vh;
+.productsPage {
+  margin-top: 20vh;
+  margin-bottom: 5vh;
 }
-.filter{
-    font-family:'Montserrat', sans-serif;
-    font-weight: bold;
-    letter-spacing: 2px;
+.filter {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
-.filter > div > div:hover{
-    cursor:pointer;
-    text-decoration: underline solid var(--secondary-color) 5px;
+.filter > div > div:hover {
+  cursor: pointer;
+  text-decoration: underline solid var(--secondary-color) 5px;
 }
-.productsCard{
-    margin-top: 10vh;
+.productsCard {
+  margin-top: 10vh;
 }
-#allproducts{
-    font-weight:bolder;
+#allproducts {
+  font-weight: bolder;
 }
-.card{
-    margin-bottom: 10%;
+.card {
+  margin-bottom: 10%;
 }
-.product-desc{
-    font-size: small;
+.product-desc {
+  font-size: small;
 }
-
 
