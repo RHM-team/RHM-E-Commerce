@@ -12,20 +12,12 @@ if (fav) {
     window.open("../pages/favoritePage.html");
   });
 }
+let active = ActiveUser();
 if (logout) {
-  logout.addEventListener("click", (e) => {
-    localStorage.removeItem("user");
-    location.reload();
-  });
-}
-let activeUser = ActiveUser();
-if (activeUser) {
-  console.log(activeUser);
-  console.log(userName);
-  userName.forEach((e) => (e.innerHTML = activeUser.name));
-  buttons.forEach((e) => {
-    e.style.display = "none";
-  });
-} else {
-  userIcon.classList.add("d-none");
+  if (active) {
+    logout.addEventListener("click", (e) => {
+      localStorage.removeItem("user");
+      location.reload();
+    });
+  }
 }
