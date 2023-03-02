@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/productDetailsStyling.css" />
     <!-- <link rel="stylesheet" href="../css/userDetails.css"> -->
     <link rel="stylesheet" href="../css/user.css" />
-    <link rel="stylesheet" href="../css/loadingSpinner.css">
+    <link rel="stylesheet" href="../css/loadingSpinner.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -38,11 +38,8 @@
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered ">
-          <div
-            class="modal-content User-Content "
-            style="height: 510px;"
-          >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content User-Content" style="height: 510px">
             <div class="modal-header">
               <h5 class="modal-title h5 text-secondary" id="exampleModalLabel">
                 Profile
@@ -73,7 +70,7 @@
                     class="user-icon d-flex align-items-center gap-3"
                     style="align-items: baseline; cursor: pointer"
                   ></div>
-                  <p style="margin-top: 15px">User</p>
+                  <p style="margin-top: 15px" class="user-name">User</p>
                 </header>
                 <div class="profile-bio fs-5 fw-bold text-center">
                   <p class="fav">
@@ -83,7 +80,7 @@
                   <hr />
                   <div>Your Orders</div>
                   <hr />
-                  <div>Log out</div>
+                  <div class="logout" style="cursor: pointer">Log out</div>
                 </div>
               </aside>
             </div>
@@ -284,7 +281,7 @@
     <script src="./js/addToCart.js" type="module"></script>
     <script src="./js/cartCounter.js" type="module"></script>
     <!-- <script src="./js/cart.js" type="module"></script> -->
-    <script src="../js/userpage.js"></script>
+    <script src="../js/userpage.js" type="module"></script>
 
     <script src="./js/productSection.js" type="module"></script>
     <script src="./js/navbar.js"></script>
