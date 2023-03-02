@@ -26,6 +26,8 @@ product.addEventListener("click", (e) => {
     e.target.style.color = "red";
     let addItem = e.target.closest(".product-container-card");
     fetchData().then((data) => {
+      spinner.setAttribute('hidden','');
+      
       let productItem = getAllProduct(data).find(
         (item) => item.id == addItem.dataset.id
       );
