@@ -11,6 +11,8 @@ const addToCart = (e) => {
   if (e.target.classList.contains("add__to__cart")) {
     let addItem = e.target.closest(".product-container-card");
     fetchData().then((data) => {
+      spinner.setAttribute('hidden','');
+
       let productItem = getAllProduct(data).find(
         (item) => item.id == addItem.dataset.id
       );
@@ -32,4 +34,3 @@ const addToCart = (e) => {
 
 product.addEventListener("click", (e) => {addToCart(e)});
 
-// addCartBtn.addEventListener("click", () => console.log("jsj"));

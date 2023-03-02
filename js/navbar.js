@@ -118,7 +118,7 @@ let navbar = `<div class="row">
         <a
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/productPage.html"
           >
-          <button class ="search__btn logSign" type="submit"><i class="fa fa-search search"></i></button>
+          <button class ="search__btn bg-dark border-dark" type="submit"><i class="fa fa-search search"></i></button>
           </a>
           <a
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/loginPage.html"
