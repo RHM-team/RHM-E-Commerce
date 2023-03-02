@@ -143,12 +143,12 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center p-0 pt-md-3 "
           >
             <div class="user-icon d-flex align-items-center" style="cursor: pointer;">
-              <p>
+              <p >
                 <button style="border-radius: 50%;" type="button" class="btn d-block " data-bs-toggle="modal" data-bs-target="#exampleModal">
                   <img src="../assets/userIcon.png" style="width: 40px; height: 40px; border-radius: 50%;" alt="user">
                 </button>
               </p>
-              <p class = "text-light fs-15px">User</p>
+              <p class = "text-light fs-15px user-name" >User</p>
             </div>
           </a>
           <a
