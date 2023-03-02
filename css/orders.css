@@ -1,0 +1,24 @@
+@import url(./root.css);
+body {
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-dark-grayish-blue);
+    font-size: 0.89rem;
+    background-color: var(--clr-primary-cream);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.orders-section{
+    height: 60px;
+    background-color:var(--primary-color) ;
+    color: var(--clr-primary-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order-count {
+    font-weight: bold;
+   color: var(--primary-color);
+  }
