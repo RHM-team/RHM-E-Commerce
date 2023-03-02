@@ -2,6 +2,7 @@ const loginBtn = document.querySelector("#login-btn");
 const emailIn = document.querySelector(".user-email-input");
 const passIn = document.querySelector(".user-pass-input");
 const loginForm = document.querySelector("#login-form");
+const regBtn = document.querySelector(".reg-btn");
 class LoginPage {
   constructor() {
     loginBtn.addEventListener("click", this._login.bind(this));
@@ -13,6 +14,9 @@ class LoginPage {
     });
     emailIn.addEventListener("input", (e) => {
       document.querySelector(".error-email").style.display = "none";
+    });
+    regBtn.addEventListener("click", (e) => {
+      window.open("../pages/signupPage.html", "_self");
     });
   }
   _login() {

@@ -1,32 +1,16 @@
+import displayMessage from "./modules/displayMessage.js";
+import fetchData from "./modules/fetchData.js";
+import getAllProduct from "./modules/getAllProduct.js";
 var productSectionContainer = document.getElementById(
   "productSectionContainer"
 );
 
 fetchData()
-  .then((data) => displaySamoleOfProducts(data))
+  .then((data) => displaySampleOfProducts(data))
   .catch((err) => console.log(err)); //Show Sample of Products
 
-async function fetchData() {
-  let response = await fetch("../data.json"); //fetch data by url
-  let fetchedData = await response.text();
-  let data = JSON.parse(fetchedData);
-  return data;
-}
-
-function displaySamoleOfProducts(fetchProducts) {
-  let chairsArray = fetchProducts.chairs;
-  let bedsArray = fetchProducts.beds;
-  let mirrorsArray = fetchProducts.mirrors;
-  let sofasArray = fetchProducts.sofas;
-  let tablesArray = fetchProducts.tables;
-
-  let productsArray = [
-    ...chairsArray,
-    ...bedsArray,
-    ...mirrorsArray,
-    ...sofasArray,
-    ...tablesArray,
-  ];
+function displaySampleOfProducts(fetchProducts) {
+  let productsArray = getAllProduct(fetchProducts);
 
   let oldRandNum = [0];
   let newRandNum = null;
@@ -72,7 +56,7 @@ function getSampleProducts(sampleProductsArray) {
                                           style="border-radius: 5%"
                                           />
                                           <div class="social">
-                                          <i class="bx bx-heart"></i>
+                                          <i class="bx bx-heart add__to__fav"></i>
                                           <i class="bx bx-cart add__to__cart"></i>
                                           </div>
                                           <h5 class="card-title text-truncate">${element["title"]}</h5>
@@ -101,31 +85,21 @@ let myModal = document.querySelector(".myModal");
 
 productSectionContainer.addEventListener("click", function (e) {
   let productCardData = e.target.closest(".product-card");
-  console.log(productCardData);
-  fetchData().then((data) => {
-    showDetilsData(
-      allProduct(data).find((item) => item.id == productCardData.dataset.id)
-    );
-    incAndDec();
-  });
+  if (e.target.classList.contains("add__to__cart")) {
+    displayMessage("cart", "add to cart", myModal);
+  } else if (e.target.classList.contains("add__to__fav")) {
+    displayMessage("fav", "add to cart", myModal);
+  } else {
+    fetchData().then((data) => {
+      showDetilsData(
+        getAllProduct(data).find(
+          (item) => item.id == productCardData.dataset.id
+        )
+      );
+      incAndDec();
+    });
+  }
 });
-
-function allProduct(fetchProducts) {
-  let chairsArray = fetchProducts.chairs;
-  let bedsArray = fetchProducts.beds;
-  let mirrorsArray = fetchProducts.mirrors;
-  let sofasArray = fetchProducts.sofas;
-  let tablesArray = fetchProducts.tables;
-
-  let productsArray = [
-    ...bedsArray,
-    ...chairsArray,
-    ...mirrorsArray,
-    ...sofasArray,
-    ...tablesArray,
-  ];
-  return productsArray;
-}
 
 function showDetilsData(newData) {
   let detailesData = `

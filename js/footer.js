@@ -35,22 +35,20 @@ let footer = `<div class="row mb-0 section--4 section">
           </div>
         </div>
         <p class="text-center"><em>"Think outside the box"</em></p>
+     
         <ul
           class="list-unstyled d-flex flex-row justify-content-center"
         >
           <li>
             <a class="text-white px-2" href="#!">
-              <i class="fab fa-facebook-square"></i>
             </a>
           </li>
           <li>
             <a class="text-white px-2" href="#!">
-              <i class="fab fa-instagram"></i>
             </a>
           </li>
           <li>
             <a class="text-white ps-2" href="#!">
-              <i class="fab fa-youtube"></i>
             </a>
           </li>
         </ul>
@@ -74,7 +72,7 @@ let footer = `<div class="row mb-0 section--4 section">
       <!--Grid column-->
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase mb-4">FOLLOW US</h5>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled ms-5">
           <li class="mb-2">
             <a href="" class="text-white me-4"
               ><i
@@ -185,6 +183,7 @@ let footer = `<div class="row mb-0 section--4 section">
                   type="button"
                   class="btn text-light"
                   style="background-color: var(--primary-color)"
+                  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal"
                 >
                   Submit
                 </button>
@@ -192,19 +191,29 @@ let footer = `<div class="row mb-0 section--4 section">
             </div>
           </div>
         </div>
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body contact-body d-flex flex-column">
+            <img src = "/assets/thankyou.png">
+            <p class = " text-center fw-bold h4" > Thank You! </p>
+            </div>
+          </div>
+        </div>
+      </div>
         <ul class="list-unstyled">
           <li>
             <p>
-              <i class="fas fa-map-marker-alt pe-2"></i>Warsaw, 57
+              Warsaw, 57
               Street, Poland
             </p>
           </li>
           <li>
-            <p><i class="fas fa-phone pe-2"></i>+ 01 234 567 89</p>
+            <p>+ 01 234 567 89</p>
           </li>
           <li>
             <p>
-              <i class="fas fa-envelope pe-2 mb-0"></i>RHM@gmail.com
+              RHM@gmail.com
             </p>
           </li>
         </ul>

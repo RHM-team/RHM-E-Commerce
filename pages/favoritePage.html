@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/checkOut.css" />
+    <link rel="shortcut icon" href="../assets/cube.png" type="image/x-icon" />
+    <title>The RHM Store | CheckOut</title>
+  </head>
+  <body>
+    <div class="container checkOut-container">
+      <div class="card mb-3 checkOut-card rounded-start h-100">
+        <div class="row g-0" style="height: 100%">
+          <div class="col-md-6 col-sm-12 checkOut-body p-3 h-100">
+            <!-- Start Of Cart section -->
+            <div class="card-body card-body-details mt-0 h-100">
+              <div class="section fav-section mt-0 h-100">
+                <h5
+                  class="card-title mt-0 text-center my-4"
+                  style="letter-spacing: 0.2rem"
+                >
+                  YOUR Favorites
+                </h5>
+                <hr />
+                <div
+                  class="product-card-container h-75"
+                  style="overflow-y: scroll"
+                ></div>
+                <div
+                  class="d-flex flex-nowrap justify-content-between mt-4 align-self-end"
+                >
+                  <p id="backbtn" class="back">
+                    <i class="bx bx-left-arrow-alt"></i>Back to shop
+                  </p>
+                </div>
+              </div>
+              <!-- End Of Cart Section -->
+            </div>
+          </div>
+
+          <!-- Summary Section -->
+          <div class="col-12 col-md-6 checkOutImg-section">
+            <img
+              src="../assets/products/decorations/image-3.jpg"
+              class="img-fluid checkOutImg"
+              alt="image"
+              width="100%"
+            />
+            <div id="order" class="summary-section d-none"></div>
+          </div>
+          <!-- End Of Summary Section -->
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/favorites.js" type="module"></script>
+  </body>
+</html>
