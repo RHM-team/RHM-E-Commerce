@@ -8,7 +8,7 @@ const allSections = document.querySelectorAll('.section')
 const revealSection = function(entries, observer)
 {
     const [entry] = entries;
-    console.log(entry);
+
     if(!entry.isIntersecting) return;
 
     entry.target.classList.remove('section--hidden');
