@@ -148,7 +148,7 @@ let navbar = `<div class="row">
                   <img src="../assets/userIcon.png" style="width: 40px; height: 40px; border-radius: 50%;" alt="user">
                 </button>
               </p>
-              <p class = "text-light fs-15px">Lorem</p>
+              <p class = "text-light fs-15px">User</p>
             </div>
           </a>
           <a

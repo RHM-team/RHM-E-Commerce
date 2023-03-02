@@ -72,7 +72,7 @@ let footer = `<div class="row mb-0 section--4 section">
       <!--Grid column-->
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
         <h5 class="text-uppercase mb-4">FOLLOW US</h5>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled ms-5">
           <li class="mb-2">
             <a href="" class="text-white me-4"
               ><i
