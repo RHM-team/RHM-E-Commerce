@@ -12,36 +12,31 @@ fetchData()
 function displaySampleOfProducts(fetchProducts) {
   let productsArray = getAllProduct(fetchProducts);
 
-  let oldRandNum = [];
+  let oldRandNum = [0];
   let newRandNum = null;
   let flag;
 
   let sampleProductsArray = [];
-  for (let i = 0; i < 4; i++) {
+  for (let i = 1; i <= 4; i++) {
     newRandNum = Math.floor(Math.random() * productsArray.length);
-    sampleProductsArray.push(productsArray[newRandNum]);
+    for(let j = 0; j < oldRandNum.length; j++){
+      if(newRandNum !== oldRandNum[j]){
+        flag = true;
+      }
+      else{
+        flag = false;
+        break;
+      }
+    }
+    if(flag){
+      oldRandNum.push(newRandNum);
+      sampleProductsArray.push(productsArray[newRandNum]);
+    }
+    else{
+      i--;
+    }
+    
   }
-
-  // for(let i = 0 ; i < 4 ; i++){
-  //     flag = true;
-  //     newRandNum = Math.floor(Math.random() * productsArray.length);
-  //     console.log(newRandNum);
-
-  //     for(newRandNum in sampleProductsArray){
-  //         i--;
-  //         flag = false;
-  //       break;
-  //     }
-
-  //     if(flag == true){
-  //         sampleProductsArray.push(productsArray[newRandNum]);
-  //         oldRandNum.push(newRandNum);
-  //         console.log(oldRandNum)
-  //     }
-
-  // }
-
-  console.log(sampleProductsArray);
 
   getSampleProducts(sampleProductsArray); //Get Products to Products Section
 
