@@ -1,6 +1,6 @@
 <p align="center" >
-  <img style = "width:150px; height:150px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
-  <h1> RHM e-commerce </h1>
+  <img style = "width:150px; height:130px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
+  <h1 align="center"> RHM e-commerce </h1>
 </p>
 
 
