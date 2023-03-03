@@ -28,6 +28,7 @@ RHM is a Furniture E-Commerce project built with vanilla JS and attractive anima
 - Contact us
 - Lazy loading 
 
+![Cover](https://user-images.githubusercontent.com/78274961/222845163-14504cea-1196-4ae0-a7d0-90e65ff3d4d8.jpg)
 
 ## Support
 
