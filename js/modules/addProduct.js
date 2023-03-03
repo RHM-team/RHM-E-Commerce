@@ -1,3 +1,4 @@
+import { cartCounter } from "../cartCounter.js";
 import ActiveUser from "./ActiveUser.js";
 import updateActiveUser from "./updateActiveUser.js";
 
@@ -14,7 +15,6 @@ export default function addProduct(product) {
     } else {
       activeUser.cart.push(product);
     }
-
     localStorage.setItem("user", JSON.stringify(activeUser));
     updateActiveUser();
   }
