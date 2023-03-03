@@ -31,7 +31,7 @@ RHM is a Furniture E-Commerce project built with vanilla JS and attractive anima
 
 ## Support
 
-If you our work, feel free to:
+If you like our work, feel free to:
 
 ⭐ this repository. It helps.
 
