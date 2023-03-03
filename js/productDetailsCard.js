@@ -14,7 +14,8 @@ productContainer.addEventListener("click", function (e) {
     displayMessage("fav", "added to Favorite", myModal);
   } else {
     fetchData().then((data) => {
-      showDetilsData(
+       spinner.setAttribute('hidden','');
+       showDetilsData(
         allProduct(data).find((item) => item.id == productCardData.dataset.id)
       );
       incAndDec();
@@ -100,6 +101,7 @@ function incAndDec() {
 const addToCart = (e) => {
   let addItem = e.target.closest(".product-container-card");
   fetchData().then((data) => {
+    spinner.setAttribute('hidden','');
     let productItem = getAllProduct(data).find(
       (item) => item.id == addItem.dataset.id
     );

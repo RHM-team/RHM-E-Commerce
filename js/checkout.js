@@ -122,7 +122,7 @@ buyNowBtn.addEventListener("click", hideOrderSection);
 buyNowBtn.addEventListener("click", function () {
   let activeUser = ActiveUser();
   let totalPrice = 0;
-  let deliveryFees = 2.75;
+  let deliveryFees = 100;
   if (activeUser) {
     let cart = activeUser.cart;
     if (cart.length !== 0) {
@@ -154,7 +154,7 @@ const showProducts = () => {
   let activeUser = ActiveUser();
   var totalPrice = 0;
   var totalItems = 0;
-  var deliveryFees = 2.75;
+  var deliveryFees = 100;
   var itemsImg = [];
 
   if (activeUser) {

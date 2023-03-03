@@ -4,6 +4,8 @@ var productContainer = document.getElementById("productContainer");
 var filterElement = document.querySelectorAll(".filterElement");
 var cardContainer = document.querySelector(".productsCard");
 
+var spinner = document.getElementById("spinner");
+
 var allproducts = document.getElementById("allproducts");
 var tables = document.getElementById("tables");
 var chairs = document.getElementById("chairs");
@@ -14,7 +16,10 @@ var sofas = document.getElementById("sofas");
 var fetchProducts = fetchData(); //calling fn
 
 fetchData()
-  .then((data) => displayAllProduct(data))
+  .then((data) => {
+    spinner.setAttribute('hidden','');
+    displayAllProduct(data);
+  })
   .catch((err) => console.log(err)); //Show All Products
 allproducts.style.textDecoration = "underline solid #61876E 5px";
 
@@ -90,7 +95,10 @@ allproducts.addEventListener("click", function () {
   removeElements();
   allproducts.style.textDecoration = "underline solid #61876E 5px";
   fetchData()
-    .then((data) => displayAllProduct(data))
+    .then((data) => {
+      spinner.setAttribute('hidden','');
+      displayAllProduct(data);
+    })
     .catch((err) => console.log(err)); //Show All Products
 });
 
@@ -98,7 +106,10 @@ tables.addEventListener("click", function () {
   removeElements();
   tables.style.textDecoration = "underline solid #61876E 5px";
   fetchData()
-    .then((data) => getArray(data.tables))
+    .then((data) => {
+      spinner.setAttribute('hidden','');
+      getArray(data.tables);
+    })
     .catch((err) => console.log(err)); //Show tables
 });
 
@@ -106,7 +117,10 @@ chairs.addEventListener("click", function () {
   removeElements();
   chairs.style.textDecoration = "underline solid #61876E 5px";
   fetchData()
-    .then((data) => getArray(data.chairs))
+    .then((data) => {
+      spinner.setAttribute('hidden','');
+      getArray(data.chairs);
+    })
     .catch((err) => console.log(err)); //Show chairs
 });
 
@@ -114,7 +128,10 @@ decorations.addEventListener("click", function () {
   removeElements();
   decorations.style.textDecoration = "underline solid #61876E 5px";
   fetchData()
-    .then((data) => getArray(data.mirrors))
+    .then((data) => {
+      spinner.setAttribute('hidden','');
+      getArray(data.mirrors);
+    })
     .catch((err) => console.log(err)); //Show tables
 });
 
@@ -122,7 +139,10 @@ beds.addEventListener("click", function () {
   removeElements();
   beds.style.textDecoration = "underline solid #61876E 5px";
   fetchData()
-    .then((data) => getArray(data.beds))
+    .then((data) => {
+      spinner.setAttribute('hidden','');
+      getArray(data.beds);
+    })
     .catch((err) => console.log(err)); //Show tables
 });
 
@@ -130,6 +150,9 @@ sofas.addEventListener("click", function () {
   removeElements();
   sofas.style.textDecoration = "underline solid #61876E 5px";
   fetchData()
-    .then((data) => getArray(data.sofas))
+    .then((data) => {
+      spinner.setAttribute('hidden','');
+      getArray(data.sofas);
+    })
     .catch((err) => console.log(err)); //Show tables
 });

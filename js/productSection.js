@@ -1,12 +1,18 @@
 import displayMessage from "./modules/displayMessage.js";
 import fetchData from "./modules/fetchData.js";
 import getAllProduct from "./modules/getAllProduct.js";
+
+var spinner = document.getElementById("spinner");
+
 var productSectionContainer = document.getElementById(
   "productSectionContainer"
 );
 
 fetchData()
-  .then((data) => displaySampleOfProducts(data))
+  .then((data) => {
+    spinner.setAttribute('hidden','');
+    displaySampleOfProducts(data);
+  })
   .catch((err) => console.log(err)); //Show Sample of Products
 
 function displaySampleOfProducts(fetchProducts) {
@@ -91,6 +97,7 @@ productSectionContainer.addEventListener("click", function (e) {
     displayMessage("fav", "add to cart", myModal);
   } else {
     fetchData().then((data) => {
+      spinner.setAttribute('hidden','');
       showDetilsData(
         getAllProduct(data).find(
           (item) => item.id == productCardData.dataset.id

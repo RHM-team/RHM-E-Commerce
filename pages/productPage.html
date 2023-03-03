@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="../css/productDetailsStyling.css" />
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/loadingSpinner.css">
+    
   </head>
   <body>
     <!------------Products Page Container------------>
@@ -49,14 +51,14 @@
                     <div class="user-icon d-flex align-items-center gap-3"  style="align-items: baseline; cursor: pointer; ">
                       </div>
                     </a>
-                      <p style="margin-top: 15px;">User</p>
+                      <p style="margin-top: 15px;" class="user-name">User</p>
                     </header>
                     <div class="profile-bio fs-5 fw-bold text-center">
-                      <p>Favorites <i class='bx bx-heart' style="font-size: 20px;"></i></p>
+                      <p class="fav">Favorites <i class='bx bx-heart' style="font-size: 20px;"></i></p>
                       <hr>
-                      <div>Your Orders</div>
+                      <div class="order">Your Orders</div>
                       <hr>
-                      <div>Log out</div>
+                      <div class="logout" style="cursor: pointer;">Log out</div>
                     </div>
                   </aside>
             </div>
@@ -96,7 +98,7 @@
             </div>
           </div>
           <!--End of Filter Section-->
-
+          <div hidden id="spinner"></div>
           <!--Products Cards-->
           <div
             id="productContainer"
@@ -116,7 +118,7 @@
     <script src="../js/footer.js"></script>
     <script src="../js/addToCart.js" type="module"></script>
     <script src="../js/cartCounter.js" type="module"></script>
-    <script src="../js/userpage.js"></script>
+    <script src="../js/userpage.js" type="module"></script>
     <script src="../js/addToFavorite.js " type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

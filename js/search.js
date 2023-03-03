@@ -12,6 +12,7 @@ var searchInput = document.querySelector(".search__input");
         const value = searchInput.value.toLowerCase();
         clearContainer();
         fetchData().then((data) => {
+            spinner.setAttribute('hidden','');
             getAllProduct(data)
                 .forEach(item => {
                     const isVisible = item.title.toLowerCase().includes(value);
