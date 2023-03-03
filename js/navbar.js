@@ -143,8 +143,8 @@ let navbar = `<div class="row">
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center p-0 pt-md-3 "
           >
             <div class="user-icon d-flex align-items-center" style="cursor: pointer;">
-              <p >
-                <button style="border-radius: 50%;" type="button" class="btn d-block " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <p>
+                <button style="border-radius: 50%;" type="button" class="btn d-block " data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile Details">
                   <img src="../assets/userIcon.png" style="width: 40px; height: 40px; border-radius: 50%;" alt="user">
                 </button>
               </p>
