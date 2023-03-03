@@ -5,6 +5,6 @@
 
 
 
-<p align="center" style = "width:100px; height:100px;">
-  <img src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
+<p align="center" >
+  <img style = "width:100px; height:100px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
 </p>
