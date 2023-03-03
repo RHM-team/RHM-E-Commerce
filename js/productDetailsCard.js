@@ -9,9 +9,9 @@ let myModal = document.querySelector(".myModal");
 productContainer.addEventListener("click", function (e) {
   let productCardData = e.target.closest(".product-card");
   if (e.target.classList.contains("add__to__cart")) {
-    displayMessage("cart", "added to cart", myModal);
+    displayMessage("cart", "Added To Cart ", myModal);
   } else if (e.target.classList.contains("add__to__fav")) {
-    displayMessage("fav", "added to Favorite", myModal);
+    displayMessage("fav", "Added To Favorite ", myModal);
   } else {
     fetchData().then((data) => {
        spinner.setAttribute('hidden','');
