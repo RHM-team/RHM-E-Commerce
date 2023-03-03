@@ -7,7 +7,7 @@ export function removeItemFromList(from, e) {
   if (activeUser) {
     if (from == "fav") {
       list = activeUser.favorite;
-    } else if (from == "cart") { 
+    } else if (from == "cart") {
       list = activeUser.cart;
     }
     let ItemId = e.target.closest(".cart-item").dataset.id;
@@ -15,11 +15,11 @@ export function removeItemFromList(from, e) {
     if (from == "fav") {
       activeUser.favorite = returnedArray;
     } else if (from == "cart") {
-        activeUser.cart = returnedArray;
+      activeUser.cart = returnedArray;
     }
     localStorage.setItem("user", JSON.stringify(activeUser));
     updateActiveUser();
-  } 
+  }
 }
 function removeFromArray(array, id) {
   const filteredArray = array.filter((item) => item.id != id);
