@@ -5,7 +5,6 @@ import { removeItemFromList } from "./modules/removeItemFromList.js";
 const cartSection = document.querySelector(".product-card-container");
 const checkoutBtn = document.querySelector("#checkout-btn");
 
-
 const showAllProducts = () => {
   let activeUser = ActiveUser();
   if (activeUser) {
@@ -63,8 +62,9 @@ const renderProduct = (product) => {
         </div>
       </div>
     </div>
+    <hr />
   </div>
-  <hr />
+ 
     `;
 
   cartSection.insertAdjacentHTML("afterbegin", html);
@@ -102,8 +102,6 @@ checkoutBtn.addEventListener("click", (e) => {
   updateActiveUser();
 });
 
-
-
 /*-----------Delete item from local storage and card-----------*/
 const remove__item = document.querySelectorAll(".bx-x");
 
@@ -112,8 +110,3 @@ remove__item.forEach((e) =>
     removeItemFromList("cart", e);
   })
 );
-
-
-
-
-
