@@ -3,6 +3,7 @@ import getAllProduct from "./modules/getAllProduct.js";
 import { Product } from "./models/product.js";
 import fetchData from "./modules/fetchData.js";
 import displayMessage from "./modules/displayMessage.js";
+import { cartCounter } from "./cartCounter.js";
 
 let myModal = document.querySelector(".myModal");
 
@@ -14,12 +15,13 @@ productContainer.addEventListener("click", function (e) {
     displayMessage("fav", "Added To Favorite ", myModal);
   } else {
     fetchData().then((data) => {
-       spinner.setAttribute('hidden','');
-       showDetilsData(
+      spinner.setAttribute("hidden", "");
+      showDetilsData(
         allProduct(data).find((item) => item.id == productCardData.dataset.id)
       );
       incAndDec();
       const addCartBtn = document.querySelector(".add__button");
+
       addCartBtn.addEventListener("click", (e) => {
         addToCart(e);
       });
@@ -97,11 +99,12 @@ function incAndDec() {
     countText.innerText = count;
   });
 }
+const notification = document.querySelector(".notification");
 
-const addToCart = (e) => {
+function addToCart(e) {
   let addItem = e.target.closest(".product-container-card");
   fetchData().then((data) => {
-    spinner.setAttribute('hidden','');
+    spinner.setAttribute("hidden", "");
     let productItem = getAllProduct(data).find(
       (item) => item.id == addItem.dataset.id
     );
@@ -127,5 +130,6 @@ const addToCart = (e) => {
     );
 
     addProduct(product);
+    cartCounter(notification);
   });
-};
+}

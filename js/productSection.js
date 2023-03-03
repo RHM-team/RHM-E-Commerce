@@ -1,3 +1,6 @@
+import { cartCounter } from "./cartCounter.js";
+import { Product } from "./models/product.js";
+import addProduct from "./modules/addProduct.js";
 import displayMessage from "./modules/displayMessage.js";
 import fetchData from "./modules/fetchData.js";
 import getAllProduct from "./modules/getAllProduct.js";
@@ -10,7 +13,7 @@ var productSectionContainer = document.getElementById(
 
 fetchData()
   .then((data) => {
-    spinner.setAttribute('hidden','');
+    spinner.setAttribute("hidden", "");
     displaySampleOfProducts(data);
   })
   .catch((err) => console.log(err)); //Show Sample of Products
@@ -25,23 +28,20 @@ function displaySampleOfProducts(fetchProducts) {
   let sampleProductsArray = [];
   for (let i = 1; i <= 4; i++) {
     newRandNum = Math.floor(Math.random() * productsArray.length);
-    for(let j = 0; j < oldRandNum.length; j++){
-      if(newRandNum !== oldRandNum[j]){
+    for (let j = 0; j < oldRandNum.length; j++) {
+      if (newRandNum !== oldRandNum[j]) {
         flag = true;
-      }
-      else{
+      } else {
         flag = false;
         break;
       }
     }
-    if(flag){
+    if (flag) {
       oldRandNum.push(newRandNum);
       sampleProductsArray.push(productsArray[newRandNum]);
-    }
-    else{
+    } else {
       i--;
     }
-    
   }
 
   getSampleProducts(sampleProductsArray); //Get Products to Products Section
@@ -97,13 +97,18 @@ productSectionContainer.addEventListener("click", function (e) {
     displayMessage("fav", "Added To Favorites ", myModal);
   } else {
     fetchData().then((data) => {
-      spinner.setAttribute('hidden','');
+      spinner.setAttribute("hidden", "");
       showDetilsData(
         getAllProduct(data).find(
           (item) => item.id == productCardData.dataset.id
         )
       );
       incAndDec();
+      const addCartBtn = document.querySelector(".add__button");
+
+      addCartBtn.addEventListener("click", (e) => {
+        addToCart(e);
+      });
     });
   }
 });
@@ -113,8 +118,8 @@ function showDetilsData(newData) {
 
   <div class="modal-content">
   <div class="modal-body">
-      <article class="product">
-        <picture class="product__img">
+  <article class="product product-container-card" data-id="${newData.id}">
+  <picture class="product__img">
           <img src= ${newData.avatar} alt=" Gabrielle Essence Perfume bottle flat on a table">
         </picture>
         <div class="product__content">
@@ -159,5 +164,38 @@ function incAndDec() {
     count--;
     count <= 0 ? (count = 1) : count;
     countText.innerText = count;
+  });
+}
+const notification = document.querySelector(".notification");
+function addToCart(e) {
+  let addItem = e.target.closest(".product-container-card");
+  fetchData().then((data) => {
+    spinner.setAttribute("hidden", "");
+    let productItem = getAllProduct(data).find(
+      (item) => item.id == addItem.dataset.id
+    );
+    document
+      .querySelector(".count__container")
+      .addEventListener("click", (e) => {
+        if (e.target.classList.contains("inc")) {
+          e.target.parentElement.querySelector(".counter__text").textContent++;
+        }
+
+        if (e.target.classList.contains("dec")) {
+          e.target.parentElement.querySelector(".counter__text").textContent--;
+        }
+      });
+    let product = new Product(
+      productItem.id,
+      productItem.category,
+      productItem.title,
+      productItem.description,
+      productItem.avatar,
+      productItem.price,
+      e.target.parentElement.querySelector(".counter__text").textContent
+    );
+
+    addProduct(product);
+    cartCounter(notification);
   });
 }

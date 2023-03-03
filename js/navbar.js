@@ -1,10 +1,10 @@
+import { cartCounter } from "./cartCounter.js";
 import ActiveUser from "./modules/ActiveUser.js";
 
 let container = document.querySelector(".all");
 
 let activeUser = ActiveUser();
-let UserName = document.querySelector('.user-name');
-
+let UserName = document.querySelector(".user-name");
 
 let userDetails = `<div class="all row">
 <aside class="profile-card">
@@ -126,7 +126,9 @@ let navbar = `<div class="row">
           >
           <button class ="search__btn bg-dark border-dark" type="submit"><i class="fa fa-search search"></i></button>
           </a>
-          ${activeUser ? `<a
+          ${
+            activeUser
+              ? `<a
           class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center p-0 pt-md-3 "
         >
           <div class="user-icon d-flex align-items-center" style="cursor: pointer;">
@@ -137,7 +139,8 @@ let navbar = `<div class="row">
             </p>
             <p class = "text-light fs-15px user-name" > ${activeUser.name} </p>
           </div>
-        </a>` : `<a
+        </a>`
+              : `<a
         class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/loginPage.html"
       >
         <button
@@ -154,7 +157,8 @@ let navbar = `<div class="row">
         >
           Sign Up
         </button>
-      </a>`}
+      </a>`
+          }
           
           <a
             class="col-12 col-md-auto nav-link d-flex justify-content-center align-items-md-center my-sm-3 my-md-0" href="../pages/checkOut.html"
@@ -179,7 +183,8 @@ container.insertAdjacentHTML("afterbegin", navbar);
 
 let userIcon = document.querySelector(".user-icon");
 
-if(activeUser){
+if (activeUser) {
   UserName.innerHTML = activeUser.name;
 }
-
+const notification = document.querySelector(".notification");
+cartCounter(notification);
