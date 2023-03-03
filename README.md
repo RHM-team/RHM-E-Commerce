@@ -1,11 +1,11 @@
 <p align="center" >
-  <img style = "width:150px; height:130px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
-  <h1 align="center"> RHM e-commerce </h1>
+  <img style = "width:150px; height:120px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
+  <h1 align="center"> RHM E-Commerce </h1>
 </p>
 
 # Introduction
 
-RHM is a Furniture e-commerce project built with vanilla JS and attractive animated UI
+RHM is a Furniture E-Commerce project built with vanilla JS and attractive animated UI
 
 
 ## Technologies
@@ -57,8 +57,7 @@ Insert gif or link to demo
 
 ## User Flow 
 
-![Desktop - 1](https://user-images.githubusercontent.com/78925756/221297197-bde1651e-9886-418d-8733-c7095ea7afea.png)
-
+![WhatsApp Image 2023-03-04 at 12 00 07 AM](https://user-images.githubusercontent.com/95037451/222838081-5b5a6456-d08f-4e7a-9f11-4a2a04b9e4dc.jpeg)
 
 
 
