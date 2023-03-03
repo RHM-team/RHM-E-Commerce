@@ -35,7 +35,10 @@ body {
   transition: all 1s ease-in-out;
   cursor: pointer;
 }
-.bx-x:hover {
+/* .del-fav :hover {
+  transform: none;
+} */
+.remove-item:hover {
   transform: scale(1.5) rotate(180deg);
 }
 .step-button[aria-expanded="true"] {
@@ -72,8 +75,8 @@ body {
   background-color: var(--clr-primary-cream);
 }
 .section {
-	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 @keyframes slide-top {
   0% {
@@ -155,20 +158,21 @@ body {
 .checkout-section {
   width: 100%;
 }
-.telValidation , .nameValidation{
+.telValidation,
+.nameValidation {
   display: none;
   font-size: x-small;
 }
-input[type="text"]:focus + .nameValidation{
+input[type="text"]:focus + .nameValidation {
   display: block;
 }
-input[type="tel"]:focus + .telValidation{
+input[type="tel"]:focus + .telValidation {
   display: block;
 }
-input[type="text"]:valid + .nameValidation{
+input[type="text"]:valid + .nameValidation {
   display: none;
 }
-input[type="tel"]:valid + .telValidation{
+input[type="tel"]:valid + .telValidation {
   display: none;
 }
 /* End Of Checkout Section  */
@@ -182,14 +186,14 @@ input[type="tel"]:valid + .telValidation{
 .visa-input {
   border: var(--bs-border-width) solid var(--bs-border-color);
 }
-.cardValidation{
+.cardValidation {
   display: none;
   font-size: x-small;
 }
-input[type="text"]:focus + .cardValidation{
+input[type="text"]:focus + .cardValidation {
   display: block;
 }
-input[type="text"]:valid + .cardValidation{
+input[type="text"]:valid + .cardValidation {
   display: none;
 }
 /* End Of Payment Section */
@@ -200,7 +204,7 @@ input[type="text"]:valid + .cardValidation{
   flex-direction: row;
   justify-content: center;
   height: 70vh;
-  align-items:center;
+  align-items: center;
 }
 .success-checkmark .check-icon {
   width: 80px;
@@ -225,7 +229,8 @@ input[type="text"]:valid + .cardValidation{
   border-radius: 0 100px 100px 0;
   animation: rotate-circle 4.25s ease-in;
 }
-.success-checkmark .check-icon::before, .success-checkmark .check-icon::after {
+.success-checkmark .check-icon::before,
+.success-checkmark .check-icon::after {
   content: "";
   height: 100px;
   position: absolute;
@@ -350,8 +355,8 @@ input[type="text"]:valid + .cardValidation{
 
 /* Start Of Cart Section  */
 .cart-section {
-  overflow-y: auto; 
-  height:510px;
+  overflow-y: auto;
+  height: 510px;
 }
 
 .cart-item {
@@ -457,10 +462,10 @@ input[type="text"]:valid + .cardValidation{
   width: 30px;
   height: 100%;
 }
-.totalPrice-section{
+.totalPrice-section {
   width: 100%;
 }
-.totalPrice-section .row{
+.totalPrice-section .row {
   width: 95%;
   margin-left: 2.5%;
 }
@@ -469,47 +474,45 @@ input[type="text"]:valid + .cardValidation{
 }
 /* End Of Image Section */
 
-
-
-
-.empty-img{
+.empty-img {
   width: 50%;
   height: 100px;
-  -webkit-animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both  infinite;
-  animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955)  both infinite;
+  -webkit-animation: shake-bottom 5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both infinite;
+  animation: shake-bottom 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both
+    infinite;
   animation-timing-function: linear;
-
 }
 @keyframes shake-bottom {
   0%,
   20% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
     -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
   }
   2% {
     -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
   4%,
   8%,
   12% {
     -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
+    transform: rotate(-4deg);
   }
   6%,
   10%,
   14% {
     -webkit-transform: rotate(4deg);
-            transform: rotate(4deg);
+    transform: rotate(4deg);
   }
   16% {
     -webkit-transform: rotate(-2deg);
-            transform: rotate(-2deg);
+    transform: rotate(-2deg);
   }
   18% {
     -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
+    transform: rotate(2deg);
   }
 }
