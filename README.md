@@ -1,5 +1,5 @@
 <p align="center" >
-  <img style = "width:150px; height:120px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
+  <img style = "width:150px; height:110px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
   <h1 align="center"> RHM E-Commerce </h1>
 </p>
 
