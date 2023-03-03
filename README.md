@@ -3,6 +3,57 @@
   <h1 align="center"> RHM e-commerce </h1>
 </p>
 
+# Introduction
+
+RHM is a Furniture e-commerce project built with vanilla JS and attractive animated UI
+
+
+## Technologies
+- HTML
+- CSS
+- JS
+- Bootstrap
+
+## Features
+
+- Authentication
+    - Login
+    - Register
+    - Logout
+- Product management.
+- Category management (Filteration).
+- Search
+- Profile (Favorites, Order history)
+- Order management
+- Contact us
+- Lazy loading 
+
+
+## Support
+
+If you our work, feel free to:
+
+⭐ this repository. It helps.
+
+
+## Demo
+
+Insert gif or link to demo
+
+
+## Authors
+
+- [Hager Abd El Galil](https://github.com/Hager-Abd-El-Galil)
+
+- [Hager Khaled](https://github.com/hagerk720)
+
+- [Mariam Khaled](https://github.com/Marim99)
+
+- [Rowan Tamer](https://github.com/rowantamer)
+
+- [Radwa Khalil](https://github.com/radwakhalil22)
+
+
 
 ## User Flow 
 
