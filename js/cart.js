@@ -48,7 +48,7 @@ const renderProduct = (product) => {
               class="d-flex align-items-baseline justify-content-between"
             >
               <p class="product__price">EGP${product.price}</p>
-              <i class="bx bx-x"></i>
+              <i class="bx bx-x remove-item"></i>
             </div>
             <div
               class="d-flex align-items-baseline justify-content-between quantity-contanier"
