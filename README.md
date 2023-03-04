@@ -7,6 +7,7 @@
 
 RHM is a Furniture E-Commerce project built with vanilla JS and attractive animated UI
 
+visit our website [Here](https://hagermini22.000webhostapp.com/)
 
 ## Technologies
 - HTML
@@ -39,7 +40,7 @@ If you like our work, feel free to:
 
 ## Demo
 
-Insert gif or link to demo
+[Demo Video](https://youtu.be/dmpEiHEEMuI)
 
 
 ## Authors
