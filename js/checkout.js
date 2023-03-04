@@ -164,7 +164,6 @@ const showProducts = () => {
         totalItems += Number(item.quantity);
         totalPrice += item.price * item.quantity;
         itemsImg.push(item.avatar);
-        console.log(totalPrice, totalItems, deliveryFees);
       });
     } else {
       deliveryFees = 0;
