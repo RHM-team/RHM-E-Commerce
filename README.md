@@ -1,5 +1,5 @@
 <p align="center" >
-  <img style = "width:150px; height:120px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
+  <img style = "width:150px; height:110px;" src="https://user-images.githubusercontent.com/95037451/222831367-5b912a42-b5ce-44fd-9fdc-c8b38ae75699.gif" />
   <h1 align="center"> RHM E-Commerce </h1>
 </p>
 
@@ -28,10 +28,11 @@ RHM is a Furniture E-Commerce project built with vanilla JS and attractive anima
 - Contact us
 - Lazy loading 
 
+![Cover](https://user-images.githubusercontent.com/78274961/222845163-14504cea-1196-4ae0-a7d0-90e65ff3d4d8.jpg)
 
 ## Support
 
-If you our work, feel free to:
+If you like our work, feel free to:
 
 ⭐ this repository. It helps.
 
