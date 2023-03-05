@@ -86,11 +86,6 @@ quantityContanier.forEach((i) =>
 );
 
 checkoutBtn.addEventListener("click", (e) => {
-  console.log(
-    e.target.parentElement.parentElement.parentElement.querySelector(
-      ".counter__text"
-    )
-  );
   let activeUser = ActiveUser();
   activeUser.cart.forEach((c) => {
     c.quantity =
